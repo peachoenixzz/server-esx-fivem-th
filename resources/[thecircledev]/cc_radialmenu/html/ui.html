@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexagonal Menu</title>
+    <link href="styles_tw.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fuggles&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="flex flex-col justify-center items-center h-screen">
+    <!-- First page menu -->
+    <div id="firstPage" class="menu-page">
+      <!-- Main menu items will be generated here -->
+    </div>
+    <div id="submenuContainer" class="menu-page hidden">
+      <!-- Submenu items will be dynamically inserted here -->
+    </div>
+
+    <!-- Back button, initially hidden -->
+    <div class="menu-page">
+      <div
+        class="hex-item text-center text-white hidden"
+        id="backButton"
+        data-menu="back"
+      >
+        <div class="hex-content">Back</div>
+      </div>
+      <div
+        class="hex-item text-center text-white"
+        id="closeMenu"
+        data-menu="close"
+      >
+        <div class="hex-content">Close</div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

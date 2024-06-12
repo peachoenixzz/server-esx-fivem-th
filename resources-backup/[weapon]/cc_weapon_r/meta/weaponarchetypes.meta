@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>ck_weaponpunk_bottle</modelName>
+			<txdName>ck_weaponpunk_bottle</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+		<Item>
+			<modelName>ck_weaponpunk_poolcue_hi</modelName>
+			<txdName>ck_weaponpunk_poolcue_hi</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+		<Item>
+			<modelName>ck_weaponpunk_gclub</modelName>
+			<txdName>ck_weaponpunk_gclub</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+		<Item>
+			<modelName>ck_weponpunk_bat</modelName>
+			<txdName>ck_weponpunk_bat</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+		<Item>
+			<modelName>ck_weaponpunk_machette_lr</modelName>
+			<txdName>ck_weaponpunk_machette_lr</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+		<Item>
+			<modelName>ck_weaponpunk_knife</modelName>
+			<txdName>ck_weaponpunk_knife</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+		<Item>
+			<modelName>ck_weaponpunk_knuckle</modelName>
+			<txdName>ck_weaponpunk_knuckle</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+		<Item>
+			<modelName>ck_weaponpunk_dagger</modelName>
+			<txdName>ck_weaponpunk_dagger</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
+

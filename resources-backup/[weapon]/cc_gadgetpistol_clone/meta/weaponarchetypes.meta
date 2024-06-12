@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponModelInfo__InitDataList>
+  <InitDatas>
+		
+	<!-- Gadget Pistol -->
+
+	<Item>
+		<modelName>w_pi_singleshoth4</modelName>
+		<txdName>w_pi_singleshoth4</txdName>
+		<ptfxAssetName>weap_ih_gpistol</ptfxAssetName>
+		<lodDist value="50"/>
+	</Item>
+	<Item>
+		<modelName>w_pi_singleshoth4_shell</modelName>
+		<txdName>w_pi_singleshoth4_shell</txdName>
+		<ptfxAssetName>null</ptfxAssetName>
+		<lodDist value="50"/>
+	</Item>
+	
+  </InitDatas>
+</CWeaponModelInfo__InitDataList>

@@ -1,0 +1,100 @@
+/* thai */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Kanit Regular'), local('Kanit-Regular'), url(../font/Kanit-thai.woff2) format('woff2');
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Kanit Regular'), local('Kanit-Regular'), url(../font/Kanit-vietnamese.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Kanit Regular'), local('Kanit-Regular'), url(../font/Kanit-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Kanit Regular'), local('Kanit-Regular'), url(../font/Kanit-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  user-select: none;
+}
+
+.contents{
+  display: none;
+  position: fixed;
+  bottom: 1%;
+  left: 50%;
+  width: 385px;
+  height: 35px;
+  transform: translate(-50%, -1%);
+  background-color: rgb(34, 34, 34);
+  border-radius: 50px;
+  opacity: 0.9;
+}
+
+.modename{
+  position: relative;
+  top: -12.5px;
+  left: 92.5px;
+  width: 200px;
+  text-align: center;
+  height: 20px;
+  color: #ffffff;
+  background-color: rgb(34, 34, 34);
+  border-radius: 50px 50px 0px 0px;
+  font-size: 12px
+}
+
+#water {
+	position: relative;
+  top: -10px;
+	left: 12.5px;
+	width: 360px;
+	height: 15px;
+	background-color: rgb(47, 47, 47);
+	border-radius: 50px;
+	transition: 0.2s ease-in-out;
+  text-align: center;
+}
+  
+#water span{
+	position: relative;
+  color: white;
+  top: -25px;
+}
+
+#water_inner {
+	width: 360px;
+	height: 20px;
+} 
+  
+#boxwater {
+	display:block;
+	width:80%;
+	height: 75%;
+	background: rgb(64, 113, 188);
+	border-radius: 50px;
+	overflow:hidden;
+	transition: 0.2s ease-in-out;
+}

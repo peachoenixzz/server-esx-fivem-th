@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+
+      .no-select {
+        user-select: none;
+      }
+
+      body {
+        display: none;
+      }
+      .overflow-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      ::-webkit-scrollbar {
+        width: 0vh;
+      }
+
+      button[disabled] {
+        background-color: black;
+        color: white;
+      }
+      .border-out {
+        border-radius: 10px 40px 40px 10px !important;
+        border: none;
+      }
+      .border-in {
+        border-radius: 10px 35px 35px 10px !important;
+        border: none;
+      }
+
+      .bg-gradient {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 204, 0, 0.5),
+          rgba(166, 106, 2, 0.5)
+        );
+      }
+      .bg-cloud {
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 204, 0, 0.8),
+            rgba(166, 106, 2, 0.8)
+          ),
+          url("img/cloud.png");
+        background-size: cover;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      .rounded9999px {
+        border-radius: 1900px 9999px 9999px 1900px;
+      }
+      .bg-color {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7); */
+      }
+      .bg-color:hover {
+        background-image: linear-gradient(to bottom, #ffcc00, #ffa800);
+        box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+      }
+
+      @keyframes numberChange {
+        from {
+          opacity: 0.5;
+          transform: scale(1.2);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .number-change-animation {
+        animation: numberChange 0.3s ease forwards;
+      }
+
+      input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        outline: none;
+        transition: all 0.15s ease-in-out;
+        width: 2vh;
+        min-width: 2vh;
+        height: 2vh;
+        min-height: 2vh;
+        margin: 4px;
+      }
+
+      input[type="checkbox"]:checked {
+        content: url("img/checker.png");
+      }
+    </style>
+  </head>
+
+  <body class="no-select p-1">
+    <div class="flex justify-center items-center h-screen">
+      <div class="w-fit h-fit rounded-lg">
+        <div class="absolute top-[9%] ml-[5vh] z-10">
+          <img
+            src="img/dragon-head.png"
+            class="object-cover h-[11vh] w-[16vh]"
+            alt="Logo"
+            style="transform: scaleX(-1)"
+          />
+        </div>
+        <div class="flex">
+          <div
+            class="box-content bg-black/[0.5] rounded-l-full text-white w-[30%]"
+          >
+            <div class="relative">
+              <div
+                class="box-content bg-gradient-to-l from-[#ffa800]/[0.7] to-[#ffcc00]/[0.7] border-[3px] border-white h-[8vh] rounded-full flex text-center justify-center m-3 relative overflow-hidden"
+              >
+                <div
+                  class="ml-1.5 flex flex-col justify-center items-center z-20"
+                >
+                  <div
+                    class="text-[3.5vh] leading-[3vh]"
+                    style="text-shadow: 1px 1px 1px black"
+                  >
+                    CRAFTING
+                  </div>
+                  <div
+                    class="text-[3.5vh] leading-[3vh]"
+                    style="text-shadow: 1px 1px 1px black"
+                  >
+                    TABLE
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="box-content bg-black/[0.5] rounded-r-lg text-white text-[2.2vh] w-[70%] flex items-center justify-center"
+            id="filter"
+          >
+            <div class="flex flex-col" id="container-button">
+              <div class="flex">
+                <button
+                  id="button-general"
+                  class="bg-black/[0.5] bg-gradient hover:bg-gradient-to-l from-[#ffa800]/[0.5] to-[#ffcc00]/[0.5] rounded-lg w-[13.5vh] mr-3"
+                  onclick="filterByCategory('all'); addBg('button-general')"
+                >
+                  ทั่วไป
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex mt-1 h-[53.8vh]">
+          <div
+            class="box-content bg-black/[0.5] w-[24vh] rounded-lg p-1.5 mr-1 overflow-y-scroll"
+          >
+            <div id="item-container"></div>
+          </div>
+          <div class="rounded-lg relative">
+            <div
+              class="box-content bg-black/[0.5] w-[68vh] h-[44vh] rounded-lg pt-3 text-white relative"
+              id="big-materials-container"
+            ></div>
+
+            <div
+              class="box-content bg-black/[0.5] rounded9999px text-white text-[1.8vh] absolute bottom-0 w-full"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex flex-col mx-3 my-2">
+                  <div class="flex items-center mb-1" id="currency"></div>
+
+                  <div>
+                    <button
+                      class="bg-color w-[12vh] rounded-md"
+                      id="craft-button"
+                      onclick="progress_bar()"
+                    >
+                      CRAFT
+                    </button>
+                  </div>
+                </div>
+                <div class="relative m-4">
+                  <div
+                    class="rounded9999px box-content bg-black/[0.5] h-[5vh] w-[42vh] flex items-center justify-center text-center"
+                  >
+                    <div
+                      class="absolute inset-0 flex items-center justify-center z-10"
+                    >
+                      0%
+                    </div>
+                    <div
+                      id="progress"
+                      class="absolute bottom-0 left-0 right-0 box-content bg-cloud rounded9999px h-[5vh] w-[0%] z-0"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/app.js"></script>

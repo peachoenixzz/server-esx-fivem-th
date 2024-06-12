@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+      body {
+        display: none;
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      /*.overflow-scroll::-webkit-scrollbar {*/
+      /*        display: none;*/
+      /*} */
+
+      ::-webkit-scrollbar-track {
+        /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      ::-webkit-scrollbar {
+        width: 0.55vh;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(20, 184, 166, 0.8);
+      }
+      .shadow-custom {
+        shadow: 10px 10px rgba(0, 0, 0, 0.8);
+        border-radius: 50%;
+      }
+      .btn-3d {
+        align-items: center;
+        appearance: none;
+        background-image: radial-gradient(
+          100% 100% at 100% 0px,
+          rgba(20, 184, 166, 1) 0px,
+          rgba(15, 118, 110, 1) 100%
+        );
+        border: 0px;
+        border-radius: 6px;
+        box-shadow: rgba(45, 35, 66, 0.4) 0px 2px 4px,
+          rgba(45, 35, 66, 0.3) 0px 7px 13px -3px,
+          rgba(58, 65, 111, 0.5) 0px -3px 0px inset;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: inline-flex;
+        height: 55px;
+        justify-content: center;
+        line-height: 55px;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-decoration: none;
+        transition: box-shadow 0.15s ease 0s, transform 0.15s ease 0s;
+        user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow, transform;
+        font-size: 18px;
+      }
+
+      .btn-3d:active {
+        box-shadow: rgba(15, 118, 110, 1) 0px 3px 7px inset;
+        transform: translateY(2px);
+      }
+
+      .btn-3d-canclex {
+        align-items: center;
+        appearance: none;
+        background-image: radial-gradient(
+          100% 100% at 100% 0px,
+          rgb(193, 32, 38) 0px,
+          rgb(116, 14, 25) 100%
+        );
+        border: 0px;
+        border-radius: 6px;
+        box-shadow: rgba(45, 35, 66, 0.4) 0px 2px 4px,
+          rgba(45, 35, 66, 0.3) 0px 7px 13px -3px,
+          rgba(58, 65, 111, 0.5) 0px -3px 0px inset;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: inline-flex;
+        height: 55px;
+        justify-content: center;
+        line-height: 55px;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-decoration: none;
+        transition: box-shadow 0.15s ease 0s, transform 0.15s ease 0s;
+        user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow, transform;
+        font-size: 18px;
+      }
+
+      .btn-3d-canclex:active {
+        box-shadow: rgb(116, 14, 25) 0px 3px 7px inset;
+        transform: translateY(2px);
+      }
+      .loader {
+        width: 3vh;
+        height: 3vh;
+        border: 0.4vh solid #fff;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center h-screen relative">
+      <div
+        class="bg-gradient-to-l from-[#519188]/[0.8] to-[#519188]/[0.3] w-fit rounded-tl-[9vh] rounded-lg text-white"
+      >
+        <div class="flex m-[3vh]">
+          <div class="mr-[3vh] relative">
+            <div class="relative">
+              <div
+                class="box-content bg-black/[0.5] h-[12vh] w-[30vh] rounded-full flex"
+              >
+                <div
+                  class="border-[0.2vh] border-teal-500 rounded-full w-full m-[0.8vh] flex items-center"
+                >
+                  <div
+                    class="box-content h-[14vh] w-[14vh] rounded-full flex items-center absolute left-0"
+                  >
+                    <img
+                      src="img/thecircle_logo.png "
+                      class="drop-shadow-[0_5px_8.5px_rgba(0,0,0,0.65)] h-[12vh] w-[12vh]"
+                    />
+
+                    <div class="ml-1.5 text-center">
+                      <div class="text-[3.0vh] leading-[3.5vh]">MYSTERY</div>
+                      <div class="text-[4.5vh] leading-[3vh]">MAN</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute bottom-0">
+              <div class="flex justify-center mb-[1vh]">
+                <span
+                  class="dot h-[1vh] w-[1vh] mx-1 rounded-full bg-white"
+                ></span>
+                <span
+                  class="dot h-[1vh] w-[1vh] mx-1 rounded-full bg-white"
+                ></span>
+                <span
+                  class="dot h-[1vh] w-[1vh] mx-1 rounded-full bg-white"
+                ></span>
+                <span
+                  class="dot h-[1vh] w-[1vh] mx-1 rounded-full bg-white"
+                ></span>
+                <span
+                  class="dot h-[1vh] w-[1vh] mx-1 rounded-full bg-white"
+                ></span>
+              </div>
+              <div class="border-[2.5px] w-[30vh] rounded-lg">
+                <div class="bg-blue-400 rounded-lg m-[1vh]">
+                  <div class="imgSlides h-[44vh]">
+                    <img
+                      src="img/ads-1.png"
+                      class="w-[100%] object-cover h-[44vh] rounded-lg"
+                    />
+                  </div>
+
+                  <div class="imgSlides">
+                    <img
+                      src="img/ads-2.png"
+                      class="w-[100%] object-cover h-[44vh] rounded-lg"
+                    />
+                  </div>
+
+                  <div class="imgSlides">
+                    <img
+                      src="img/ads-3.png"
+                      class="w-[100%] object-cover h-[44vh] rounded-lg"
+                    />
+                  </div>
+
+                  <div class="imgSlides">
+                    <img
+                      src="img/ads-4.png"
+                      class="w-[100%] object-cover h-[44vh] rounded-lg"
+                    />
+                  </div>
+
+                  <div class="imgSlides">
+                    <img
+                      src="img/ads-5.png"
+                      class="w-[100%] object-cover h-[44vh] rounded-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="relative">
+              <div>
+                <div class="text-[4vh] leading-[1vh] mb-[2vh]" id="player-name">
+                  JOW TAOSAO
+                </div>
+                <div
+                  class="box-content bg-black/[0.5] rounded-lg flex justify-between items-center w-[28vh] h-[4.5vh] text-[3vh]"
+                >
+                  <div class="ml-[1.5vh]" id="cash-point">9,999,999</div>
+                  <div class="flex justify-center items-center">
+                    <div class="mr-[0.5vh] text-[3vh]">CC</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-0 right-0 mr-[1vh] text-center text-[1.5vh]"
+              >
+                <!--                <div class="leading-[2vh]">วันหมดอายุ CIRCLE PASS</div>-->
+                <!--                <div-->
+                <!--                  class="box-content bg-black/[0.5] h-[2vh] w-[13.5vh] rounded mx-auto flex items-center justify-center"-->
+                <!--                >-->
+                <!--                  30/04/2023-->
+                <!--                </div>-->
+                <div class="leading-[2vh]">วันหมดอายุ CIRCLE VIP</div>
+                <div
+                  class="box-content bg-black/[0.5] h-[2vh] w-[13.5vh] rounded mx-auto flex items-center justify-center"
+                  id="expire-vip"
+                >
+                  30/04/2023
+                </div>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-lg mt-[2vh]">
+              <div
+                class="bg-black/[0.5] rounded-lg h-[52vh] p-[1vh] overflow-y-scroll relative"
+              >
+                <div
+                  class="absolute top-[50%] text-[1.5vh]"
+                  style="
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 999;
+                  "
+                  id="model-container"
+                ></div>
+
+                <div>
+                  <div class="grid grid-rows gap-[1vh]">
+                    <div>
+                      <div class="grid grid-cols-6 gap-[1vh]" id="cash-items">
+                        <!-- <div class="bg-black/[0.5] rounded-lg w-fit p-[1vh]">
+                          <div class="text-center">เคียว (0/2)</div>
+                          <div class="flex justify-center mx-1">
+                            <div class="box-content w-[9vh] h-[9vh]">
+                              <img
+                                src="img/sickle.png"
+                                class="w-[9vh] h-[9vh]"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="mx-auto w-full h-[0.09vh] bg-gray-400 rounded-full"
+                          ></div>
+                          <div class="text-[1.6vh] text-center">1,000 CC</div>
+                          <button
+                            class="btn-3d my-btn-class-32 h-[2.3vh] w-full rounded-md text-white select-none whitespace-nowrap flex items-center justify-center"
+                            onclick="confirmModel()"
+                          >
+                            <div class="box-content h-[1.7] w-[1.7vh]">
+                              <img
+                                src="img/cart.png"
+                                class="box-content h-[1.5] w-[1.5vh] mb-[0.2vh]"
+                              />
+                            </div>
+                          </button>
+                        </div>
+                        <div class="bg-black/[0.5] rounded-lg w-fit p-[1vh]">
+                          <div class="text-center">เคียว (0/2)</div>
+                          <div class="flex justify-center mx-1">
+                            <div class="box-content w-[9vh] h-[9vh]">
+                              <img
+                                src="img/sickle.png"
+                                class="w-[9vh] h-[9vh]"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="mx-auto w-full h-[0.09vh] bg-gray-400 rounded-full"
+                          ></div>
+                          <div class="text-[1.6vh] text-center">1,000 CC</div>
+                          <button
+                            class="btn-3d my-btn-class-32 h-[2.3vh] w-full rounded-md text-white select-none whitespace-nowrap flex items-center justify-center"
+                            onclick="confirmModel()"
+                          >
+                            <div class="box-content h-[1.7] w-[1.7vh]">
+                              <img
+                                src="img/cart.png"
+                                class="box-content h-[1.5] w-[1.5vh] mb-[0.2vh]"
+                              />
+                            </div>
+                          </button>
+                        </div>
+                        <div class="bg-black/[0.5] rounded-lg w-fit p-[1vh]">
+                          <div class="text-center">เคียว (0/2)</div>
+                          <div class="flex justify-center mx-1">
+                            <div class="box-content w-[9vh] h-[9vh]">
+                              <img
+                                src="img/sickle.png"
+                                class="w-[9vh] h-[9vh]"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="mx-auto w-full h-[0.09vh] bg-gray-400 rounded-full"
+                          ></div>
+                          <div class="text-[1.6vh] text-center">1,000 CC</div>
+                          <button
+                            class="btn-3d my-btn-class-32 h-[2.3vh] w-full rounded-md text-white select-none whitespace-nowrap flex items-center justify-center"
+                            onclick="confirmModel()"
+                          >
+                            <div class="box-content h-[1.7] w-[1.7vh]">
+                              <img
+                                src="img/cart.png"
+                                class="box-content h-[1.5] w-[1.5vh] mb-[0.2vh]"
+                              />
+                            </div>
+                          </button>
+                        </div>
+                        <div class="bg-black/[0.5] rounded-lg w-fit p-[1vh]">
+                          <div class="text-center">เคียว (0/2)</div>
+                          <div class="flex justify-center mx-1">
+                            <div class="box-content w-[9vh] h-[9vh]">
+                              <img
+                                src="img/sickle.png"
+                                class="w-[9vh] h-[9vh]"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="mx-auto w-full h-[0.09vh] bg-gray-400 rounded-full"
+                          ></div>
+                          <div class="text-[1.6vh] text-center">1,000 CC</div>
+                          <button
+                            class="btn-3d my-btn-class-32 h-[2.3vh] w-full rounded-md text-white select-none whitespace-nowrap flex items-center justify-center"
+                            onclick="confirmModel()"
+                          >
+                            <div class="box-content h-[1.7] w-[1.7vh]">
+                              <img
+                                src="img/cart.png"
+                                class="box-content h-[1.5] w-[1.5vh] mb-[0.2vh]"
+                              />
+                            </div>
+                          </button>
+                        </div>
+                        <div class="bg-black/[0.5] rounded-lg w-fit p-[1vh]">
+                          <div class="text-center">เคียว (0/2)</div>
+                          <div class="flex justify-center mx-1">
+                            <div class="box-content w-[9vh] h-[9vh]">
+                              <img
+                                src="img/sickle.png"
+                                class="w-[9vh] h-[9vh]"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="mx-auto w-full h-[0.09vh] bg-gray-400 rounded-full"
+                          ></div>
+                          <div class="text-[1.6vh] text-center">1,000 CC</div>
+                          <button
+                            class="btn-3d my-btn-class-32 h-[2.3vh] w-full rounded-md text-white select-none whitespace-nowrap flex items-center justify-center"
+                            onclick="confirmModel()"
+                          >
+                            <div class="box-content h-[1.7] w-[1.7vh]">
+                              <img
+                                src="img/cart.png"
+                                class="box-content h-[1.5] w-[1.5vh] mb-[0.2vh]"
+                              />
+                            </div>
+                          </button>
+                        </div>
+                        <div class="bg-black/[0.5] rounded-lg w-fit p-[1vh]">
+                          <div class="text-center">เคียว (0/2)</div>
+                          <div class="flex justify-center mx-1">
+                            <div class="box-content w-[9vh] h-[9vh]">
+                              <img
+                                src="img/sickle.png"
+                                class="w-[9vh] h-[9vh]"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="mx-auto w-full h-[0.09vh] bg-gray-400 rounded-full"
+                          ></div>
+                          <div class="text-[1.6vh] text-center">1,000 CC</div>
+                          <button
+                            class="btn-3d my-btn-class-32 h-[2.3vh] w-full rounded-md text-white select-none whitespace-nowrap flex items-center justify-center"
+                            onclick="confirmModel()"
+                          >
+                            <div class="box-content h-[1.7] w-[1.7vh]">
+                              <img
+                                src="img/cart.png"
+                                class="box-content h-[1.5] w-[1.5vh] mb-[0.2vh]"
+                              />
+                            </div>
+                          </button>
+                        </div>
+                        <div class="bg-black/[0.5] rounded-lg w-fit p-[1vh]">
+                          <div class="text-center">เคียว (0/2)</div>
+                          <div class="flex justify-center mx-1">
+                            <div class="box-content w-[9vh] h-[9vh]">
+                              <img
+                                src="img/sickle.png"
+                                class="w-[9vh] h-[9vh]"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="mx-auto w-full h-[0.09vh] bg-gray-400 rounded-full"
+                          ></div>
+                          <div class="text-[1.6vh] text-center">1,000 CC</div>
+                          <button
+                            class="btn-3d my-btn-class-32 h-[2.3vh] w-full rounded-md text-white select-none whitespace-nowrap flex items-center justify-center"
+                            onclick="confirmModel()"
+                          >
+                            <div class="box-content h-[1.7] w-[1.7vh]">
+                              <img
+                                src="img/cart.png"
+                                class="box-content h-[1.5] w-[1.5vh] mb-[0.2vh]"
+                              />
+                            </div>
+                          </button>
+                        </div>
+                      </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute">
+        <div id="topup-container" class="relative"></div>
+      </div>
+      <div
+        class="absolute p-[1.5vh] bg-black/[0.5] text-white rounded-[1vh]"
+        style="display: none"
+        id="qrCodeContainer"
+      >
+        <div class="flex flex-col justify-center items-center">
+          <div id="qr-code"></div>
+          <div id="qr-text"></div>
+          <button
+            class="btn-3d-cancle h-[2.5vh] px-[1vh]"
+            onclick="closeGenerateQRCode()"
+          >
+            <span class="mb-[0.3vh]">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="app.js"></script>

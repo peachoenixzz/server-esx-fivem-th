@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+
+      body {
+        display: none;
+      }
+
+      .bg-cloud {
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 204, 0, 0.9),
+            rgba(255, 168, 0, 0.85)
+          ),
+          url("img/cloud_texture2.png");
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="fixed bottom-0 left-0 right-0 container bg-cloud rounded-t-lg mx-auto w-[35vh]"
+      id="process"
+    >
+      <div class="flex mt-2">
+        <div class="w-[49.6%] flex justify-center">
+          <div class="grid grid-rows w-full" id="base-items">
+            <!-- <div
+              class="flex items-center justify-between text-[1.2vh] text-white mb-2 mx-2"
+            >
+              <div class="box-content  w-[2.5vh] h-[2.5vh] rounded "><img src="img/stone.png"></div>
+              <div class="w-[48%]">แร่เหล็กดำ</div>
+              <div class="bg-black/[0.5] rounded w-[2.8vh] text-center">25</div>
+            </div> -->
+
+            <!--            <div-->
+            <!--              class="flex items-center justify-between text-[1.2vh] text-white mb-2 mx-2"-->
+            <!--            >-->
+            <!--              <div class="box-content w-[2.5vh] h-[2.5vh] rounded">-->
+            <!--                <img src="img/stone.png" />-->
+            <!--              </div>-->
+            <!--              <div class="w-[48%]">หิน</div>-->
+            <!--              <div class="bg-black/[0.5] rounded w-[2.8vh] text-center">25</div>-->
+            <!--            </div>-->
+
+            <!-- <div
+              class="flex items-center justify-between text-[1.2vh] text-white mb-2 mx-2"
+            >
+            <div class="box-content  w-[2.5vh] h-[2.5vh] rounded "><img src="img/stone.png"></div>
+              <div class="w-[48%]">แร่เหล็กดำ</div>
+              <div class="bg-black/[0.5] rounded w-[2.8vh] text-center">25</div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="w-[0.8%] flex justify-center items-center">
+          <div
+            class="box-content bg-black/[0.6] h-[90%] w-[100%] rounded-lg"
+          ></div>
+        </div>
+        <div class="w-[49.6%] flex justify-center">
+          <div class="grid grid-rows w-full">
+            <div id="process-items"></div>
+            <div id="bonus-items"></div>
+          </div>
+        </div>
+      </div>
+      <!--      <div class="container w-full bg-[#519188] h-[0.3vh]">-->
+      <!--        <div id="progress" class="w-[0%] bg-black h-[0.3vh]"></div>-->
+      <!--      </div>-->
+    </div>
+  </body>
+
+  <script>
+    // const progress = document.getElementById("progress");
+    // let width = 0;
+    //
+    // setInterval(() => {
+    //   if (width < 100) {
+    //     width += 33.33;
+    //     if (width > 100) {
+    //       width = 100;
+    //     }
+    //     progress.style.width = `${width}%`;
+    //   }
+    // }, 1000);
+  </script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</html>

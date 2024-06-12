@@ -1,0 +1,44 @@
+    -- 03/04/24 14:28:59
+    {
+		coords = vec3(186.979492, -932.422608, 29.713804),
+		heading = 55.999996185302,
+		model = 1783728142,
+		spawn = true,
+		texture = 0,
+		type = "normal",
+		smallBlind = 50,
+	},
+
+    -- 03/04/24 14:40:39
+    {
+		coords = vec3(187.164002, -932.248292, 29.713804),
+		heading = 55.999996185302,
+		model = 1783728142,
+		spawn = true,
+		texture = 1,
+		type = "normal",
+		smallBlind = 50,
+	},
+
+    -- 03/04/24 14:41:02
+    {
+		coords = vec3(178.966354, -926.367004, 29.712888),
+		heading = 55.499996185302,
+		model = 1783728142,
+		spawn = true,
+		texture = 1,
+		type = "normal",
+		smallBlind = 50,
+	},
+
+    -- 03/04/24 14:41:43
+    {
+		coords = vec3(171.167756, -921.065490, 29.712888),
+		heading = 55.499996185302,
+		model = 1783728142,
+		spawn = true,
+		texture = 1,
+		type = "normal",
+		smallBlind = 50,
+	},
+

@@ -1,0 +1,24 @@
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>map1.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames>
+    <Item>c:\users\sompo\onedrive\desktop\ลอยกระทง\prop บ้านทรงไทย\thai_garden.ytyp</Item>
+    <Item>c:\users\sompo\onedrive\desktop\ลอยกระทง\prop บ้านทรงไทย\thai_house.ytyp</Item>
+  </YtypFilenames>
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+  <YdrFilenames>
+    <Item>c:\users\sompo\onedrive\desktop\ลอยกระทง\prop บ้านทรงไทย\thai_garden.ydr</Item>
+    <Item>c:\users\sompo\onedrive\desktop\ลอยกระทง\prop บ้านทรงไทย\thai_house.ydr</Item>
+  </YdrFilenames>
+  <YddFilenames />
+  <YftFilenames />
+  <YtdFilenames />
+</CodeWalkerProject>

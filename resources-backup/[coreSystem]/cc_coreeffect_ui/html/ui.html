@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+
+      /* body {
+        display: none;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <div class="fixed bottom-0 left-0 ml-[8.5vh] mb-[3vh]">
+      <div class="flex mb-[0.35vh]" id="main-debuff">
+        <!--          <div-->
+        <!--                  class="box-content bg-black/[0.5] w-[3vh] h-[3vh] rounded-lg relative flex items-center justify-center"-->
+        <!--                  style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7)"-->
+        <!--          >-->
+        <!--            <div-->
+        <!--                    class="bg-gradient-to-b from-[#7b7836] to-[#66652a] h-[100%] rounded-lg absolute bottom-0 left-0 right-0 z-10 smooth-height"-->
+        <!--                    id="#"-->
+        <!--            ></div>-->
+        <!--            <img src="img/poison.png" class="relative z-20 w-[2vh] h-[2vh]" />-->
+        <!--          </div>-->
+
+        <!--          <div-->
+        <!--                  class="box-content bg-black/[0.5] w-[3vh] h-[3vh] rounded-lg ml-1 relative flex items-center justify-center"-->
+        <!--                  style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7)"-->
+        <!--          >-->
+        <!--            <div-->
+        <!--                    class="bg-gradient-to-b from-[#8d3f3f] to-[#69252a] h-[100%] rounded-lg absolute bottom-0 left-0 right-0 z-10 smooth-height"-->
+        <!--                    id="#"-->
+        <!--            ></div>-->
+        <!--            <img src="img/bleeding.png" class="relative z-20 w-[2vh] h-[2vh]" />-->
+        <!--          </div>-->
+
+        <!--          <div-->
+        <!--                  class="box-content bg-black/[0.5] w-[3vh] h-[3vh] rounded-lg ml-1 relative flex items-center justify-center"-->
+        <!--                  style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7)"-->
+        <!--          >-->
+        <!--            <div-->
+        <!--                    class="bg-gradient-to-b from-[#8c6c54] to-[#6c4d30] h-[100%] rounded-lg absolute bottom-0 left-0 right-0 z-10 smooth-height"-->
+        <!--                    id="#"-->
+        <!--            ></div>-->
+        <!--            <img src="img/hunger.png" class="relative z-20 w-[2vh] h-[2vh]" />-->
+        <!--          </div>-->
+      </div>
+      <div class="flex h-[3vh]"></div>
+    </div>
+    <div class="px-5 absolute right-0 mb-5 bottom-0 text-white text-[1.3vh]">
+      <div class="flex flex-col-reverse text-[1.3vh]" id="main-effect">
+        <div class="flex justify-end">
+          <div
+            class="block-content bg-black/[0.5] px-2 mt-1.5 rounded flex items-center"
+            style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7)"
+          >
+            <div id="datezone">loading brain...</div>
+            <img src="img/clock.png" class="w-[1.3vh] h-[1.3vh] mx-2" />
+            <div id="timezone">loading brain...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/app.js"></script>

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/web/build/static/css/main.e51e8bb5.css",
+    "main.js": "/web/build/static/js/main.4ebcb30f.js",
+    "static/media/thecircle_logo.png": "/web/build/static/media/thecircle_logo.6fc405c65033aab6168f.png",
+    "index.html": "/web/build/index.html",
+    "main.e51e8bb5.css.map": "/web/build/static/css/main.e51e8bb5.css.map",
+    "main.4ebcb30f.js.map": "/web/build/static/js/main.4ebcb30f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e51e8bb5.css",
+    "static/js/main.4ebcb30f.js"
+  ]
+}

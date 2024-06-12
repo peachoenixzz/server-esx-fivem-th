@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/web/build/static/css/main.d572b88f.css",
+    "main.js": "/web/build/static/js/main.5097ca5c.js",
+    "static/media/main_container.png": "/web/build/static/media/main_container.7619ad8a4f12252812bd.png",
+    "static/media/logo_border.png": "/web/build/static/media/logo_border.0f574b0c6d4d6362c5f3.png",
+    "static/media/dragon-head.png": "/web/build/static/media/dragon-head.bc95517c4c7ac21d6964.png",
+    "static/media/button.png": "/web/build/static/media/button.db22dc065695faefa8e2.png",
+    "static/media/point.png": "/web/build/static/media/point.c8c39e8e70e6556a7f24.png",
+    "static/media/item_border.png": "/web/build/static/media/item_border.bb415c5de297d06b16f1.png",
+    "static/media/gold-coin.png": "/web/build/static/media/gold-coin.3b9afdf1788bfbf07edb.png",
+    "static/media/close_1.png": "/web/build/static/media/close_1.12026b4cb826344ae316.png",
+    "static/media/trolley.png": "/web/build/static/media/trolley.3b52c0938fc0795ecaa9.png",
+    "index.html": "/web/build/index.html",
+    "main.d572b88f.css.map": "/web/build/static/css/main.d572b88f.css.map",
+    "main.5097ca5c.js.map": "/web/build/static/js/main.5097ca5c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d572b88f.css",
+    "static/js/main.5097ca5c.js"
+  ]
+}

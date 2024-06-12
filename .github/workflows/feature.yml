@@ -1,0 +1,30 @@
+name: Deploy to Server Feature
+
+on:
+  push:
+    branches:
+      - feature
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Get the folder names from the last commit
+        run: git diff-tree --no-commit-id --name-only -r HEAD | awk -F '/' '{print $(NF-1)}'
+      - name: Write SSH keys
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          host='103.212.181.83'
+          hosts="$(dig +short "$host" | grep -v '\.$' | sed -z 's|\n|,|g')$host"
+          ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
+      - name: Deploy to Server
+        run: |
+          ssh -i ~/.ssh/id_rsa fivem-server@103.212.181.83 "bash /home/fivem-server/fivem-resource/deploy-feature.sh"

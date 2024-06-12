@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/723d9b901d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div style="display: flex; justify-content: center">
+      <div
+        style="
+          display: grid;
+          gap: 6vh;
+          width: fit-content;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          margin-top: 1%;
+        "
+      >
+        <div class="board-people">
+          <div
+            class="main-people"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: end;
+              padding-right: 1vh;
+              box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+            "
+          >
+            <img
+              src="img/stage-airdrop.png"
+              style="
+                height: 10vh;
+                width: 10vh;
+                position: absolute;
+                right: 11.5vh;
+              "
+            />
+            <div style="z-index: 10">
+              <div
+                style="text-align: center; font-size: 1.5vh; font-weight: bold"
+              >
+                STAGE AIRDROP
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  line-height: 0.7vh;
+                  font-size: 1.2vh;
+                  font-weight: bold;
+                "
+              >
+                - ประชาชน -
+              </div>
+              <div
+                id="time-people"
+                style="
+                  text-align: center;
+                  font-size: 2vh;
+                  line-height: 2.2vh;
+                  font-weight: bold;
+                "
+              >
+                05:00
+              </div>
+              <div
+                id="text-people"
+                style="text-align: center; font-size: 1.2vh; font-weight: bold"
+              >
+                พิมพ์ <span style="color: black">/sad</span> เพื่อเข้าร่วม
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="board-family">
+          <div
+            class="main-family"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: end;
+              padding-right: 1vh;
+              box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+            "
+          >
+            <img
+              src="img/stage-airdrop.png"
+              style="
+                height: 10vh;
+                width: 10vh;
+                position: absolute;
+                right: 11.5vh;
+              "
+            />
+            <div style="z-index: 10">
+              <div
+                style="text-align: center; font-size: 1.5vh; font-weight: bold"
+              >
+                STAGE AIRDROP
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  line-height: 0.7vh;
+                  font-size: 1.2vh;
+                  font-weight: bold;
+                "
+              >
+                - ครอบครัว -
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  font-size: 2vh;
+                  line-height: 2.2vh;
+                  font-weight: bold;
+                "
+                id="time-family"
+              >
+                05:00
+              </div>
+              <div
+                style="text-align: center; font-size: 1.2vh; font-weight: bold"
+                id="text-family"
+              >
+                พิมพ์ <span style="color: black">/sad</span> เพื่อเข้าร่วม
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="board-gang">
+          <div class="main-gang">
+            <img
+              src="img/stage-airdrop.png"
+              style="
+                height: 10vh;
+                width: 10vh;
+                position: absolute;
+                right: 11.5vh;
+              "
+            />
+            <div style="z-index: 10">
+              <div
+                style="text-align: center; font-size: 1.5vh; font-weight: bold"
+              >
+                STAGE AIRDROP
+              </div>
+              <div
+                style="
+                  text-align: center;
+                  line-height: 0.7vh;
+                  font-size: 1.2vh;
+                  font-weight: bold;
+                "
+              >
+                - แก๊ง -
+              </div>
+              <div
+                id="time-gang"
+                style="
+                  text-align: center;
+                  font-size: 2vh;
+                  line-height: 2.2vh;
+                  font-weight: bold;
+                "
+              >
+                05:00
+              </div>
+              <div
+                id="text-gang"
+                style="text-align: center; font-size: 1.2vh; font-weight: bold"
+              >
+                พิมพ์ <span style="color: black">/sad</span> เพื่อเข้าร่วม
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="board-gang">
+      <div class="main-gang">
+        <img
+          src="img/stage-airdrop.png"
+          style="height: 12vh; width: 12vh; position: absolute; right: 13vh"
+        />
+        <div style="z-index: 10">
+          <div style="text-align: center; font-size: 1.8vh; font-weight: bold">
+            STAGE AIRDROP
+          </div>
+          <div
+            style="
+              text-align: center;
+              line-height: 1vh;
+              font-size: 1.5vh;
+              font-weight: bold;
+            "
+          >
+            - แก๊ง -
+          </div>
+          <div
+            id="time-gang"
+            style="
+              text-align: center;
+              font-size: 2.5vh;
+              line-height: 2.8vh;
+              font-weight: bold;
+            "
+          >
+            05:00
+          </div>
+          <div
+            id="text-gang"
+            style="text-align: center; font-size: 1.3vh; font-weight: bold"
+          >
+            พิมพ์ <span style="color: black">/sad</span> เพื่อเข้าร่วม
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="board-people"> -->
+    <!-- <div
+        class="grid"
+        style="display: flex; align-items: center; justify-content: center"
+      >
+        <img src="img/airdrop_1.png" style="height: 50px; width: 50px" />
+      </div>
+     
+      <p class="text-air">STAGE AIRDROP: CITIZEN</p>
+      <p class="textseccond" id="text-people">
+        พิมพ์ <span style="color: #ffcc00">/sad</span> เพื่อเข้าร่วมภายใน 5 นาที
+      </p>
+      <div style="display: flex; align-items: center; font-size: 25px">
+        <i class="bx bx-loader-circle bx-spin bx-flip-horizontal"></i>
+        <h4 class="timetext" id="time-people">04 : 35</h4>
+      </div> -->
+    <!-- <div class="board-gang">
+      <div
+        class="grid-gang"
+        style="display: flex; align-items: center; justify-content: center"
+      >
+        <img src="img/airdrop_1.png" style="height: 50px; width: 50px" />
+      </div> -->
+    <!-- <div class="left-border">
+            <i class="fas fa-info-circle"></i>
+        </div> -->
+    <!-- <p class="text-air">STAGE AIRDROP: GANG</p>
+      <p class="textseccond" id="text-gang">
+        พิมพ์ <span style="color: red">/sad</span> เพื่อเข้าร่วมภายใน 5 นาที
+      </p>
+      <div style="display: flex; align-items: center; font-size: 25px">
+        <i class="bx bx-loader-circle bx-spin bx-flip-horizontal"></i>
+        <h4 class="timetext" id="time-gang">04 : 35</h4>
+      </div>
+    </div> -->
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        #mina {
+            display: none;
+            overflow: hidden;
+        }
+		
+		@-webkit-keyframes glow {
+		  from {
+			text-shadow: 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000;
+		  }
+		  to {
+			text-shadow: 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000;
+		  }
+		}
+		
+		.glow {
+		  color: #fff;
+		  -moz-animation: glow 1s ease-in-out infinite alternate;
+		  animation: glow 1s ease-in-out infinite alternate;
+		}
+    </style>
+	
+</head>
+
+<body style="font-family: 'Kanit', sans-serif;">
+
+
+    <!--
+    <div id="mina">
+        <div id="pbar_outerdiv" style="margin-top: 45.5%; left: 42.5%; background-color: rgba(0,0,0,0.25); width: 15%; height: 30px; z-index: 1; position: relative;">
+            <div id="pbar_innerdiv" style="background-color: rgba(0, 161, 255, 0.95); z-index: 2; height: 100%; width: 0%;"></div>
+            <div id="pbar_innertext" style="color: white; z-index: 3; position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-weight: bold; text-align: center; font-family: 'Baloo Bhai', cursive; margin-top: 2px;">0%</div>
+        </div>
+    </div>
+	-->
+
+    <div id="mina" class="row" style="margin-top: 20%;margin-right: 85%;">
+        <center>
+            <div class="first circle col-lg-4">
+                  <span id="textCircle" class="glow" style="font-size: 15px; color: white;">animation <br/> progress</span>
+                
+            </div>
+        </center>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="circle-progress.js"></script>
+    <script>
+        $(function() {
+            window.onload = (e) => {
+                window.addEventListener('message', (event) => {
+                    var item = event.data;
+                    if (item !== undefined && item.type === "ui") {
+                        if (item.display === true) {
+                            $("#mina").show();
+                            console.log("starting this shit!");
+                            var start = new Date();
+                            var maxTime = item.time;
+                            var text = item.text;
+                            var timeoutVal = Math.floor(maxTime / 100);
+                            animateUpdate();
+
+                            $('#textCircle').text(text);
+
+
+
+                            /*
+                            $('#pbar_innertext').text(text);
+
+                            function updateProgress(percentage) {
+                                $('#pbar_innerdiv').css("width", percentage + "%");
+                            }
+							*/
+
+
+                            function animateUpdate() {
+                                var now = new Date();
+                                var timeDiff = now.getTime() - start.getTime();
+                                var perc = Math.round((timeDiff / maxTime) * 100);
+                                var perc2 = perc / 100;
+                                console.log(perc);
+                                if (perc <= 100) {
+                                    $('.first.circle').circleProgress({
+                                        value: perc2,
+                                        animation: false,
+                                        fill: {
+                                            gradient: ['#ffffff', '#ffffff']
+                                        }
+                                    });
+                                    $('#percent').html("<strong style='color:#fff'>" + perc + '<i>%</i></strong>');
+
+
+                                    setTimeout(animateUpdate, timeoutVal);
+                                } else {
+                                    $("#mina").hide();
+                                }
+                            }
+
+
+
+
+                        } else {
+                            $("#mina").hide();
+                        }
+                    }
+                });
+            };
+        });
+    </script>
+
+</body>
+
+</html>

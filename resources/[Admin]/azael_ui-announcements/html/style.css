@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+}
+.container {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  top: 3%;
+  color: rgb(240, 248, 255);
+  font-size: 1.125em;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: "Kanit", sans-serif;
+}
+.container-inner {
+  display: table;
+  margin: 0px auto;
+}
+.container-wrap {
+  display: flex;
+  align-items: center;
+}
+.container-wrap img {
+  display: block;
+  width: 3.5vh;
+  height: 3.5vh;
+  margin-bottom: 0.5vh;
+  margin-right: -2vh;
+  z-index: 2000;
+  background: #a751f7;
+  border-radius: 20vh;
+  box-shadow: 0 0 3vh #bc13fe;
+}
+.message-auto-announce,
+.message-admin-announce {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 204, 0, 0.5),
+    rgba(255, 168, 0, 0.5)
+  );
+  padding: 0.7vh 3vh;
+  margin-bottom: 0.6vh;
+  width: 100%;
+  border-radius: 1vh;
+  /* border-left: 0.4vh solid #f7b751;
+  border-right: 0.4vh solid #f7b751; */
+  box-shadow: 0 0 1.2vh rgba(0, 0, 0, 0.7) !important;
+}
+.message-auto-announce .head-auto-announce {
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+}
+.message-admin-announce .head-admin-announce {
+  color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+}

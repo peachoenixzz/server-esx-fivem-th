@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Sarabun");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+* {
+  color: white;
+  font-family: "Kanit", sans-serif;
+}
+:root {
+  --main1: rgb(255, 204, 0);
+  --main-ppl: rgba(211, 152, 23, 0.8);
+  --main-gang: rgba(168, 17, 14, 0.8);
+  --time-gang: rgb(197, 30, 27);
+  --time-ppl: rgb(255, 204, 0);
+}
+
+/* .board-gang {
+  position: absolute;
+  top: 64.2%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: rgba(19, 19, 19, 0.5);
+  height: 65px;
+  border-radius: 5px;
+  width: 233px;
+  display: none;
+  z-index: 50;
+  overflow: hidden;
+  margin-top: 10vh;
+  padding-left: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+}
+
+.board-people {
+  position: absolute;
+  top: 57%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: rgba(19, 19, 19, 0.5);
+  height: 65px;
+  border-radius: 5px;
+  width: 233px;
+  display: none;
+  z-index: 50;
+  overflow: hidden;
+  margin-top: 10vh;
+  padding-left: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+} */
+.board-gang {
+  display: none;
+}
+
+.board-people {
+  display: none;
+}
+
+.board-family {
+  display: none;
+}
+
+.left-border {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  /* background: linear-gradient(90deg, rgba(51, 116, 229, 1) 0%, rgba(15, 47, 105, 1) 100%); */
+  background: linear-gradient(
+    5deg,
+    rgba(15, 118, 110, 1),
+    rgb(22, 150, 135),
+    rgba(20, 184, 166, 1)
+  );
+}
+
+.fas.fa-info-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.timetext {
+  /* position: absolute; */
+  font-size: 20px;
+  /* font-weight: bold; */
+  top: 21px;
+  line-height: 10px;
+  /* right: 38px; */
+  /* text-align: left; */
+  margin: 0px 0px 0px 5px;
+}
+.text-air i {
+  font-size: 14px;
+  margin-right: 5px;
+  color: var(--main1);
+}
+
+.text-air {
+  /* position: absolute; */
+  font-size: 15px;
+  font-weight: bold;
+  height: 20px;
+  top: -16px;
+  right: 51px;
+  text-align: left;
+  margin: 0px;
+  color: #fff;
+}
+
+.textseccond {
+  /* position: absolute; */
+  font-size: 11px;
+  font-weight: bold;
+  height: 18px;
+  top: 13px;
+  /* right: 33px; */
+  text-align: left;
+  margin: 0px;
+}
+
+.timetextcolor-gang {
+  font-weight: bold;
+  color: var(--time-gang);
+}
+
+.timetextcolor-ppl {
+  font-weight: bold;
+  color: var(--main-ppl);
+}
+
+.grid {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  border-radius: 0 5px 5px 0;
+  z-index: -1;
+  width: 65px;
+  height: 65px;
+  background: var(--main-ppl);
+  /* clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%); */
+  overflow: hidden;
+}
+
+.grid-gang {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  border-radius: 0 5px 5px 0;
+  z-index: -1;
+  width: 65px;
+  height: 65px;
+  background: var(--main-gang);
+
+  overflow: hidden;
+}
+
+.texttt {
+  margin-top: -6px;
+  margin-left: 1px;
+  font-size: 18px;
+  transform: rotate(-30deg);
+  color: rgba(255, 255, 255, 0.432);
+  font-weight: 700;
+}
+.main-people {
+  position: relative;
+  width: 18vh;
+  border-radius: 0.5vh;
+  background: linear-gradient(
+    to right,
+    rgba(255, 204, 0, 0.2),
+    rgba(255, 204, 0, 0.8)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 1vh;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+.main-family {
+  position: relative;
+  width: 18vh;
+  border-radius: 0.5vh;
+  background: linear-gradient(
+    to right,
+    rgba(41, 194, 250, 0.5),
+    rgba(0, 34, 255, 0.5)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 1vh;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+.main-gang {
+  position: relative;
+  width: 18vh;
+  border-radius: 0.5vh;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.2),
+    rgba(255, 0, 0, 0.8)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 1vh;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}

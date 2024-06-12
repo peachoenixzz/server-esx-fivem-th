@@ -1,0 +1,46 @@
+<<<<<<< HEAD
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>map_trunk.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames />
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+  <YdrFilenames />
+  <YddFilenames />
+  <YftFilenames />
+  <YtdFilenames />
+=======
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+<<<<<<< HEAD:resources/[Map_C]/cc_map_trunk/stream/map_trunk.cwproj
+    <Item>map_trunk.ymap</Item>
+=======
+<<<<<<< HEAD
+    <Item>cc_tent_map.ymap</Item>
+=======
+    <Item>map1.ymap</Item>
+>>>>>>> 2a76d263b20ae2c64440451b863689a2a8b4a440
+>>>>>>> 39fe90589b54a52b6969dafb67a8cb29a679b8c6:resources/[Map_C]/cc_tent_map/stream/cc_tent_map.cwproj
+  </YmapFilenames>
+  <YtypFilenames />
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+  <YdrFilenames />
+  <YddFilenames />
+  <YftFilenames />
+  <YtdFilenames />
+>>>>>>> d421e71ceea2ae3d095ba085af00cf5b72b35bf6
+</CodeWalkerProject>

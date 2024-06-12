@@ -1,0 +1,31 @@
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>tops_warzone1.ymap</Item>
+    <Item>tops_warzone2.ymap</Item>
+    <Item>tops_warzone3.ymap</Item>
+    <Item>tops_warzone4.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames>
+    <Item>tops_warzone.ytyp</Item>
+  </YtypFilenames>
+  <YbnFilenames>
+    <Item>tops_warzone_col001.ybn</Item>
+    <Item>tops_warzone_col002.ybn</Item>
+    <Item>tops_warzone_col003.ybn</Item>
+  </YbnFilenames>
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+  <YdrFilenames>
+    <Item>tops_warzone.ydr</Item>
+  </YdrFilenames>
+  <YddFilenames />
+  <YftFilenames />
+  <YtdFilenames>
+    <Item>tops_warzone.ytd</Item>
+  </YtdFilenames>
+</CodeWalkerProject>

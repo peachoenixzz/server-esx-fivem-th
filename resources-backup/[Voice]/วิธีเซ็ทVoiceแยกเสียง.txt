@@ -1,0 +1,15 @@
+﻿นำโค๊ด ส่วนนี้ไป เพิ่ม ใน server.cfg ของเครื่องหลัก
+
+#Voice system
+setr voice_useNativeAudio true
+setr voice_useSendingRangeOnly true
+setr voice_defaultCycle "z"
+setr voice_enableSubmix 1
+setr voice_enableRadioAnim 1
+setr voice_defaultRadio "LMENU"
+setr voice_defaultVolume "0.6"
+setr voice_syncData 1
+setr voice_externalAddress "IP เครื่องที่ รันเสียงแยก"
+setr voice_externalPort 30130  --# ตั้ง Port ที่จะใช้เชื่อม ให้ตรงกับเครื่อง ที่รับเสียง
+
+นำไล์ Voice ไป รันไว้ใน เครื่องที่รับ เสียง จากนั้น การทำ Forward Port allPort ของเครื่อง ที่รับเสียง

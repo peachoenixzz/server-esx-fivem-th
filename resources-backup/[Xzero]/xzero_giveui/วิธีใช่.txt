@@ -1,0 +1,11 @@
+# วิธีการเชื่อม GiveUI
+- ขั้นตอนที่ 1
++ เปิดไฟล์ esx_inventoryhud/__resource.lua
+ในส่วน client_scripts ให้เพิ่ม '@xzero_giveui/export/giveui.lua' ลงไปต่อท้าย
+# ตัวอย่างการเพิ่มสามารถดูได้ในรูปภาพด้านล่าง
+
+- ขั้นตอนที่ 2
++ เปิดไฟล์ esx_inventoryhud/client/main.lua
+- ค้นหา TriggerServerEvent("esx:giveInventoryItem"
++ แล้วเพิ่ม TriggerEvent('xzero_giveui:client:On_GiveItem', data) เอาไว้ด้านบน
+# ตัวอย่างการเพิ่มสามารถดูได้ในรูปภาพด้านล่าง

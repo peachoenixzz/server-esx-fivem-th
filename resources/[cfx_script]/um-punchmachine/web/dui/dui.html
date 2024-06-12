@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UM - PunchMachine | Dui</title>
+    <style>.totalscore,body{position:absolute;text-align:center}@font-face{font-family:digitalFont;src:url(../assets/digital.ttf)}body{margin:0;padding:0;box-sizing:border-box;top:47%;left:40%}.totalscore{right:10vh;bottom:8vh;background:#000;width:60vh;height:28vh}.totalscore span{font-family:digitalFont;font-size:35vh;color:#c01111}</style>
+</head>
+<body>
+    <div class="totalscore">
+        <span id="score">100</span>
+    </div>
+    <script>
+      const increment=(e,t,n)=>{let s=parseInt(document.getElementById("score").innerText,10);s<t?(s++,document.getElementById("score").innerText=s,setTimeout(()=>{increment(e,t)},5)):setTimeout(()=>{postFetch("exitdui")},2e3)},postFetch=(e,t)=>{fetch(`https://um-punchmachine/${e}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({load:t})})};window.addEventListener("message",e=>{let t=e.data;"totalscore"===t.status&&increment(100,t.score)});
+    </script>
+</body>
+</html>

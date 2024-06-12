@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+* {
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+.board {
+    position: absolute;
+    left: 2%;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 14vh;
+    border-radius: 1vh;
+    width: 37vh;
+    display: none;
+    z-index: 50;
+    overflow: hidden;
+    box-shadow: 0vh 0vh 0.5vh 0vh #000;
+}
+
+#JSBOX {
+    position: absolute;
+    width: 35vh;
+    height: 12vh;
+    left: 1vh;
+    top: 1vh;
+    border-radius: 0.5vh;
+    background: rgba(0,0,0,0.5);
+}
+
+#headtext {
+    position: absolute;
+    width: 20vh;
+    height: 2vh;
+    top: 1vh;
+    left: 1vh;
+    line-height: 2vh;
+    color: #ffbd03;
+    font-size: 2.5vh;
+    text-align: left;
+}
+
+#Boxtime {
+    position: absolute;
+    width: 33vh;
+    height: 4vh;
+    left: 1vh;
+    bottom: 1vh;
+    border-radius: 0.4vh;
+    background: rgb(0,0,0,0.3);
+}
+
+#Time {
+    width: 100%;
+    height: 100%;
+    font-size: 2.5vh;
+    line-height: 4vh;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+#textmin {
+    color: red;
+    font-weight: 600;
+}
+
+#textsec {
+    color: red;
+    font-weight: 600;
+}
+
+#smalltext {
+    position: absolute;
+    width: 25vh;
+    height: 2vh;
+    line-height: 2vh;
+    color: white;
+    top: 4vh;
+    left: 1vh;
+    font-size: 1.5vh;
+    text-align: left;
+}
+
+#JSBoxlogo {
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    right: 1vh;
+    top: 1vh;
+    border-radius: 0.5vh;
+    background: rgba(0,0,0,0.3);
+}
+
+#icon {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    top: 0.5vh;
+    left: 0.5vh;
+    background-image: url(img/Logo.png);
+    background-size: cover;
+    animation: 3s ease 0s infinite normal none running LogoRotate;
+}
+
+@keyframes LogoRotate { 
+  0% { transform: rotate(-360deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

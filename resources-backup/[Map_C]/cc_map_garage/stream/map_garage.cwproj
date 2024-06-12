@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>map_garage.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames>
+    <Item>process_pork\v_int_11.ytyp</Item>
+    <Item>prop\ytyp\slochar_prop.ytyp</Item>
+  </YtypFilenames>
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+  <YdrFilenames>
+    <Item>prop\ydr\slochar_advert.ydr</Item>
+  </YdrFilenames>
+  <YddFilenames />
+  <YftFilenames />
+  <YtdFilenames />
+=======
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>map_garage.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames>
+    <Item>process_pork\v_int_11.ytyp</Item>
+    <Item>prop\ytyp\slochar_prop.ytyp</Item>
+  </YtypFilenames>
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+  <YdrFilenames>
+    <Item>prop\ydr\slochar_advert.ydr</Item>
+  </YdrFilenames>
+  <YddFilenames />
+  <YftFilenames />
+  <YtdFilenames />
+>>>>>>> d421e71ceea2ae3d095ba085af00cf5b72b35bf6
+</CodeWalkerProject>

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Mitr");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Sarabun");
+
+html,
+body {  
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  color: rgb(255, 255, 255);   /* สีตัวหนังสือ */
+  background-color: #00000000;
+  font-family: 'Prompt', sans-serif;
+}
+#body {
+  display: block;
+}
+ 
+.bg-container {     /* ทั้งจอ */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: -15%;
+}
+
+.displayzc {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 465px;
+  padding: 10px;
+  background-color: #000000c4;
+  align-items: center;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, #a43ad5, #3a56d5);
+}
+#maintext {
+  padding: 5px;
+}
+#maintext2 {
+  /* padding: 5px; */
+  position: absolute;
+}
+.colortext{
+  color: #45c6f1;
+}
+button {
+  color: #6f00ff;
+  border: 0px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}

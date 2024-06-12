@@ -1,0 +1,54 @@
+/* Tailwind utility classes may not cover all custom styles, so add them here */
+.hex-item {
+    position: relative;
+    width: 100px; /* Adjust the size of hexagons */
+    height: 115px;
+    background-color: rgba(0, 0, 0, 0.8); /* Golden background */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the shine effect doesn't overflow the hex shape */
+    font-weight : 500;
+    transition: background-color 0.3s;
+    margin-top:-30px;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+}
+
+
+.hex-item:hover {
+    background-color: #ffba00;
+    transition: background-color 0.3s;
+}
+
+.hex-content {
+    background: rgb(121,102,58);
+    background: linear-gradient(0deg, rgba(203, 164, 64, 0.4) 0%, rgba(0, 0, 0, 0.68) 67%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-top:-10px;
+    transition: background-color 0.3s;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 650px; /* Adjust as needed */
+    margin-bottom:40px;
+}
+

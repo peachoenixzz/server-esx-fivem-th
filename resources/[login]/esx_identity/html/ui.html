@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+      body {
+        display: none;
+      }
+
+      ::-webkit-scrollbar-track {
+        /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      ::-webkit-scrollbar {
+        width: 0.55vh;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #ffcc00;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      .bg-gradient {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 204, 0, 0.5),
+          rgba(166, 106, 2, 0.5)
+        );
+      }
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      /*body {*/
+      /*  background-image: url(img/identify_screen.png);*/
+      /*  background-size: cover;*/
+      /*  background-repeat: no-repeat;*/
+      /*}*/
+    </style>
+  </head>
+
+  <body onkeydown="TriggeredKey(this)">
+    <video autoplay loop muted id="video">
+      <source src="img/v.webm" type="video/webm" />
+    </video>
+    <div class="flex justify-center items-center h-screen">
+      <div
+        class="box-content bg-black/[0.5] p-4 rounded-lg flex justify-center relative"
+      >
+        <div
+          class="absolute w-[30vh] top-[0%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+        >
+          <img
+            src="img/dragon-head.png"
+            class="object-cover h-[12vh] mb-[9.5vh] ml-[7.5vh]"
+            alt="Logo"
+          />
+          <!-- Adjust the src and class as needed -->
+        </div>
+        <form
+          id="register-circle"
+          name="register-circle"
+          action="#"
+          class="z-50"
+        >
+          <div class="flex text-white">
+            <input
+              type="text"
+              id="firstname"
+              name="#"
+              class="box-content rounded bg-black/[0.5] h-[2vh] text-center text-[1.5vh] w-[13vh] mr-2.5"
+              placeholder="FIRSTNAME"
+              minlength="2"
+              maxlength="20"
+              pattern="[a-zA-Z0-9]*"
+            />
+            <input
+              type="text"
+              id="lastname"
+              name="#"
+              class="box-content rounded bg-black/[0.5] h-[2vh] text-center text-[1.5vh] w-[13vh]"
+              placeholder="LASTNAME"
+              minlength="2"
+              maxlength="20"
+              pattern="[a-zA-Z0-9]*"
+            />
+          </div>
+
+          <div class="flex mt-2.5 text-white">
+            <input
+              datepicker
+              datepicker-format="dd/mm/yyyy"
+              type="text"
+              id="dateofbirth"
+              name="dateofbirth"
+              placeholder="วัน/เดือน/ปี"
+              class="box-content rounded bg-black/[0.5] h-[2vh] text-center text-[1.5vh] w-[13vh] mr-2.5"
+            />
+
+            <input
+              type="number"
+              id="height"
+              min="120"
+              max="220"
+              name="#"
+              class="box-content rounded bg-black/[0.5] h-[2vh] text-center text-[1.5vh] w-[13vh]"
+              placeholder="HEIGHT"
+            />
+          </div>
+
+          <div class="flex items-center justify-center mt-1.5 text-white">
+            <div
+              class="h-[0.2vh] bg-gray-400/[0.5] w-full rounded-full mx-2"
+            ></div>
+            <div>GENDER</div>
+            <div
+              class="h-[0.2vh] bg-gray-400/[0.5] w-full rounded-full mx-2"
+            ></div>
+          </div>
+
+          <div class="flex justify-center text-white mt-1.5">
+            <!-- <input
+                type="radio"
+                name="sex"
+                value="m"
+                class="hidden"
+                id="radiom"
+              />
+              <input
+                type="radio"
+                name="sex"
+                value="f"
+                class="hidden"
+                id="radiof"
+              /> -->
+
+            <label
+              value="m"
+              onclick="changeBackground(this)"
+              class="box-content rounded bg-black/[0.5] hover:bg-gradient-to-l from-[#ffa800]/[0.5] to-[#ffcc00]/[0.5] h-[2vh] text-[1.5vh] w-[9vh] flex items-center justify-center mr-2.5 cursor-pointer"
+            >
+              MALE
+            </label>
+            <label
+              value="f"
+              onclick="changeBackground(this)"
+              class="box-content rounded bg-black/[0.5] hover:bg-gradient-to-l from-[#ffa800]/[0.5] to-[#ffcc00]/[0.5] h-[2vh] text-[1.5vh] w-[9vh] flex items-center justify-center cursor-pointer"
+            >
+              FEMALE
+            </label>
+          </div>
+
+          <div class="flex justify-center text-white w-full mt-4">
+            <button
+              id="submit"
+              type="submit"
+              class="box-content rounded bg-black/[0.5] hover:bg-gradient-to-l from-[#ffa800] to-[#ffcc00] h-[2vh] text-[1.5vh] w-[13vh] flex items-center justify-center"
+            >
+              CREATE
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  function TriggeredKey(e) {
+    var keycode;
+    if (window.event) keycode = window.event.keyCode;
+    if (window.event.keyCode === 13 || window.event.keyCode === 27)
+      return false;
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/datepicker.min.js"></script>
+<script src="js/script.js"></script>

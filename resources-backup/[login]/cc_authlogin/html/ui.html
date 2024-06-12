@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="styles_tw.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-ellipsis div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #fff;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      .lds-ellipsis div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+      @keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes lds-ellipsis3 {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      @keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(24px, 0);
+        }
+      }
+      .bg-color {
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+      }
+      .bg-color:hover {
+        background-image: linear-gradient(to bottom, #ffcc00, #ffa800);
+        box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+      }
+      /*body {*/
+      /*  background-image: url(img/loading_screen.png);*/
+      /*  background-size: cover;*/
+      /*  background-repeat: no-repeat;*/
+      /*}*/
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      @keyframes rainbow-text-animation {
+        0% {
+          background-position: 10% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 10% 50%;
+        }
+      }
+      .rainbow-text {
+        background: linear-gradient(
+          90deg,
+          #f8c600,
+          #ffd500,
+          #ffe800,
+          #ffffff,
+          #ffe800,
+          #ffd500
+        );
+
+        background-size: 300% auto;
+        color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow-text-animation 5s linear infinite;
+        display: inline-block;
+      }
+
+      .tips-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #tip-content {
+        flex-grow: 1;
+        text-align: center;
+        padding: 0 20px; /* Add padding to prevent text from touching the buttons */
+      }
+
+      #prev-tip,
+      #next-tip {
+        background-image: linear-gradient(to bottom, #ffcc00, #ffa800);
+        box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 20px; /* Larger font size for arrows */
+      }
+
+      .content-container {
+        max-height: 35vh; /* Adjust the height as necessary */
+        overflow-y: auto; /* Adds a scrollbar when content overflows */
+        margin-bottom: 5px; /* Optional: adds space between the containers */
+      }
+
+      .content-container::-webkit-scrollbar {
+        width: 10px; /* Adjust the width of the scrollbar */
+      }
+
+      /* Style the scrollbar handle */
+      .content-container::-webkit-scrollbar-thumb {
+        background: #ffcc00; /* Choose a color that matches your design */
+        border-radius: 5px; /* Optional: rounds the corners of the scrollbar handle */
+      }
+
+      /* Handle on hover */
+      .content-container::-webkit-scrollbar-thumb:hover {
+        background: #ffa800; /* Darker color on hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <video autoplay loop muted id="video">
+      <source src="img/v.webm" type="video/webm" />
+    </video>
+    <!--    <img src="img/auth_dragon.png" />-->
+
+    <div class="flex flex-col items-center h-screen text-white">
+      <!--      <div class="container mx-auto p-[2vh]">-->
+      <!--        <div-->
+      <!--          class="bg-black/75 rounded-lg shadow-lg p-[3vh] text-white content-container"-->
+      <!--        >-->
+      <!--          <h2 class="text-[3vh] font-bold mb-[1.5vh] rainbow-text">-->
+      <!--            Patch Notes - วันที่ 17/01/2024 - 27/01/2024 🔥-->
+      <!--          </h2>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1vh]">-->
+      <!--            ระบบใหม่ / นำออก: 🌟-->
+      <!--          </h3>-->
+      <!--          <ul class="list-disc pl-[2vh] mb-[2vh] text-[1.2vh]">-->
+      <!--            <li>แก้ไขราคา Rare Items และ ปรับปรุงอัตราได้รับ ให้ดียิ่งขึ้น</li>-->
+      <!--            <li>นำ Rare Items เข้ามาในจุดฟาร์ม เพื่อต่อยอดการพัฒนาตัวละคร</li>-->
+      <!--            <li>เพิ่มรถใหม่ในร้านค้า</li>-->
+      <!--            <li>ลดระยะเวลา Mining ในนั่งฐาณ เป็น 10 วินาที ต่อ 1 ชิ้น</li>-->
+      <!--            <li>นำบัตรนั่งญาณ 4 ชั่วโมง ออกจาก เหรียญพลเมืองดี</li>-->
+      <!--            <li>-->
+      <!--              ทำการเพิ่มประสิทธิภาพการทำงานของทุกระบบภายในเมือง-->
+      <!--              โดยตัดความไม่จำเป็นในการเรียกใช้งาน CPU และ Memory-->
+      <!--              ของผู้เล่นออกไปหากไม่จำเป็นต้องใช้งานในระบบ-->
+      <!--            </li>-->
+      <!--          </ul>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1vh] mt-[1.5vh]">-->
+      <!--            รายการเพิ่มรถใหม่ในร้านค้า️-->
+      <!--          </h3>-->
+      <!--          <p class="text-[1.2vh]">-->
+      <!--            **Muscle (20KG)**-->
+      <!--            <br />-->
+      <!--            HotKnife : 120,000-->
+      <!--            <br />-->
+      <!--            Hermes : 100,000-->
+      <!--            <br />-->
+      <!--            Hustler : 80,000-->
+      <!--            <br />-->
+      <!--            Moonbeam : 75,000-->
+      <!--            <br />-->
+      <!--            **Motorcycle**-->
+      <!--            <br />-->
+      <!--            Veto : 95,000-->
+      <!--            <br />-->
+      <!--            Veto 2 : 135,000-->
+      <!--            <br />-->
+      <!--            Rocket : 150,000-->
+      <!--            <br />-->
+      <!--            Sovereign : 90,000 (เอาของตำรวจออก แก้ไขความเร็วเป็น default)-->
+      <!--            <br />-->
+      <!--            Blazer 3 : 180,000-->
+      <!--          </p>-->
+
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1vh] mt-[1.5vh]">-->
+      <!--            แก้ไขบัค: 🛠️-->
+      <!--          </h3>-->
+      <!--          <ul class="list-disc pl-[2vh] mb-[2vh] text-[1.2vh]">-->
+      <!--            <li>ไม่มีอัพเดตในรอบนี้</li>-->
+      <!--          </ul>-->
+      <!--        </div>-->
+
+      <!--        <div-->
+      <!--          class="bg-black/75 rounded-[1vh] shadow-lg p-[3vh] text-white mt-[3vh] content-container"-->
+      <!--        >-->
+      <!--          <h2 class="text-[3vh] font-bold mb-[1.5vh] rainbow-text">-->
+      <!--            กิจกรรม / โปรโมชั่น ที่ดำเนินอยู่ 🧚‍-->
+      <!--          </h2>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1vh]">-->
+      <!--            Christmas Coin มาถึงแล้ว-->
+      <!--          </h3>-->
+      <!--          <p class="text-[1.2vh]">-->
+      <!--            ขณะนี้ พ่อค้าลึกลับได้นำ Mystery Coin กลับมาแล้วในช่วงเทศกาล XMAS-->
+      <!--            จุใจจนถึง 20 Jan 2024 เพียงอันละ 10CC นำ Mystery Coin ไป-->
+      <!--            พัฒนาเป็นไอเทม Christmas Coin ได้ที่โต๊ะคราฟ และ-->
+      <!--            นำไปเปิดที่ห้องปริศนาได้ทันที ลุ้นรับไอเทมมากมาย <br />-->
+      <!--            สามารถแลกเปลี่ยนกับพ่อค้าลึกลับได้โดยการ กด F10 จนถึงวันที่ 20 Jan-->
+      <!--            2024-->
+      <!--          </p>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1vh] mt-[1.5vh]">-->
+      <!--            โปรโมชั่น พ่อค้าลึกลับใจกว้าง (20 Dec 2023 - 31 Dec 2023): 🕵️‍♀️-->
+      <!--          </h3>-->
+      <!--          <p class="text-[1.2vh]">-->
+      <!--            พ่อค้าลึกลับใจกว้าง ฉลองใกล้สิ้นปี ลดราคาทั้งร้าน 20% ยกเว้น Coin Mystery-->
+      <!--          </p>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1.5vh] mt-[1.5vh]">-->
+      <!--            เตรียมพร้อมกับกิจกรรม XMAS วันที่ 22-31 DEC 2023-->
+      <!--          </h3>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1.5vh] mt-[1.5vh]">-->
+      <!--            Unlock จุดปูนทุกจุดจนถึงสิ้นปี 🔥🔥🔥-->
+      <!--          </h3>-->
+      <!--          <p class="text-[1.2vh]">-->
+      <!--            เฮียเฉา และ Wutto รวมไปถึง Yoy ใจดีให้ทุกคนในเมืองได้ทำงานดำจกปูนอย่างจุใจสามารถทำได้ทั้งในเมืองและนอกเมือง-->
+      <!--          </p>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1.5vh] mt-[1.5vh]">-->
+      <!--            เพิ่ม สิทธิประโยชน์สำหรับ VIP ในทุกระดับขั้น-->
+      <!--          </h3>-->
+      <!--          <p class="text-[1.2vh]">-->
+      <!--            ตัวอย่างรายการ VIP Ultimate-->
+      <!--            <br />- ขาย Economy ได้ราคาเพิ่ม 10$ เป็นเวลา 30 วัน <br />- กระเป๋า-->
+      <!--            5KG เป็นเวลา 30 วัน <br />- ได้รับแต้ม 600 CC <br />- ได้รับ-->
+      <!--            ระฆังทองคำ 3 ชิ้น <br />- ได้รับ บัตรนั่งฌาณ 2 ชิ้น <br />- ได้รับ-->
+      <!--            กระเป๋าทะลุน้ำหนัก 2 ชิ้น <br />-->
+      <!--            ***เพื่อที่จะ Activate VIP-->
+      <!--            หากคุณอยู่ในเมืองแล้วควรออกเข้าใหม่อีกสักครั้งนึง-->
+      <!--            เพื่อรับผลประโยชน์การค้าขาย Economy-->
+      <!--          </p>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1vh] mt-[1.5vh]">-->
+      <!--            กิจกรรมแชร์รับของรางวัล (สามารถแชร์ได้ทุกสัปดาห์): 🙏-->
+      <!--          </h3>-->
+      <!--          <p class="text-[1.2vh]">-->
+      <!--            กิจกรรมแชร์รับของรางวัลรายสัปดาห์ติดตามรายละเอียดต่าง ๆ ได้ที่-->
+      <!--            Discord ของ The Circle-->
+      <!--          </p>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1.5vh] mt-[1.5vh]">-->
+      <!--            กิจกรรม Fever Time Event: ⚡-->
+      <!--          </h3>-->
+      <!--          <p class="text-[1.2vh]">-->
+      <!--            จะจัดขึ้นในช่วงระยะเวลา 14.30 - 15.30 และ 20.30 - 21.30 ของทุก ๆ วัน-->
+      <!--          </p>-->
+      <!--          <h3 class="text-[2vh] font-semibold mb-[1.5vh] mt-[1.5vh]">-->
+      <!--            โปรโมชั่น Donate รับโบนัส CC เพิ่มทันที !-->
+      <!--          </h3>-->
+      <!--          <p class="text-[1.2vh]">-->
+      <!--            Donate 300CC ขึ้นไป ได้โบนัสเพิ่ม 20% สูงสุด 500CC-->
+      <!--            ตั้งแต่วันนี้เป็นต้นไป-->
+      <!--          </p>-->
+      <!--        </div>-->
+      <!--        <div-->
+      <!--          class="bg-black/75 rounded-[1vh] shadow-lg p-[3vh] text-white mt-[3vh] tips-container "-->
+      <!--        >-->
+      <!--          <button id="prev-tip">&#8678;</button>-->
+      <!--          &lt;!&ndash; Left arrow &ndash;&gt;-->
+      <!--          <div id="tip-content" class="text-bold text-[2.5vh]"></div>-->
+      <!--          <button id="next-tip">&#8680;</button>-->
+      <!--          &lt;!&ndash; Right arrow &ndash;&gt;-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <div
+        class="absolute bottom-[10vh] bg-black/75 rounded-[1vh] shadow-lg p-[3vh] text-white mt-[3vh] tips-container"
+      >
+        <button id="prev-tip">&#8678;</button>
+        <!-- Left arrow -->
+        <div id="tip-content" class="text-bold text-[2.5vh]"></div>
+        <button id="next-tip">&#8680;</button>
+        <!-- Right arrow -->
+      </div>
+      <div class="absolute bottom-0 mb-3">
+        <button
+          id="play-button"
+          class="drop-shadow-lg rounded-lg h-[5vh] px-5 flex items-center justify-center transition duration-150 ease-in-out select-none text-[3vh] text-white"
+          disabled
+        >
+          <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/app.js"></script>

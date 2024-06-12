@@ -1,0 +1,32 @@
+-- es_extended.users definition
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `identifier` varchar(50) NOT NULL,
+  `accounts` longtext DEFAULT NULL,
+  `inventory` longtext DEFAULT NULL,
+  `skin` longtext DEFAULT NULL,
+  `wardrobe` int(3) DEFAULT 3,
+  `job` varchar(50) DEFAULT 'unemployed',
+  `job_grade` int(11) DEFAULT 0,
+  `group` varchar(50) DEFAULT 'user',
+  `loadout` longtext DEFAULT NULL,
+  `position` varchar(255) DEFAULT '{"x":-309.65,"y":-998.31,"z":30.89,"heading":205.8}',
+  `firstname` varchar(50) DEFAULT '',
+  `lastname` varchar(50) DEFAULT '',
+  `dateofbirth` varchar(25) DEFAULT '',
+  `sex` varchar(10) DEFAULT '',
+  `height` varchar(5) DEFAULT '',
+  `is_dead` tinyint(1) DEFAULT 0,
+  `status` longtext DEFAULT NULL,
+  `tattoos` longtext DEFAULT NULL,
+  `last_property` varchar(255) DEFAULT NULL,
+  `user_skin` varchar(255) DEFAULT 'default',
+  `phone_number` varchar(10) DEFAULT NULL,
+  `metadata` longtext NOT NULL,
+  `health` int(11) DEFAULT NULL,
+  `armour` int(11) DEFAULT NULL,
+  PRIMARY KEY (`identifier`),
+  KEY `id` (`id`),
+  KEY `users_phone_number_IDX` (`phone_number`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles_tw.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="flex justify-center items-center h-screen relative">
+      <div class="w-[92vh] rounded-[2vh] h-fit">
+        <div
+          class="bg-gradient-to-l from-black/[0.6] to-[#ffcc00]/[0.8] rounded-t-[2vh] w-full h-[9vh] text-white flex justify-between items-center px-[2vh]"
+        >
+          <div>
+            <img class="h-[9vh]" src="img/mk-tablet.png" />
+          </div>
+          <div class="flex text-[2vh]">
+            <div class="relative w-[2vh] mr-[1vh]">
+              <button
+                class="absolute bottom-0 h-[3vh] flex items-center"
+                onclick="delAllData()"
+              >
+                <img src="img/bin.png" class="w-[2vh] h-[2vh]" />
+              </button>
+            </div>
+            <div>
+              <!--              <div class="flex w-full justify-center">-->
+              <!--                <div class="flex items-center mr-[1vh]">-->
+              <!--                  <div>MD</div>-->
+              <!--                  <label class="switch ml-[0.5vh]">-->
+              <!--                    <input type="checkbox" id="chk-MD" onclick="openMD()" />-->
+              <!--                    <span class="slider round"></span>-->
+              <!--                  </label>-->
+              <!--                </div>-->
+              <!--                <div class="flex items-center">-->
+              <!--                  <div>PD</div>-->
+              <!--                  <label class="switch ml-[0.5vh]">-->
+              <!--                    <input type="checkbox" id="chk-PD" onclick="openPD()" />-->
+              <!--                    <span class="slider round"></span>-->
+              <!--                  </label>-->
+              <!--                </div>-->
+              <!--              </div>-->
+              <input
+                type="text"
+                class="bg-black/[0.5] h-[3vh] mt-[0.5vh] rounded-[0.8vh] text-center"
+                id="search-phone"
+                onchange="searchPhone()"
+                placeholder="ค้นหาเบอร์โทรศัพท์"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="bg-black/[0.5] w-full rounded-b-[2vh] flex p-[1vh]">
+          <div
+            class="w-[21%] h-[45vh] mr-[1vh] text-[1.7vh] text-white overflow-y-scroll"
+            id="event-data"
+          >
+            <button
+              class="h-[3vh] w-full bg-[#3c3b3c]/[0.8] hover:bg-gradient-to-l from-black/[0.6] to-[#ffcc00]/[0.8] rounded-[0.8vh] flex items-center justify-center mb-[0.5vh]"
+              onclick="showDataAllEvent()"
+              id="btn-allevent"
+            >
+              เคสทั้งหมด
+            </button>
+          </div>
+          <div
+            class="bg-[#3c3b3c]/[0.8] w-[79%] h-[45vh] rounded-[1.2vh] p-[1vh] text-[1.7vh] text-white overflow-y-scroll"
+            id="show-data"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="app.js"></script>

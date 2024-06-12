@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Sarabun");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+* {
+  color: white;
+  font-family: "Kanit", sans-serif;
+}
+:root {
+  --main1: rgb(22, 150, 135);
+  --main-ppl: rgb(91, 117, 113);
+  --main-gang: rgb(173, 154, 44);
+}
+
+.board-gang {
+  position: absolute;
+  top: 57%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: rgba(19, 19, 19, 0.5);
+  height: 60px;
+  border-radius: 5px;
+  width: 233px;
+  display: none;
+  z-index: 50;
+  overflow: hidden;
+  margin-top: 10vh;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+}
+
+.board-people {
+  position: absolute;
+  top: 64%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: rgba(19, 19, 19, 0.5);
+  height: 60px;
+  border-radius: 5px;
+  width: 233px;
+  display: none;
+  z-index: 50;
+  overflow: hidden;
+  margin-top: 10vh;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+}
+
+.left-border {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  /* background: linear-gradient(90deg, rgba(51, 116, 229, 1) 0%, rgba(15, 47, 105, 1) 100%); */
+  background: linear-gradient(
+    5deg,
+    rgba(15, 118, 110, 1),
+    rgb(22, 150, 135),
+    rgba(20, 184, 166, 1)
+  );
+}
+
+.fas.fa-info-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.timetext {
+  position: absolute;
+  font-size: 12px;
+  /* font-weight: bold; */
+  height: 20px;
+  top: 21px;
+  right: 38px;
+  text-align: left;
+  margin-right: 15px;
+}
+.text-air i {
+  font-size: 14px;
+  margin-right: 5px;
+  color: var(--main1);
+}
+
+.text-air {
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  height: 20px;
+  top: -16px;
+  right: 51px;
+  text-align: left;
+  margin-right: 15px;
+  color: #fff;
+}
+
+.textseccond {
+  position: absolute;
+  font-size: 11px;
+  font-weight: bold;
+  height: 20px;
+  top: 13px;
+  right: 33px;
+  text-align: left;
+  margin-right: 15px;
+}
+
+.timetextcolor {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--main1);
+}
+
+.grid {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  border-radius: 0 0.65em 0.65em 0;
+  z-index: -1;
+  width: 54px;
+  height: 102%;
+  background: var(--main-ppl);
+  clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.grid-gang {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  border-radius: 0 0.65em 0.65em 0;
+  z-index: -1;
+  width: 54px;
+  height: 102%;
+  background: var(--main-gang);
+  clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.texttt {
+  margin-top: -6px;
+  margin-left: 1px;
+  font-size: 18px;
+  transform: rotate(-30deg);
+  color: rgba(255, 255, 255, 0.432);
+  font-weight: 700;
+}

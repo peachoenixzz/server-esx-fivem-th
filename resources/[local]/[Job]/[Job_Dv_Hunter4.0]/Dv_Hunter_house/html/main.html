@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	</head>
+	<body>
+	</body>
+	<script>
+		window.addEventListener('message', function(event) {
+			if (event.data.type == "playsound") {
+				var msg = new Audio('./dance.mp3');
+				msg.volume = 0.5;
+				msg.play();
+			} else if (event.data.type == "ghost") {
+				var msg2 = new Audio('./pickaxe.mp3');
+				msg2.volume = 0.5;
+				msg2.play();
+			} else if (event.data.type == "ghosts") {
+				var msg2 = new Audio('./pickaxe.mp3');
+				msg2.volume = 0.5;
+				msg2.play();
+			}
+		});
+	</script>
+</html>

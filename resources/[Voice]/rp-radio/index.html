@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+      body {
+        display: none;
+      }
+    </style>
+    <title>rp-radio</title>
+
+    <script type="text/javascript">
+      let state = false;
+      window.addEventListener("message", function (event) {
+        var item = event.data;
+
+        if (item.sound && item.volume) {
+          document.getElementById(item.sound);
+          document.getElementById(item.sound).load();
+          document.getElementById(item.sound).volume = item.volume;
+          document.getElementById(item.sound).play();
+        }
+
+        if (item.useRadio) {
+          if (!state) $("body").fadeIn();
+          state = true;
+          const radioGuide = document.getElementById("hz");
+          if (item.currentMhz === undefined) return;
+          radioGuide.innerHTML = item.currentMhz;
+        }
+        if (!item.useRadio) {
+          $("body").fadeOut();
+          state = false;
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <audio id="audio_on" src="on.ogg"></audio>
+    <audio id="audio_off" src="off.ogg"></audio>
+    <div id="radio-guide">
+      <div class="flex justify-start ml-5 mt-[16%]">
+        <div
+          class="flex text-center text-[1.5vh] text-white bg-black/[0.5] rounded-lg"
+          style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8)"
+        >
+          <div class="p-2">
+            <div class="flex items-center mb-1">
+              <div
+                class="flex items-center bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-sm px-1.5 mr-2 w-[2vh] h-[2vh]"
+              >
+                E
+              </div>
+              <span>เพื่อ เปิด/ปิด วิทยุสื่อสาร</span>
+            </div>
+            <div class="flex justify-center items-center mb-1">
+              <div
+                class="flex items-center bg-gradient-to-r from-yellow-500 to-yellow-700 rounded-sm px-1.5 mr-2 h-[2vh]"
+              >
+                TAB
+              </div>
+              <span>เพื่อ เปิด/ปิด เสียงแจ้งเตือน</span>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="flex items-center rounded-sm px-1.5 w-[2vh] h-[2vh] mr-1 bg-gradient-to-r from-yellow-500 to-yellow-700"
+              >
+                <div>
+                  <img src="img/previous.png" />
+                </div>
+              </div>
+              <span>,</span>
+              <div
+                class="flex items-center rounded-sm px-1.5 w-[2vh] h-[2vh] ml-1 mr-2 bg-gradient-to-r from-yellow-500 to-yellow-700"
+              >
+                <img src="img/next.png" />
+              </div>
+              <span>เพื่อเลือกช่องสื่อสาร</span>
+            </div>
+          </div>
+          <div class="flex items-center rounded-r-lg mx-2">
+            <div
+              class="flex items-center justify-center h-[4.5vh] min-w-[4.5vh] px-3 text-4xl rounded-md bg-gradient-to-r from-yellow-500 to-yellow-700"
+              id="hz"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>

@@ -1,0 +1,258 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap);
+
+html {
+    font-weight: 400;
+    overflow: hidden
+}
+
+* {
+    font-family: Kanit, sans-serif;
+    font-weight: 100;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#app,
+body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    max-width: 100%;
+    height: 100vh
+}
+
+.body-containers {
+    height: 100%;
+    width: 100%
+}
+
+.main-container {
+    width: 15.1%;
+    height: 4.8%;
+    position: absolute;
+    bottom: 6.2%;
+    left: 1.3%;
+    -webkit-animation: main-container-in .8s forwards;
+    animation: main-container-in .8s forwards
+}
+
+@-webkit-keyframes main-container-in {
+    0% {
+        opacity: 0;
+        left: -2%
+    }
+
+    to {
+        opacity: 1;
+        left: 1.3%
+    }
+}
+
+@keyframes main-container-in {
+    0% {
+        opacity: 0;
+        left: -2%
+    }
+
+    to {
+        opacity: 1;
+        left: 1.3%
+    }
+}
+
+.main-container-out {
+    -webkit-animation: main-container-out .8s forwards;
+    animation: main-container-out .8s forwards
+}
+
+@-webkit-keyframes main-container-out {
+    0% {
+        opacity: 1;
+        left: 1.3%
+    }
+
+    to {
+        opacity: 0;
+        left: -2%
+    }
+}
+
+@keyframes main-container-out {
+    0% {
+        opacity: 1;
+        left: 1.3%
+    }
+
+    to {
+        opacity: 0;
+        left: -2%
+    }
+}
+
+.main-container .bg {
+    width: 100%;
+    margin: 0;
+    position: absolute
+}
+
+.boxFuel {
+    width: 16%;
+    height: 100%;
+    position: absolute
+}
+
+.boxFuel>img {
+    top: 50%;
+    left: 57%;
+    width: 40%;
+    opacity: 1
+}
+
+.boxFuel>img,
+.Emty {
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, -50%)
+}
+
+.Emty {
+    left: 18.3%
+}
+
+.Emty,
+.Full {
+    font-style: normal;
+    font-weight: 600;
+    top: 30%;
+    color: #d0d0d0;
+    font-size: .6vw
+}
+
+.Full {
+    left: 65%
+}
+
+.BarFuel,
+.Full {
+    position: absolute;
+    margin: 0;
+    transform: translate(-50%, -50%)
+}
+
+.BarFuel {
+    width: 41.5%;
+    height: 10%;
+    top: 30%;
+    left: 41.5%;
+    background: #191919;
+    border-radius: 2px
+}
+
+.updateFuel {
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90.46deg, rgba(255, 204, 0, .8) .5%, rgba(255, 168, 0, 1) 100%);
+    border-radius: 2px
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 75%;
+    height: 55%;
+    margin: 0;
+    bottom: 2%;
+    left: 55%;
+    transform: translate(-50%)
+}
+
+.JERRYCAN,
+.Total {
+    font-style: normal;
+    font-weight: 400;
+    position: absolute;
+    margin: 0;
+    top: 49%;
+    left: -1%;
+    transform: translateY(-50%);
+    color: #d0d0d0;
+    font-size: .7vw
+}
+
+.footer img {
+    width: 8%;
+    top: 50%;
+    left: 20%
+}
+
+.footer img,
+.price {
+    position: absolute;
+    margin: 0;
+    transform: translate(-50%, -50%)
+}
+
+.price {
+    left: 36%
+}
+
+.JerryP,
+.price {
+    font-style: normal;
+    font-weight: 400;
+    top: 48%;
+    color: #d0d0d0;
+    font-size: .7vw
+}
+
+.JerryP {
+    left: 40%
+}
+
+.btnE,
+.JerryP {
+    position: absolute;
+    margin: 0;
+    transform: translate(-50%, -50%)
+}
+
+.btnE {
+    width: 11%;
+    height: 80%;
+    top: 45%;
+    left: 59%;
+    background: #191919;
+    border-radius: 5px
+}
+
+.btnE p {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: .95vw;
+    background: linear-gradient(90deg, #c04848, #e82626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent
+}
+
+.btnE p,
+.tocal {
+    margin: 0;
+    position: absolute;
+    font-style: normal;
+    font-weight: 400
+}
+
+.tocal {
+    top: 45%;
+    right: .8%;
+    transform: translateY(-50%);
+    color: #d0d0d0;
+    font-size: .7vw
+}

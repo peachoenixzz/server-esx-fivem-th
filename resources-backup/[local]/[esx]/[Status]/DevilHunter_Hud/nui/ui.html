@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="da-DK">
+  <head>
+    <meta charset="utf-8" />
+    <link href="styles_tw.css" rel="stylesheet" />
+    <style>
+      .smooth-width {
+        transition: width 0.3s ease-in-out;
+      }
+
+      .smooth-height {
+        transition: height 0.3s ease-in-out;
+      }
+
+      /*@keyframes glow {*/
+      /*  0%,*/
+      /*  100% {*/
+      /*    opacity: 0.8;*/
+      /*  }*/
+      /*  70% {*/
+      /*    opacity: 1;*/
+      /*  }*/
+      /*}*/
+
+      /*.dynamic-bg {*/
+      /*  animation: glow 2s ease-in-out infinite;*/
+      /*}*/
+
+      .bg-cloud {
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 204, 0, 0.9),
+            rgba(255, 168, 0, 0.85)
+          ),
+          url("img/cloud.png");
+        background-size: cover;
+      }
+
+      .bg-cloud-t {
+        background-image: linear-gradient(
+            to top,
+            rgba(255, 204, 0, 0.9),
+            rgba(255, 168, 0, 0.9)
+          ),
+          url("img/cloud.png");
+        background-size: cover;
+      }
+
+      @keyframes heart-pulse {
+        0% {
+          transform: scale(0.75, 0.75);
+        }
+        30% {
+          transform: scale(1, 1);
+        }
+      }
+      .heart {
+        color: white;
+        text-shadow: 0 0 1px black;
+        font-size: 2vh;
+        animation: heart-pulse 0.8s ease-out alternate;
+        animation-iteration-count: infinite;
+      }
+      .logo-image {
+        max-width: 100px; /* Adjust as needed */
+        height: auto;
+      }
+      wrapper {
+        position: relative;
+        margin: 20px;
+      }
+
+      .arc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8vh;
+        height: 8vh;
+        border-radius: 100%;
+        border: 2px solid;
+        border-color: #ffcc00;
+      }
+      .arc_start {
+        border-color: #ffcc00 transparent;
+        -webkit-transform: rotate(-158deg);
+        -moz-transform: rotate(-158deg);
+        -ms-transform: rotate(-158);
+        -o-transform: rotate(-158deg);
+        transform: rotate(-158deg);
+      }
+      .arc_end {
+        border-color: transparent #ffcc00 #ffcc00 #ffcc00;
+        -webkit-transform: rotate(-110deg);
+        -moz-transform: rotate(-110deg);
+        -ms-transform: rotate(-110deg);
+        -o-transform: rotate(-110deg);
+        transform: rotate(-277deg);
+      }
+      .gradient {
+        background: linear-gradient(
+          to left,
+          rgba(0, 0, 0, 0.2) 95%,
+          transparent
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed bottom-0 left-0 flex h-fit m-[0.5vh]">
+      <div class="arc-wrapper">
+        <div class="arc arc_start"></div>
+        <div class="h-[8vh] w-[8vh] rounded-full bg-black/[0.2]">
+          <img
+            src="img/happy.png"
+            id="dragon-hp"
+            alt="Logo"
+            class="h-full w-full"
+            style="object-fit: cover"
+          />
+        </div>
+        <div class="arc arc_end"></div>
+      </div>
+      <!-- <div
+        class="h-[8vh] w-[8vh] rounded-full border-[#ffcc00] border-2 m-[0.2vh] bg-black/[0.2]"
+      >
+        <img
+          src="img/happy.png"
+          id="dragon-hp"
+          alt="Logo"
+          class="h-full w-full"
+          style="object-fit: cover"
+        />
+      </div> -->
+      <div
+        class="flex p-[0.5vh] gradient rounded h-fit absolute bottom-0 ml-[7vh] mb-[1.5vh]"
+        style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)"
+      >
+        <div>
+          <div
+            class="container mx-auto my-auto h-[2vh] bg-black/[0.35] rounded-sm w-[20vh] overflow-hidden"
+            style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5)"
+          >
+            <div
+              id="heal-point"
+              class="bg-cloud h-[2vh] w-[100%] rounded-sm smooth-width flex items-center"
+            >
+              <div class="ml-1">
+                <div class="heart">♥</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center w-[20vh]">
+            <div
+              class="h-[0.8vh] text-[0.8vh] font-bold text-white w-[19%]"
+              id="player-id"
+            >
+              ID : 101
+            </div>
+            <div
+              class="container mx-auto my-auto h-[0.8vh] bg-black/[0.35] rounded-[1px] mt-0.5 overflow-hidden"
+              style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5)"
+            >
+              <div
+                id="armor"
+                class="bg-gradient-to-r from-white to-gray-100 w-[80%] h-[0.8vh] rounded-[1px] smooth-width"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="box-content bg-black/[0.35] w-[3vh] h-[3vh] rounded-md ml-1 relative flex items-center justify-center overflow-hidden"
+          style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5)"
+        >
+          <div
+            id="food"
+            class="bg-cloud-t h-[100%] rounded-md absolute bottom-0 left-0 right-0 z-10 smooth-height"
+          ></div>
+          <img src="img/FD.png" class="relative z-20 w-[1.9vh] h-[1.9vh]" />
+        </div>
+
+        <!--        <div-->
+        <!--          class="box-content bg-black/[0.35] w-[3vh] h-[3vh] rounded-md ml-1 relative flex items-center justify-center overflow-hidden"-->
+        <!--          style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5)"-->
+        <!--        >-->
+        <!--          <div-->
+        <!--            class="bg-cloud h-[70%] rounded-md absolute bottom-0 left-0 right-0 z-10 smooth-height"-->
+        <!--            id="healthy"-->
+        <!--          ></div>-->
+        <!--          <img src="img/SD.png" class="relative z-20 w-[1.9vh] h-[1.9vh]" />-->
+        <!--        </div>-->
+
+        <div
+          class="box-content bg-black/[0.35] w-[3vh] h-[3vh] rounded-md ml-1 relative flex items-center justify-center overflow-hidden"
+          style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5)"
+        >
+          <div
+            class="bg-cloud-t h-[80%] rounded-md absolute bottom-0 left-0 right-0 z-10 smooth-height"
+            id="stress"
+          ></div>
+          <img src="img/SS.png" class="relative z-20 w-[1.9vh] h-[1.9vh]" />
+        </div>
+
+        <div
+          class="box-content bg-black/[0.35] w-[3vh] h-[3vh] rounded-md ml-1 relative flex items-center justify-center overflow-hidden"
+          id="dive-box"
+        >
+          <div
+            id="dive"
+            class="bg-cloud-t h-[80%] rounded-md absolute bottom-0 left-0 right-0 z-10 smooth-height"
+          ></div>
+          <img src="img/TH.png" class="relative z-20 w-[1.9vh] h-[1.9vh]" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<script src="ui.js" type="text/javascript"></script>
+<script>
+  function _0x1f6a() {
+    var _0x6e1efc = [
+      "3669232tdprps",
+      "heal",
+      "115zrvBHR",
+      "205676UaaBUg",
+      "width",
+      "288210ZcQXxq",
+      "55270aMkiGe",
+      "4918110QhbmSH",
+      "24yiXWKu",
+      "#BoxHeal",
+      "2963094vKVogm",
+      "#debug",
+      "42ZCuvgS",
+      "#Heal",
+      "css",
+      "2538711UYgdzY",
+      "data",
+    ];
+    _0x1f6a = function () {
+      return _0x6e1efc;
+    };
+    return _0x1f6a();
+  }
+  function _0x284f(_0x385e60, _0x35c8a2) {
+    var _0x1f6aea = _0x1f6a();
+    return (
+      (_0x284f = function (_0x284fbb, _0x27a35c) {
+        _0x284fbb = _0x284fbb - 0x9c;
+        var _0x451a17 = _0x1f6aea[_0x284fbb];
+        return _0x451a17;
+      }),
+      _0x284f(_0x385e60, _0x35c8a2)
+    );
+  }
+  (function (_0x3245c2, _0xcb2dd0) {
+    var _0x3615c9 = _0x284f,
+      _0x9da413 = _0x3245c2();
+    while (!![]) {
+      try {
+        var _0x199473 =
+          (parseInt(_0x3615c9(0xa8)) / 0x1) *
+            (-parseInt(_0x3615c9(0x9d)) / 0x2) +
+          parseInt(_0x3615c9(0xa9)) / 0x3 +
+          (-parseInt(_0x3615c9(0xa5)) / 0x4) *
+            (-parseInt(_0x3615c9(0xa4)) / 0x5) +
+          parseInt(_0x3615c9(0xac)) / 0x6 +
+          (-parseInt(_0x3615c9(0xa2)) / 0x7) *
+            (parseInt(_0x3615c9(0xaa)) / 0x8) +
+          parseInt(_0x3615c9(0xa0)) / 0x9 +
+          -parseInt(_0x3615c9(0xa7)) / 0xa;
+        if (_0x199473 === _0xcb2dd0) break;
+        else _0x9da413["push"](_0x9da413["shift"]());
+      } catch (_0x14c32c) {
+        _0x9da413["push"](_0x9da413["shift"]());
+      }
+    }
+  })(_0x1f6a, 0xcc14c),
+    $(function () {
+      var _0x47f042 = _0x284f,
+        _0x4e60f5 = $(_0x47f042(0x9c)),
+        _0xc2419 = $(_0x47f042(0x9e)),
+        _0x287338 = $(_0x47f042(0xab)),
+        _0x5e5764 = $("#BoxArmor");
+      window["addEventListener"]("message", function (_0x1f99ca) {
+        var _0x56b518 = _0x47f042;
+        _0x287338["css"](
+          _0x56b518(0xa6),
+          _0x1f99ca["data"][_0x56b518(0xa3)] - 0x64 + "%"
+        ),
+          _0x5e5764[_0x56b518(0x9f)](
+            _0x56b518(0xa6),
+            _0x1f99ca[_0x56b518(0xa1)]["armor"] + "%"
+          );
+      });
+    });
+</script>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <img src="https://friendsproject.in.th/wp-content/uploads/2022/05/image-10-1024x576.png" alt="" class="bg"> -->
+    <div class="display2">
+        <div class="consoleCar">
+            <div class="txtAreaCs1">
+                <p>LEFT</p>
+                <p>RIGHT</p>
+            </div>
+            <div class="leftConsole">
+                <div class="btnC1 LFdoor" onclick="control('door',0)">
+                    <iconify-icon icon="mdi:car-door"></iconify-icon>
+                </div>
+                <div class="btnC1 LBdoor" onclick="control('door',2)">
+                    <iconify-icon icon="mdi:car-door"></iconify-icon>
+                </div>
+                <div class="btnC1 LFseat" onclick="control('chair',-1)">
+                    <iconify-icon icon="mdi:car-seat"></iconify-icon>
+                </div>
+                <div class="btnC1 LBseat" onclick="control('chair',1)">
+                    <iconify-icon icon="mdi:car-seat"></iconify-icon>
+                </div>
+                <div class="btnC1 RBseat" onclick="control('chair',0)">
+                    <iconify-icon icon="mdi:car-seat"></iconify-icon>
+                </div>
+                <div class="btnC1 RFseat" onclick="control('chair',2)">
+                    <iconify-icon icon="mdi:car-seat"></iconify-icon>
+                </div>
+                <div class="btnC1 RBdoor" onclick="control('door',1)">
+                    <iconify-icon icon="mdi:car-door"></iconify-icon>
+                </div>
+                <div class="btnC1 RFdoor" onclick="control('door',3)">
+                    <iconify-icon icon="mdi:car-door"></iconify-icon>
+                </div>
+            </div>
+
+            <div class="btnStart" onclick="control('engine',0)"><iconify-icon icon="material-symbols:power-rounded"></iconify-icon>POWER</div>
+        </div>
+    </div>
+
+
+
+    <div class="display">
+        <div class="container">
+
+
+            <!-- <div class="car-clash">
+                <p>ยานพาหนะเสียหายหนัก</p>
+                <div class="lineC1"></div>
+                <div class="lineC2"></div>
+            </div> -->
+
+            <div class="addOn1"></div>
+            <div class="addOn2"></div>
+            <div class="addOn3"></div>
+            <div class="addOn4"></div>
+            <div class="addon5"></div>
+            <div class="addon6"></div>
+
+
+            <div class="carStat">
+                <div class="wheel1"></div>
+                <div class="wheel2"></div>
+                <div class="wheel3"></div>
+                <div class="wheel4"></div>
+                <img src="img/carImg.png" alt="" class="car">
+                <img src="img/plane.png" alt="" class="plane">
+                <img src="img/boat.png" alt="" class="boat">
+                <img src="img/motorcycle.png" alt="" class="motorcycle">
+                <img src="img/helicopter.png" alt="" class="helicopter">
+            </div>
+
+
+            <div class="speedT">
+                <p id="speed">320</p>
+                <p>KM/H</p>
+            </div>
+            <div class="gearT">
+                <p>GEAR</p>
+                <p id="gear">4</p>
+            </div>
+
+
+            <div class="speedArea"></div>
+
+            <div class="rpmArea">
+                <div class="rpm2">
+                    <p id="xrpm">x5</p>
+                    <p>000</p>
+                </div>
+                <p class="rpmtxt">RPM</p>
+            </div>
+            <div class="statCarA">
+                <div class="iconBT locked active">
+                    <iconify-icon icon="uis:lock"></iconify-icon>
+                </div>
+                <div class="iconBT belt ">
+                    <iconify-icon icon="mdi:seatbelt"></iconify-icon>
+                </div>
+                <div class="iconBT light">
+                    <iconify-icon icon="mdi:car-light-high"></iconify-icon>
+                </div>
+            </div>
+            <div class="iconCar1">
+                <iconify-icon icon="fluent:wrench-screwdriver-20-filled"></iconify-icon>
+            </div>
+            <div class="iconCar2">
+                <iconify-icon icon="maki:fuel"></iconify-icon>
+            </div>
+
+
+
+
+            <div class="engineArea leftAr">
+                <div class="iconE leftE">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                    <div class="line5"></div>
+                    <div class="line6"></div>
+                </div>
+                <div class="loadbarEng"><div class="loadEng" id="engine"></div></div>
+                <div class="iconE">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                    <!-- <div class="line5"></div> -->
+                    <div class="line6"></div>
+                </div>
+            </div>
+            <div class="engineArea rightAr">
+                <div class="iconE leftE">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                    <!-- <div class="line5"></div> -->
+                    <div class="line6"></div>
+                </div>
+                <div class="loadbarEng"><div class="loadEng" id="fuel"></div></div>
+                <div class="iconE">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                    <div class="line5"></div>
+                    <div class="line6"></div>
+                </div>
+            </div>
+            <div class="rpmLoadbar">
+                <div class="rpmLoad"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="iconify-icon.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

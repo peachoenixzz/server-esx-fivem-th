@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+  </head>
+  <style>
+    body {
+      font-family: "Kanit", sans-serif;
+    }
+
+    body {
+      display: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    /* Custom Scrollbar Styling */
+    .scrollable-content::-webkit-scrollbar {
+      width: 10px; /* Adjust width of scrollbar */
+    }
+
+    .scrollable-content::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2); /* Scrollbar track color */
+    }
+
+    .scrollable-content::-webkit-scrollbar-thumb {
+      background-color: teal; /* Scrollbar thumb color */
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    ::-webkit-scrollbar {
+      width: 0vh;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: black;
+    }
+
+    .scrollable-content {
+      max-height: 60vh; /* Adjust height as needed */
+      overflow-y: auto;
+    }
+  </style>
+  <body>
+    <div
+      class="flex flex-col justify-center items-center h-screen"
+      id="police-panel"
+    >
+      <div class="container bg-black/[0.5] w-[75vh] rounded-lg">
+        <div
+          class="container bg-gradient-to-r from-teal-500 to-teal-700 rounded-t-lg text-white flex items-center text-[2.1vh]"
+        >
+          <div class="box-content w-[3vh] h-[3vh] ml-2 mr-1 my-1 rounded-full">
+            <img src="img/circle.png" />
+          </div>
+          IRCLE GUIDE BOOK
+        </div>
+        <div
+          class="box-content mx-2 my-2 flex items-center text-[1.8vh] justify-between"
+        >
+          <!-- Sidebar for Guide Book -->
+          <div
+            class="w-1/4 bg-gradient-to-r from-teal-500 to-teal-700 rounded-lg"
+          >
+            <!-- Sidebar Content -->
+            <div class="flex flex-col">
+              <div
+                class="p-2 hover:bg-gradient-to-r from-teal-300 to-teal-700 rounded-lg cursor-pointer text-white"
+                id="main-button"
+              >
+                หน้าแรก
+              </div>
+              <div
+                class="p-2 hover:bg-gradient-to-r from-teal-300 to-teal-700 rounded-lg cursor-pointer text-white"
+                id="guide-button"
+              >
+                แนะนำปุ่ม
+              </div>
+              <div
+                class="p-2 hover:bg-gradient-to-r from-teal-300 to-teal-700 rounded-lg cursor-pointer text-white"
+                id="guide-command"
+              >
+                วิธีการพิมพ์คำสั่ง
+              </div>
+              <div
+                class="p-2 hover:bg-gradient-to-r from-teal-300 to-teal-700 rounded-lg cursor-pointer text-white"
+                id="guide-beginner"
+              >
+                แนะนำผู้เล่นใหม่ 🔥
+              </div>
+              <div
+                class="p-2 hover:bg-gradient-to-r from-teal-300 to-teal-700 rounded-lg cursor-pointer text-white"
+                id="guide-event"
+              >
+                ตารางกิจกรรม
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="w-3/4 bg-black bg-opacity-70 p-4 rounded-lg scrollable-content"
+          >
+            <!-- Details will be shown here -->
+            <div class="header text-center">
+              <h1 class="text-3xl font-bold my-4 text-teal-400">
+                The Circle Guide Book <br />[LAST UPDATE 14-01-2024]
+              </h1>
+              <img
+                src="https://i.imgur.com/rHxGUul.gif"
+                alt="Game Logo"
+                class="mx-auto"
+              />
+            </div>
+            <div id="guide-content">
+              <div class="content my-4">
+                <h2 class="text-2xl font-semibold my-2 text-teal-300">
+                  เกี่ยวกับเมือง
+                </h2>
+                <p class="text-base my-1 text-white">
+                  เมือง The Circle เป็นเมืองที่ไม่ รีซีซั่น ฟาร์มง่าย และ
+                  มีทีมงานดูแล 24 ชั่วโมง หากต้องการติดต่อทีมงานกรุณาเปิด Ticket
+                  หากประสบปัญหาใด ๆ ภายในเมืองสามารถ
+                  ถามผู้เล่นท่านอื่นแบบเบื้องต้นได้ทันที
+                  เนื่องจากผู้เล่นภายในเมืองเราเป็นมิตรทุกคน
+                </p>
+
+                <h2 class="text-2xl font-semibold my-4 text-teal-300">
+                  แนะนำผู้เล่นใหม่เบื้องต้น
+                </h2>
+                <p class="text-base my-1 text-white">
+                  หากคุณเป็นผู้เล่นใหม่มาถึงจะได้รับ Armory Box, บัตรแลกรถ 60KG,
+                  กระเช้าสนับสนุน ของเหล่านี้จะทำให้คุณสามารถ ทำกุญแจตู้เก็บของ,
+                  มีรถ 60KG เมื่อเริ่มเล่น และ มีอาวุธค้อน ตามลำดับ
+                  หากพบข้อสงสัยหรือต้องการสอบถาม ทีมงานในเมือง
+                  โดยเร็วที่สุดภายในเมืองให้ไปที่ส่วนกลาง หรือ เปิด Ticket ได้ใน
+                  นิตยสาร (Discord)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<script>
+  let Config = {};
+  Config.closeKeys = [27, 90];
+
+  document.getElementById("main-button").addEventListener("click", function () {
+    document.getElementById("guide-content").innerHTML = `
+
+                    <div class="content my-4">
+                        <h2 class="text-2xl font-semibold my-2 text-teal-300">เกี่ยวกับเมือง</h2>
+                        <p class="text-base my-1 text-white">เมือง The Circle เป็นเมืองที่ไม่ รีซีซั่น ฟาร์มง่าย และ มีทีมงานดูแล 24 ชั่วโมง หากต้องการติดต่อทีมงานกรุณาเปิด Ticket หากประสบปัญหาใด ๆ ภายในเมืองสามารถ ถามผู้เล่นท่านอื่นแบบเบื้องต้นได้ทันที เนื่องจากผู้เล่นภายในเมืองเราเป็นมิตรทุกคน</p>
+
+                        <h2 class="text-2xl font-semibold my-4 text-teal-300">แนะนำผู้เล่นใหม่เบื้องต้น</h2>
+                        <p class="text-base my-1 text-white">หากคุณเป็นผู้เล่นใหม่มาถึงจะได้รับ Armory Box, บัตรแลกรถ 60KG, กระเช้าสนับสนุน ของเหล่านี้จะทำให้คุณสามารถ ทำกุญแจตู้เก็บของ, มีรถ 60KG เมื่อเริ่มเล่น และ มีอาวุธค้อน ตามลำดับ หากพบข้อสงสัยหรือต้องการสอบถาม ทีมงานในเมือง โดยเร็วที่สุดภายในเมืองให้ไปที่ส่วนกลาง หรือ เปิด Ticket ได้ใน นิตยสาร (Discord)</p>
+
+                        <!-- Add more content here as needed -->
+                    </div>
+
+
+    `;
+  });
+
+  document
+    .getElementById("guide-button")
+    .addEventListener("click", function () {
+      document.getElementById("guide-content").innerHTML = `
+<h2 class="text-2xl font-semibold my-4 text-teal-300">ปุ่มคีย์ลัดทั่วไป</h2>
+            <ul class="text-base text-white list-disc pl-5">
+            <li>F1: เปิดโทรศัพท์มือถือ</li>
+            <li>F2: เมนูถอด / ใส่เสื้อผ้า</li>
+            <li>F3: เมนู Emotes</li>
+            <li>F5: ราคาตลาด Economy</li>
+            <li>F6: เมนูหน่วยงาน</li>
+            <li>F7: เมนูจ่ายบิล</li>
+            <li>F8: Console</li>
+            <li>F9: เมนูอุ้ม</li>
+            <li>F10: พ่อค้าลึกลับ</li>
+            <li>F12: Screenshot</li>
+            <li>PgDn: ช่องพิมคำสั่ง</li>
+            <li>T: เปิดหน้าต่างกระเป๋า</li>
+            <li>Y: คุกเข่า</li>
+            <li>G: ปล้น (ขณะถืออาวุธเท่านั้น)</li>
+            <li>V: ปรับมุมมอง</li>
+            <li>X: ยกเลิก Emotes</li>
+            <li>Z: เปลี่ยนวงไมค์</li>
+            <li>K: เปิดเมนูวิทยุสื่อสาร</li>
+            <li>N: พูดไมค์</li>
+            <li>CapsLk: พูดวิทยุสื่อสาร</li>
+            <li>1-7: Quickslot กระเป๋า</li>
+            <li>-: เมนูฟังชั่นยานพาหนะ</li>
+            <li>=: ทอด / ถอดสมอเรือ</li>
+            <li>F: ขึ้น / ลงยานพาหนะ</li>
+            <li>H: เปิดท้ายรถ</li>
+            <li>B: ใส่ / ถอดเข็มขัด</li>
+            <li>U: สตาร์ท / ดับเครื่องยนต์</li>
+            <li>L: ล็อค / ปลดล็อคยานพาหนะ</li>
+            </ul>
+    `;
+    });
+
+  document
+    .getElementById("guide-command")
+    .addEventListener("click", function () {
+      document.getElementById("guide-content").innerHTML = `
+    <h2 class="text-2xl font-semibold my-4 text-teal-300">คำสั่งทั่วไป (PgDn) หรือ F8 แล้วพิมพ์โดยไม่มี / </h2>
+    <ul class="text-base text-white list-disc pl-5">
+        <li>/reloadbag : เพื่อรีเฟรชน้ำหนักกระเป๋า</li>
+        <li>/selectmap : เพื่อเปลี่ยนธีมแผนที่</li>
+        <li>/autopilot : เพื่อขับรถไปตามจุดมาร์คอัตโนมัติ</li>
+        <li>/vol 1-100 : เพื่อปรับระดับเสียงวิทยุสื่อสาร</li>
+        <li>/setvoiceintent music : เพื่อปรับการจับเสียงให้ชัดเจนยิ่งขึ้น (สำหรับนักร้อง)</li>
+        <li>/sad : เพื่อเข้าร่วมแอร์ดรอป</li>
+        <li>/chrp [ช่องวิทยุที่ต้องการ] : เปลี่ยนช่องวิทยุ</li>
+        <li>/closeq : เพื่อปิด Sub Menu Quest</li>
+        <li>/openq : เพื่อเปิด Sub Menu Quest</li>
+        <li>/req : เพื่อ Refresh ของใน Sub Menu Quest</li>
+        <li>/se : เมื่อน้ำมัน เรือ หรือ เฮลิคอปเตอร์ เหลือ 0</li>
+
+    </ul>
+
+    `;
+    });
+
+  document
+    .getElementById("guide-beginner")
+    .addEventListener("click", function () {
+      document.getElementById("guide-content").innerHTML = `
+         <div class="tip-section">
+            <h3 class="text-2xl font-semibold my-4 text-teal-300">จุดรวมพล</h3>
+            <ul class="text-white text-base list-disc pl-5 my-2">
+                <li>ส่วนกลาง, โรงพยาบาล, สถานีตำรวจ จะไปรวมกัน ณ สถานที่เดียวคือ The Circle ตรงใจกลางแผนที่ เป็นไอคอน วงกลมสีเขียว สามารถไป รักษา, นอนสุขภาพ, แจ้งปัญหาการใช้ชีวิต, แจ้งความเกี่ยวกับเรื่องภายในเมืองกับหน่วยงาน SOS ได้ทั้งหมด ณ สถานที่นั้น</li>
+            </ul>
+            <img src="https://media.discordapp.net/attachments/1105919976344403970/1193347294246998137/20240107071053_1.jpg?ex=65ac6246&is=6599ed46&hm=cc604d4d3f5288757b4eedff60fb0bc128210f1b37cca2ea2c82e807621f442e&=&format=webp" />
+            <p class="text-center text-white text-base my-4">ภาพแผนที่ประกอบที่อยู่ของ The Circle</p>
+                        <img src="https://media.discordapp.net/attachments/1105919976344403970/1193347294645473356/20240107071149_1.jpg?ex=65ac6246&is=6599ed46&hm=a0516aed31cc5d5c73106cf5ce33a0270a344a73e2fc923eb621e1070b1f097e&=&format=webp" />
+            <p class="text-center text-white text-base my-4">ภาพประกอบสถานที่จริงของ The Circle</p>
+        </div>
+
+         <div class="tip-section">
+            <h3 class="text-2xl font-semibold my-4 text-teal-300">แลกรถ 60KG</h3>
+            <ul class="text-white text-base list-disc pl-5 my-2">
+                <li>เมื่อผู้เล่นเข้าเมืองมาจะอยู่ที่แลนด์ไก่ ให้นำ บัตรแลกรถ ไปคุยกับ NPC โจนาธาน เพื่อทำการแลกรถตามดังภาพต่อไปนี้</li>
+            </ul>
+            <img src="https://media.discordapp.net/attachments/1105919976344403970/1193357712625500170/image.png?ex=65ac6bfa&is=6599f6fa&hm=7701ae33e272860c4019adf2d58ebf0fa59f3173dfb5cdaaa5dd1ca0a3ff6983&=&format=webp&quality=lossless" />
+            <p class="text-center text-white text-base my-4">ภาพประกอบสถานที่ตั้ง แลนด์ไก่</p>
+                        <img src="https://media.discordapp.net/attachments/1105919976344403970/1193357082930450432/image.png?ex=65ac6b64&is=6599f664&hm=fa51f08bac489a8864e979e9a687be3bce1a97c91d84f55f4fc0244db3c7a8ae&=&format=webp&quality=lossless" />
+            <p class="text-center text-white text-base my-4">ภาพประกอบ NPC โจนาธาน</p>
+            <img src="https://media.discordapp.net/attachments/1105919976344403970/1193357285829922896/image.png?ex=65ac6b94&is=6599f694&hm=7273c3c46f992af262ea7721630b9a833e90166adde803c69c8cafa5e6315330&=&format=webp&quality=lossless" />
+            <p class="text-center text-white text-base my-4">ภาพประกอบไอเทม บัตรแลกรถ</p>
+        </div>
+
+        <div class="tip-section">
+            <h3 class="text-2xl font-semibold my-4 text-teal-300">อยากเป็นหน่วยงาน</h3>
+            <ul class="text-white text-base list-disc pl-5">
+                <li>ผู้เล่นทุกคนสามารถสอบหน่วยงาน SOS และ ส่วนกลาง ได้ที่ The Circle หรือ จุดรวมพลจากคำแนะนำหัวข้อก่อนหน้านี้</li>
+            </ul>
+        </div>
+
+        <div class="tip-section">
+            <h3 class="text-2xl font-semibold my-4 text-teal-300">วิธีโอนรถ</h3>
+            <ul class="text-white text-base list-disc pl-5">
+                <li>การโอนรถ: ผู้เล่นจะต้องมีบัตรโอนรถทั้งสองฝ่ายและต้องอยู่ในพื้นที่โอนรถเท่านั้น</li>
+            </ul>
+        </div>
+
+        <div class="tip-section">
+            <h3 class="text-2xl font-semibold my-4 text-teal-300">อุปกรณ์ทำงาน</h3>
+            <ul class="text-white text-base list-disc pl-5">
+                <li>อุปกรณ์ทำงาน : อุปกรณ์ทำงานต่าง ๆ มีโอกาสแตก ซื้อมากกว่าที่ใช้เพื่อประหยัดเวลา</li>
+            </ul>
+        </div>
+
+                <div class="tip-section">
+            <h3 class="text-2xl font-semibold my-4 text-teal-300">ไม่เข้าเงื่อนไข Take 2</h3>
+            <ul class="text-white text-base list-disc pl-5">
+                <li>หากยานพาหนะระเบิด จมน้ำ หรือพังเพราะแช่น้ำ ยานพาหนะนั้น ๆ จะถือว่าอยู่ในสถานะถูกทำลาย
+  ไม่สามารถซ่อมได้ การซ่อมจะทำให้ยานพาหนะถูกลบทิ้ง ผู้เล่นจะต้องทำการพาวด์เท่านั้น
+  *กรณีที่เกิดเหตุข้างต้นจากการหนีตำรวจ ทางเจ้าหน้าที่จะจับกุมได้ทันที ไม่สามารถขอ Take 2 ได้</li>
+            </ul>
+        </div>
+
+                <div class="tip-section">
+            <h3 class="text-2xl font-semibold my-4 text-teal-300">การเอาชีวิตรอด</h3>
+            <ul class="text-white text-base list-disc pl-5">
+                <li>หลอดข้าว : เมื่อหลอดลดลงจนหมด จะทำให้สูญเสียเลือดเรื่อย ๆ จนหมดสติ สามารถเพิ่มได้โดยวิธีพื้นฐาน คือ รับประทานราเมงที่ ร้านราเมง ตรงแลนด์ไก่
+                <li>หลอดสุขภาพ : เมื่อหลอดลดลงจนหมด จะทำให้สูญเสียเลือดเรื่อย ๆ จนหมดสติ สามารถเพิ่มได้โดยวิธีพื้นฐาน คือ ไปนอนเตียงที่ส่วนกลางหรือรักษากับหมอเซียน</li>
+                <li>หลอดความเครียด : เมื่อหลอดเพิ่มจนเต็ม จะทำให้หัวระเบิดและหมดสติทันที สามารถเพิ่มได้โดยวิธีพื้นฐาน คือ ทาน ไอติม ภายในเมือง</li>
+            </ul>
+            <img src="https://media.discordapp.net/attachments/1105919976344403970/1193348821523107920/image.png?ex=65ac63b2&is=6599eeb2&hm=8c0ed9535007074cd6972f654c8eaebbdb47d04202120b45d4dc15b0829cf8e4&=&format=webp&quality=lossless" />
+            <p class="text-center text-white text-base my-4">ภาพประกอบ หลอดเลือด,หลอดเกราะ (สีขาว), อาหาร, สุขภาพ, ความเครียด</p>
+        </div>
+
+    `;
+    });
+
+  document.getElementById("guide-event").addEventListener("click", function () {
+    document.getElementById("guide-content").innerHTML = `
+    <h1 class="text-2xl font-bold text-teal-400 mb-4">ตารางเวลากิจกรรม</h1>
+    <table class="table-auto border-collapse border border-teal-500 w-full mb-6">
+      <tr class="bg-teal-500 text-white">
+        <th class="border border-teal-600 p-2">กิจกรรม</th>
+        <th class="border border-teal-600 p-2">ช่วงเวลา</th>
+      </tr>
+      <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">Airdrops ภาคพื้นดิน</td>
+        <td class="border border-teal-600 p-2">15:00, 20:00, 01:00, 08:00</td>
+      </tr>
+      <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">Airdrops Stage</td>
+        <td class="border border-teal-600 p-2">10:00, 16:00, 22:00, 02:00</td>
+      </tr>
+      <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">Prop Hunt</td>
+        <td class="border border-teal-600 p-2">19:00</td>
+      </tr>
+      <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">Fever Time</td>
+        <td class="border border-teal-600 p-2">10:30, 13:30, 20:30, 02:30 </td>
+      </tr>
+      <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">Restart Server Time</td>
+        <td class="border border-teal-600 p-2">12:00, 18:00, 00:00, 06:00 </td>
+      </tr>
+    </table>
+
+    <h1 class="text-2xl font-bold text-teal-400 mb-4">ของรางวัล Airdrops Stage</h1>
+    <table class="table-auto border-collapse border border-teal-500 w-full mb-6">
+      <tr class="bg-teal-500 text-white">
+        <th class="border border-teal-600 p-2">Airdrop Stage</th>
+        <th class="border border-teal-600 p-2">ไอเทม</th>
+        <th class="border border-teal-600 p-2">โบนัสไอเทม</th>
+      </tr>
+      <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">แก๊ง</td>
+        <td class="border border-teal-600 p-2">กล่องอาวุธ (5-5), โครเมท (3-6), เกราะเบา (20-20), เกราะหนัก (20-20), แพทตินัม (4-4), โครเมี่ยม (4-4), เพนคิลเลอร์ (20-20), เศษอัลลอย (2-2), แผงวงจร (1-2), เหรียญ CC (1-3)</td>
+        <td class="border border-teal-600 p-2">อัลลอย (สุ่ม, 1)</td>
+      </tr>
+        <tr>
+     <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">ประชาชน</td>
+        <td class="border border-teal-600 p-2">กล่องอาวุธ (2-6), โครเมี่ยม (2-2), แพทตินัม (2-2), เกราะเบา (5-5), โครเมท (2-4), ผ้าพันแผล (4-10), เศษอัลลอย (2-2), แผงวงจร (1-2)</td>
+        <td class="border border-teal-600 p-2">เศษอัลลอย (สุ่ม, 1-2)</td>
+  </tr>
+      <!-- ... more rows ... -->
+    </table>
+
+    <h1 class="text-2xl font-bold text-teal-400 mb-4">ของรางวัล Airdrops ภาคพื้นดิน</h1>
+    <table class="table-auto border-collapse border border-teal-500 w-full mb-6">
+      <tr class="bg-teal-500 text-white">
+        <th class="border border-teal-600 p-2">Airdrop ภาคพื้นดิน</th>
+        <th class="border border-teal-600 p-2">ไอเทม</th>
+      </tr>
+      <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">แก๊ง</td>
+        <td class="border border-teal-600 p-2">กล่องอาวุธ (15), โครเมท (10), เกราะเบา (40), เกราะหนัก (40), เพนคิลเลอร์ (40), อัลลอย (1), แผงวงจร (5), เหรียญ CC (10)</td>
+      </tr>
+      <tr class="bg-white text-black">
+        <td class="border border-teal-600 p-2">ประชาชน</td>
+        <td class="border border-teal-600 p-2">กล่องอาวุธ (10-10), เกราะเบา (20-20), อัลลอย (1-1), แผงวงจร (5-5)</td>
+      </tr>
+      <!-- ... more rows ... -->
+    </table>
+
+              <h3 class="text-2xl font-semibold my-4 text-teal-300">สิทธิประโยชน์จาก Event Fever Time</h3>
+            <ul class="text-white text-base list-disc pl-5">
+                <li>ทำให้ผู้เล่น เก็บ, แพ็คเกจ เร็วขึ้น และ มีโอกาสได้รับโบนัสไอเทมเพิ่มขึ้น เช่น เศษอัลลอย, ไม้เนื้อแข็ง, ไอเทม Speical</li>
+            </ul>
+
+    `;
+  });
+
+  window.addEventListener("message", async function (event) {
+    let res = event.data;
+    if (res.action === "open") {
+      $("body").fadeIn();
+      return;
+    }
+    if (res.action === "closeAll") {
+      $("body").fadeOut();
+    }
+  });
+
+  function closeUI() {
+    $.post("https://cc_guidebook/NUIFocusOff", JSON.stringify({}));
+  }
+
+  $(document).ready(function () {
+    $("body").on("keyup", function (key) {
+      if (Config.closeKeys.includes(key.which)) {
+        closeUI();
+      }
+    });
+  });
+</script>

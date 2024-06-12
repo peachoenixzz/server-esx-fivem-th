@@ -1,0 +1,30 @@
+{
+    "steam:110000134d50958": {
+        "licenses": [
+            "license:4e2ab2b1fe8a3cbe1255cd614296a3ce1035c23d"
+        ],
+        "date": "Sat Mar 30 20:59:59 2024",
+        "reason": "TriggerServerEvent (esx:giveInventoryItem, C>S)"
+    },
+    "steam:110000162d815d9": {
+        "licenses": [
+            "license:0ec6cbede30dc399adaa5ea4f17cc2ed29921e30"
+        ],
+        "date": "Wed Apr  3 18:20:03 2024",
+        "reason": "Banned by Admin"
+    },
+    "steam:11000016567945f": {
+        "licenses": [
+            "license:d1e4f902ab76bfed4044a6c9c6c36f1c94bcbdc1"
+        ],
+        "date": "Sun Mar 31 00:25:36 2024",
+        "reason": "TriggerServerEvent (esx_uber:pay, C>S)"
+    },
+    "steam:110000147a7805c": {
+        "licenses": [
+            "license:0ec6cbede30dc399adaa5ea4f17cc2ed29921e30"
+        ],
+        "date": "Wed Apr  3 18:18:53 2024",
+        "reason": "Banned by Admin"
+    }
+}

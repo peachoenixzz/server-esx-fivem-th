@@ -1,0 +1,71 @@
+html { overflow-x: hidden !important; overflow-y: hidden !important; background-color: transparent !important;}
+
+body {background-color: transparent !important;}
+
+.al-item {
+     font-family:'Sarabun', sans-serif;
+     position: absolute;
+     bottom: 120px;
+     right: -20px;
+     width: 20%;
+     margin-left: auto;
+     margin-right: auto;
+     float: right;
+}
+
+.card {
+     background-color:rgba(44, 255, 255, 0);
+}
+.card-element{
+     width: 114px;
+     margin-left: 10px;
+}
+.card-body{
+     padding: 5px;
+     color: white;
+}
+
+.al-item .al-item-header {
+     background: rgba(0,0,0,.05);
+     border:none;
+     display: flex;
+     height: 112px; /*td*/
+}
+.al-item .al-item-header .al-item-action {
+  /*   background:#fff;
+     border-left:1px solid #53c6f300;
+     border-bottom:1px solid #5cdfab00;*/
+     border-radius:4px 0 12px 0;
+     color:rgba(128, 250, 189, 0);
+     min-width: 25px;
+     font-size:12px;
+     padding:5px 10px;
+     position:absolute;
+     left:0;
+     top:0;
+}
+.al-item .al-item-header .add {
+     background:#034b14;
+     color:rgb(0, 0, 0);
+     font-size: 14px;
+}
+.al-item .al-item-header .remove {
+     background:#740606;
+     color:rgb(0, 0, 0);
+     font-size: 14px;
+}
+.al-item .al-item-header .use {
+     background:#2256ff;
+     color:rgb(0, 0, 0);
+}
+.al-item .al-item-img{
+     flex-grow: 1;
+}
+.al-item .al-item-header img {
+     width:90px;
+}
+/*.al-item .al-price-box .al-item-features {
+     background: rgb(107, 3, 3);
+     color: #ffffff;
+     font-size: 14px;
+}*/

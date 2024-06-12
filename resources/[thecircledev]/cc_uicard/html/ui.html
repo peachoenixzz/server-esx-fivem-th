@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fuggles&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+
+      .signature {
+        font-family: "Fuggles", cursive;
+      }
+
+      div.thecircle {
+        line-height: 90%;
+      }
+
+      div.cardname {
+        line-height: 200%;
+      }
+
+      div.cardsign {
+        line-height: 80%;
+      }
+
+      body {
+        display: none;
+      }
+
+      .box-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150%; /* Start wider to ensure full coverage */
+        width: 200%; /* Wider to cover the entire area as it moves */
+        height: 100%;
+        z-index: 2; /* Ensure it's above the background but below the content */
+        /* Update the gradient for a golden shine */
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 215, 0, 0.1),
+          /* Lighter golden color */ rgba(255, 223, 0, 0.1),
+          /* Bright golden color */ transparent
+        );
+        animation: shine 4s infinite;
+      }
+
+      @keyframes shine {
+        0%,
+        100% {
+          left: -150%; /* Start and end outside of view for a smooth transition */
+        }
+        50% {
+          left: 100%; /* Shine moves across the element */
+        }
+      }
+
+      .box-content {
+        position: relative;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mr-5 my-48 absolute right-0">
+      <div
+        class="card-container flex ml-4 bg-[url('dark.jpg')] rounded-lg py-1 overflow-hidden w-[38vh]"
+      >
+        <div
+          class="box-content w-[37.5vh] rounded-md pt-1 bg-gradient-to-b from-black to-black/[0.5] overflow-hidden"
+        >
+          <div class="flex">
+            <div class="w-[30%] ml-3 flex justify-end">
+              <img
+                class="my-2 rounded-lg black mt-4 w-[10vh] h-[10vh]"
+                id="image"
+                src="img/MALE.png"
+                alt="Circle image"
+              />
+            </div>
+
+            <div class="w-[70%]">
+              <div class="thecircle text-[1.7vh] tracking-wide">
+                <div
+                  class="tracking-wide text-bold bg-gradient-to-l bg-clip-text text-transparent from-[#ffa800] to-[#ffcc00] mt-0.5 text-center mx-3"
+                >
+                  MONGKOL TOWN
+                </div>
+                <div class="text-white text-center mb-0.5 m-0 mx-4">
+                  IDENTIFICATION CARD
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-l from-[#ffa800] to-[#ffcc00]">
+                <div class="bg-gradient-to-l from-[#ffa800] to-[#ffcc00] py-1">
+                  <div class="h-[0.1vh] bg-black/[0.5] rounded-full"></div>
+                </div>
+
+                <div
+                  class="mx-4 text-white text-[1.8vh] leading-[2vh]"
+                  id="name"
+                  style="word-break: break-all"
+                >
+                  Min Siriratanasakulwong
+                </div>
+
+                <div class="bg-gradient-to-l from-[#ffa800] to-[#ffcc00] py-1">
+                  <div class="h-[0.1vh] bg-black/[0.5] rounded-full"></div>
+                </div>
+              </div>
+
+              <div class="flex justify-center mt-1 mx-2">
+                <div>
+                  <div
+                    class="tracking-wide text-white text-[0.8vh] text-center"
+                  >
+                    DATE OF BIRTH
+                  </div>
+
+                  <div
+                    class="text-white text-[1.1vh] text-center mt-0.5"
+                    id="dob"
+                  >
+                    21/10/53
+                  </div>
+                  <div>
+                    <div
+                      class="tracking-wide text-white text-[0.8vh] text-center"
+                    >
+                      JOB
+                    </div>
+                    <div
+                      class="text-white text-[1.1vh] text-center mt-0.5"
+                      id="job"
+                    >
+                      AMBULANCE
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mx-5">
+                  <div
+                    class="tracking-wide text-white text-[0.8vh] text-center"
+                  >
+                    GENDER
+                  </div>
+                  <div
+                    class="text-white text-[1.1vh] text-center mt-0.5"
+                    id="sex"
+                  >
+                    MALE
+                  </div>
+
+                  <div
+                    class="tracking-wide text-white text-[0.8vh] text-center"
+                  >
+                    POSITION
+                  </div>
+                  <div
+                    class="text-white text-[1.1vh] text-center mt-0.5"
+                    id="position"
+                  >
+                    ?????????
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="tracking-wide text-white text-[0.8vh] text-center"
+                  >
+                    HEIGHT
+                  </div>
+                  <div
+                    class="text-white text-[1.1vh] text-center mt-0.5"
+                    id="height"
+                  >
+                    166
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-b-lg">
+            <div
+              class="bg-gradient-to-l from-[#ffa800]/[0.9] to-[#ffcc00]/[0.9] h-[0.2vh] mx-3 my-1 rounded-full"
+            ></div>
+            <div class="mx-3 my-0.5 text-white text-[0.8vh]">SIGNATURE</div>
+            <div class="flex items-center justify-center mx-3 bg-black rounded">
+              <div
+                class="cardsign signature font-bold text-center text-[4vh] bg-gradient-to-l bg-clip-text text-transparent from-[#ffa800] to-[#ffcc00] leading-[4vh] tracking-wide"
+                id="name-signature"
+              >
+                Min Siriratanasakulwong
+              </div>
+            </div>
+            <div class="flex justify-end items-center mt-2 mb-1">
+              <div class="mx-1 text-white text-[0.8vh]">SINCE 2024</div>
+              <!--              <img-->
+              <!--                src="img/cc2.png"-->
+              <!--                alt="Circle image"-->
+              <!--                class="mb-1 mr-2 w-[2vh] h-[2vh]] object-cover rounded-full"-->
+              <!--              />-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/app.js"></script>

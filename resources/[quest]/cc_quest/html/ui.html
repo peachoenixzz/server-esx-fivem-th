@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link href="styles_tw.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+
+      body {
+        display: none;
+      }
+      /* .overflow-scroll::-webkit-scrollbar {
+        display: none;
+      } */
+
+      ::-webkit-scrollbar {
+        width: 0vh;
+      }
+
+      #container-main {
+        display: none;
+      }
+      #container-sub {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center h-screen relative">
+      <div id="container-main">
+        <div
+          class="bg-gradient-to-l from-[#ffa800] to-[#ffcc00] p-[0.5vh] flex items-center justify-center text-[2.5vh] text-white w-[33vh] relative rounded-[0.5vh]"
+          style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8)"
+        >
+          <div class="absolute inset-0 z-10">
+            <img
+              src="img/cloud_texture2.png"
+              class="w-full h-full object-cover opacity-70"
+            />
+          </div>
+          <div class="absolute mb-[12.5vh] ml-[2vh]">
+            <img
+              src="img/dragon-head.png"
+              class="object-cover h-[10vh] w-[14vh]"
+              alt="Logo"
+            />
+            <!-- Adjust the src and class as needed -->
+          </div>
+          <div class="drop-shadow font-bold">MONGKOL QUEST</div>
+        </div>
+        <div
+          class="bg-black/[0.5] p-[0.5vh] flex items-start text-[2vh] rounded-[0.5vh] mt-[0.5vh] text-white h-[22.5vh]"
+          style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8)"
+        >
+          <div
+            class="flex items-center justify-center w-full h-full"
+            id="quest-container"
+          >
+            <span class="loader"></span>
+          </div>
+        </div>
+        <div class="flex items-center text-[2vh] mt-[0.5vh] text-white">
+          <div
+            class="w-[3.3vh] h-[3.3vh] bg-black/[0.5] rounded-[0.5vh] flex items-center justify-center"
+            style="box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8)"
+            id="weight-left"
+          >
+            30
+          </div>
+
+          <div
+            class="w-[80%] bg-black/[0.5] h-[3.3vh] flex items-center justify-center text-center relative rounded-[0.5vh] mx-[0.5vh]"
+            style="box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8)"
+          >
+            <div
+              class="absolute inset-0 flex items-center justify-center z-10"
+              id="require"
+            >
+              0/5
+            </div>
+            <div id="container-buttonNprogress">
+              <div
+                id="progress"
+                class="absolute bottom-0 left-0 right-0 box-content progress h-full w-[0%] z-0 rounded-[0.5vh] bg-gradient-to-l from-[#ffa800] to-[#ffcc00]"
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="w-[3.3vh] h-[3.3vh] bg-black/[0.5] rounded-[0.5vh] flex items-center justify-center"
+            id="weight-right"
+            style="box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8)"
+          >
+            31
+          </div>
+        </div>
+        <div
+          class="bg-black/[0.5] p-[0.5vh] flex items-center justify-between text-[2.5vh] text-white rounded-r-full rounded-l-[200vh] mt-[0.5vh]"
+          style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8)"
+        >
+          <div id="button-quest-container">
+            <button
+              class="bg-gradient-to-l from-[#ffa800] to-[#ffcc00] rounded-[0.5vh] px-[1.5vh]"
+              onclick="createQuest()"
+            >
+              รับเควส
+            </button>
+          </div>
+          <div class="flex flex-row-reverse items-center">
+            <button
+              onclick="resetQuest()"
+              class="box-content bg-black/[0.5] h-[3vh] w-[3vh] rounded-full flex items-center justify-center p-[0.5vh] ml-[0.5vh]"
+            >
+              <img src="img/reset.png" class="h-[2.5vh] w-[2.5vh]" />
+            </button>
+            <div class="text-[1.5vh]">3,000</div>
+            <div
+              class="box-content h-[2vh] w-[2vh] rounded-full flex mx-[0.5vh]"
+            >
+              <img src="img/dollar.png" />
+            </div>
+            <div class="text-[1.5vh]">สุ่มเควสใหม่</div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute left-0 ml-5" id="container-sub">
+        <div class="flex h-[13vh] items-center">
+          <div
+            class="w-[0.3vh] bg-[#ffcc00] h-[90%] mr-[0.5vh]"
+            style="box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8)"
+          ></div>
+          <div
+            class="bg-black/[0.5] w-[18vh] p-[0.5vh] flex items-start text-[1vh] rounded-[0.5vh] text-white h-[13vh]"
+            style="box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8)"
+          >
+            <div
+              class="flex items-center justify-center w-full h-full"
+              id="sub-quest-container"
+            >
+              <span class="subloader"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="app.js"></script>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+      body {
+        display: none;
+      }
+      .gradient {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 204, 0, 0.5),
+          rgba(166, 106, 2, 0.5)
+        );
+      }
+      .bg-img {
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(255, 168, 0, 0.6)
+          ),
+          url("img/cloud_texture2.png");
+        background-size: cover;
+      }
+      .bg-dragon {
+        background-image: url(img/Dragon_2.png);
+        width: 40%;
+        height: 100%;
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <div class="container bg-black/[0.5] w-[35vh] rounded-lg">
+        <div
+          class="container bg-gradient-to-l from-[#ffa800] to-[#ffcc00] rounded-t-lg text-white flex items-center justify-center text-[2.1vh] relative"
+        >
+          <div class="absolute inset-0 z-10">
+            <img
+              src="img/cloud_texture2.png"
+              class="w-full h-full object-cover opacity-70"
+            />
+          </div>
+          <div class="absolute mb-[11vh] ml-[2.5vh]">
+            <img
+              src="img/dragon-head.png"
+              class="object-cover h-[10vh] w-[14vh]"
+              alt="Logo"
+            />
+            <!-- Adjust the src and class as needed -->
+          </div>
+          <div class="drop-shadow font-bold">BANK</div>
+        </div>
+        <div
+          class="box-content mx-2 my-2 flex items-center text-[1.8vh] justify-between text-white"
+        >
+          <button
+            id="deposit-btn"
+            class="box-content rounded-lg bg-black/[0.5] w-[32%] h-[2.5vh] flex items-center justify-center hover:bg-gradient-to-r from-[#ffcc00]/[0.3] to-[#ffa800]/[0.3]"
+            onclick="deposit()"
+          >
+            ฝากเงิน
+          </button>
+
+          <button
+            id="withdraw-btn"
+            class="box-content rounded-lg bg-black/[0.5] w-[32%] h-[2.5vh] flex items-center justify-center hover:bg-gradient-to-r from-[#ffcc00]/[0.3] to-[#ffa800]/[0.3]"
+            onclick="withdraw()"
+          >
+            ถอนเงิน
+          </button>
+          <button
+            class="box-content rounded-lg bg-black/[0.5] w-[32%] h-[2.5vh] flex items-center justify-center hover:bg-gradient-to-r from-[#ffcc00]/[0.3] to-[#ffa800]/[0.3]"
+            id="tranfer-btn"
+            onclick="tranfer()"
+          >
+            โอนเงิน
+          </button>
+        </div>
+        <div
+          class="box-content mx-2 my-2 rounded-lg text-white text-[1.8vh] overflow-hidden"
+        >
+          <div class="bg-img">
+            <div class="flex items-center">
+              <div
+                class="box-content w-[2.5vh] h-[2.5vh] mx-2 my-2 rounded-full"
+              >
+                <img src="player.png" />
+              </div>
+              <div id="player-name">JOW TAOSAO</div>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="box-content w-[2.5vh] h-[2.5vh] mx-2 mb-2 rounded-full"
+              >
+                <img src="dollar.png" />
+              </div>
+              <div id="player-bank">999,999,999</div>
+            </div>
+
+            <div class="flex" id="input-container">
+              <!--            <input-->
+              <!--              type="text "-->
+              <!--              id=""-->
+              <!--              name="#"-->
+              <!--              class="box-content rounded-lg bg-[#519188]/[0.5] w-[100%] h-[2.5vh] text-center my-2 mx-2"-->
+              <!--              placeholder="จำนวน"-->
+              <!--            />-->
+              <!--          </div>-->
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center mx-2 my-2">
+          <div class="w-[33%] h-[0.2vh] bg-gray-400/[0.5] rounded-full"></div>
+          <div
+            class="flex items-center justify-center mx-2 w-[33%] text-white text-[1.8vh]"
+          >
+            <div class="box-content w-[2.5vh] h-[2.5vh] mr-2 rounded-full">
+              <img src="quickdraw.png" />
+            </div>
+            <div>ถอนด่วน</div>
+          </div>
+          <div class="w-[33%] h-[0.2vh] bg-gray-400/[0.5] rounded-full"></div>
+        </div>
+        <div
+          class="box-content mx-2 my-2 flex items-center text-[1.8vh] justify-between text-white"
+        >
+          <button
+            class="box-content rounded-lg bg-black/[0.5] w-[32%] h-[2.5vh] flex items-center justify-center hover:bg-gradient-to-r from-[#ffcc00]/[0.3] to-[#ffa800]/[0.3]"
+            onclick="fastWithdraw(100)"
+          >
+            100
+          </button>
+
+          <button
+            class="box-content rounded-lg bg-black/[0.5] w-[32%] h-[2.5vh] flex items-center justify-center hover:bg-gradient-to-r from-[#ffcc00]/[0.3] to-[#ffa800]/[0.3]"
+            onclick="fastWithdraw(1000)"
+          >
+            1,000
+          </button>
+          <button
+            class="box-content rounded-lg bg-black/[0.5] w-[32%] h-[2.5vh] flex items-center justify-center hover:bg-gradient-to-r from-[#ffcc00]/[0.3] to-[#ffa800]/[0.3]"
+            onclick="fastWithdraw(10000)"
+          >
+            10,000
+          </button>
+        </div>
+        <div
+          class="box-content mx-2 my-2 flex items-center justify-between text-white"
+        >
+          <div class="flex text-[1.8vh]">
+            <div class="box-content w-[2.5vh] h-[2.5vh] mx-2 rounded-full">
+              <img src="cash.png" />
+            </div>
+            <div id="player-cash">99,999</div>
+          </div>
+
+          <button
+            class="box-content rounded-lg bg-gradient-to-l from-[#ffa800] to-[#ffcc00] w-[32%] h-[3.5vh] flex items-center justify-center text-[2vh]"
+            onclick="confirmAction()"
+          >
+            ยืนยัน
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/app.js"></script>

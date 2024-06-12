@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira&display=swap");
+@font-face { font-family: fuente; src: url("digital-7.ttf"); }
+body { overflow: hidden; height: 1080px; width: 100%; font-family: Saira, sans-serif; color: rgb(255, 255, 255); }
+#body { display: none; user-select: none; }
+#Premium {
+    position: absolute;
+    right: 55vh;
+    top: 21vh;
+    width: 58vh;
+    height: 18vh;
+    /* overflow: hidden; */
+}
+
+#Premium2 {
+    position: absolute;
+    right: 0vh;
+    top: 0vh;
+    width: 56vh;
+    height: 16vh;
+    overflow: hidden;
+    border-radius: 2.5vh;
+    border: 1vh solid #ffc800;
+    background: rgba(0,0,0);
+}
+
+#Premium3 {
+    position: absolute;
+    left: 1vh;
+    top: 1vh;
+    width: 14vh;
+    height: 14vh;
+    overflow: hidden;
+    border-radius: 0.7vh;
+    background: rgb(204 204 204 / 30%);
+}
+#icon {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    top: 2vh;
+    left: 2vh;
+    scale: 1;
+    background-image: url(logo.png);
+    border-radius:0.8vh;
+    background-size: cover;
+}
+
+#Vip {position: absolute;right: 1vh;top: 1vh;width: 39vh;height: 14vh;overflow: hidden;border-radius: 0.7vh;background: rgb(204 204 204 / 30%);}
+#Vip1 {
+    position: absolute;
+    width: 13vh;
+    padding: 0.1vh;
+    left: 25vh;
+    top: 10.5vh;
+    z-index: 500;
+    font-size: 1.5vh;
+    color: white;
+    text-align: center;
+    border-radius: 0.5vh;
+    background: rgba(0,0,0,0.5);
+}
+#Vip2 {position: absolute;width: 27vh;left: 1vh;top: 0.7vh;z-index: 500;font-size: 1.8vh;color: white;font-weight: 500;text-align: left;}
+#Vip3 {
+    position: absolute;
+    width: 27vh;
+    left: 1vh;
+    top: 2.8vh;
+    z-index: 500;
+    font-size: 1.8vh;
+    color: white;
+    font-weight: 500;
+    text-align: left;
+}
+#Vip4 {
+    position: absolute;
+    width: 27vh;
+    left: 1vh;
+    top: 4.9vh;
+    z-index: 500;
+    font-size: 1.8vh;
+    color: white;
+    font-weight: 500;
+    text-align: left;
+}
+
+#Vip5 {
+    position: absolute;
+    width: 27vh;
+    left: 7vh;
+    top: 7.2vh;
+    z-index: 500;
+    font-size: 1.8vh;
+    color: white;
+    font-weight: 500;
+    text-align: right;
+}
+
+#Vip6 {
+    position: absolute;
+    width: 27vh;
+    left: 1vh;
+    top: 7.2vh;
+    z-index: 500;
+    font-size: 1.8vh;
+    color: white;
+    font-weight: 500;
+    text-align: left;
+}
+#Xvideo1 {position: absolute;width: 5vh;padding: 0.1vh;left: 1vh;top: 10.5vh;z-index: 500;font-size: 1.5vh;color: white;text-align: center;border-radius: 0.5vh;background: rgba(0,0,0,0.5);}
+#Xvideo2 {
+    position: absolute;
+    width: 5vh;
+    padding: 0.1vh;
+    left: 7vh;
+    top: 10.5vh;
+    z-index: 500;
+    font-size: 1.5vh;
+    color: white;
+    text-align: center;
+    border-radius: 0.5vh;
+    background: rgba(0,0,0,0.5);
+}
+#Xvideo3 {
+    position: absolute;
+    width: 5vh;
+    padding: 0.1vh;
+    left: 13vh;
+    top: 10.5vh;
+    z-index: 500;
+    font-size: 1.5vh;
+    color: white;
+    text-align: center;
+    border-radius: 0.5vh;
+    background: rgba(0,0,0,0.5);
+}
+#Xvideo4 {
+    position: absolute;
+    width: 5vh;
+    padding: 0.1vh;
+    left: 19vh;
+    top: 10.5vh;
+    z-index: 500;
+    font-size: 1.5vh;
+    color: white;
+    text-align: center;
+    border-radius: 0.5vh;
+    background: rgba(0,0,0,0.5);
+}
+#Pronhud {position: absolute;right: 0%;bottom: 0%;width: 100%;height: 100%;animation-name: example;animation-duration: 2s;}
+#Icon1 { position: absolute; width: 13vh; right: 94.3vh; bottom: 64vh; z-index: 500; font-size: 3vh; color: white; text-align: center; animation: 5s ease 0s infinite normal none running LogoRotate; }
+@keyframes example { 
+  0% { right: 0%; bottom: 20%; }
+  100% { right: 0%; bottom: 0%; }
+}

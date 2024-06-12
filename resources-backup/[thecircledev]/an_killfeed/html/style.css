@@ -1,0 +1,122 @@
+/* Custom Font */
+
+@font-face {
+	font-family: Valo;
+	src: url(valo.ttf);
+}
+
+#killfeed-container {
+	margin-top: 15vh;
+	margin-right: 1vh;
+	width: 35vw;
+	height: 75vh;
+	float: right;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.kill-line {
+	float: right;
+	width: 100%;
+	margin-bottom: 0.35vh;
+	animation-fill-mode: forwards;
+}
+
+.kill-container {
+	height: 3vh;
+	float: right;
+	display:inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+
+.black-design {
+	background-color: rgba(30, 30, 30, 0.8);
+	border-radius: 0.5em;
+	padding: 0.3em 0.3em 0.3em 0.3em;
+	box-shadow: rgba(42, 42, 42, 0.35) 0px 4px 12px;
+}
+
+.teal-design {
+	background-color: rgb(255, 204, 0, 0.8);
+	border-radius: 0.5em;
+	padding: 0.3em 0.3em 0.3em 0.3em;
+	box-shadow: rgba(255, 168, 0, 0.6) 0px 4px 12px;
+}
+
+.red-design {
+	background-color: rgb(255, 0, 0, 0.8);
+	border-radius: 0.5em;
+	padding: 0.3em 0.3em 0.3em 0.3em;
+	box-shadow: rgba(186, 0, 0, 0.6) 0px 4px 12px;
+}
+
+.text {
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	color: rgb(255, 255, 255);
+	font-family: 'Valo', Arial, Helvetica, sans-serif;
+}
+
+.name {
+	padding-left: 0.85vh;
+	padding-right: 0.85vh;
+	font-size: 0.9em;
+	font-weight: 500;
+}
+
+.tag {
+	padding-left: 0.85vh;
+	margin-right: -0.30vh;
+	font-size: 1.20em;
+}
+
+.message {
+	padding-right: 0.85vh;
+	font-size: 1.35em;
+}
+
+.dist {
+	padding-left: 0.4vh;
+	padding-right: 0.4vh;
+	padding-top: 0.2vh;
+	padding-bottom: 0.2vh;
+	margin-right: 0.82vh;
+	font-size: 1.0em;
+	white-space: nowrap;
+	font-weight: 100;
+	border: solid rgb(255, 255, 255) 2px;
+	border-radius: 5px;
+}
+
+.none {
+	padding: 0;
+	padding-right: 0.85vh;
+}
+
+.weapon-image {
+	height: 2.3vh;
+}
+
+.icon-image {
+	height: 2.6vh;
+	padding: 0;
+	padding-left: 0.85vh;
+}
+
+/* ANIMATIONS  */
+
+.animate__animated.animate__fadeInRight {
+	--animate-duration: 300ms;
+}
+.animate__animated.animate__flipOutX {
+	--animate-duration: 0.6s;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+
+      body {
+        display: none;
+      }
+      .rounded9999px {
+        border-radius: 9999px 1000px 1000px 9999px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mr-5 h-[18vh] my-48 absolute right-0">
+      <div class="flex items-center h-full">
+        <div
+          class="h-[90%] w-[0.3vh] bg-[#ffcc00] mx-2"
+          style="box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8)"
+        ></div>
+        <div
+          class="bg-black/[0.5] rounded-lg"
+          style="box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8)"
+        >
+          <div class="container mx-2 my-2">
+            <div class="text-[3vh] text-[#ffcc00] ml-3" id="name">
+              JOW TAOSAO
+            </div>
+
+            <div class="container flex">
+              <div class="flex w-[50%]">
+                <div class="box-content w-[3vh] h-[3vh] rounded-full ml-2">
+                  <img
+                    src="img/phone.png"
+                    alt="phone image"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div
+                  class="flex items-center ml-2 mb-2 text-[2vh] text-white"
+                  id="phone"
+                >
+                  99999
+                </div>
+              </div>
+              <div class="flex w-[50%]">
+                <div class="box-content w-[3vh] h-[3vh] ml-2 rounded-full">
+                  <img
+                    src="img/id.png"
+                    alt="id image"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div
+                  class="flex items-center ml-2 mb-2 text-[2vh] text-white"
+                  id="id"
+                >
+                  999
+                </div>
+              </div>
+            </div>
+            <div class="container flex">
+              <div class="flex">
+                <div class="box-content w-[3vh] h-[3vh] mt-1 ml-2 rounded-full">
+                  <img
+                    src="img/job.png"
+                    alt="job image"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div
+                  class="flex items-center mt-1.5 ml-2 mb-2 text-[2vh] text-white"
+                  id="job"
+                >
+                  POLICE GENERAL
+                </div>
+              </div>
+            </div>
+            <div class="container flex">
+              <div class="flex w-[50%]">
+                <div class="box-content w-[3vh] h-[3vh] mt-1 ml-2 rounded-full">
+                  <img
+                    src="img/md.png"
+                    alt="md image"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div
+                  class="flex items-center justify-center box-content w-[7vh] h-[2vh] bg-gradient-to-l from-[#ffa800]/[0.3] to-[#ffcc00]/[0.3] my-2.5 mx-2 rounded-md text-[2vh] text-white"
+                  id="medic-count"
+                >
+                  999
+                </div>
+              </div>
+              <div class="flex w-[50%]">
+                <div class="box-content w-[3vh] h-[3vh] ml-2 mt-1 rounded-full">
+                  <img
+                    src="img/player.png"
+                    alt="player image"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div
+                  class="flex items-center justify-center box-content w-[7vh] h-[2vh] bg-gradient-to-l from-[#ffa800]/[0.3] to-[#ffcc00]/[0.3] my-2.5 mx-2 rounded-md text-[2vh] text-white"
+                  id="player-count"
+                >
+                  999
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="flex items-center bg-black/[0.5] rounded-lg h-[3vh] mt-[1vh] absolute right-0 px-2"
+          style="box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8)"
+        >
+          <div class="box-content w-[2vh] h-[2vh] rounded-full">
+            <img
+              src="img/exchange.png"
+              alt="exchange image"
+              class="object-cover rounded-full w-[2vh] h-[2vh]"
+            />
+          </div>
+          <div
+            class="flex items-center justify-between box-content w-[11vh] h-[2vh] bg-gradient-to-l from-[#ffa800]/[0.3] to-[#ffcc00]/[0.3] px-2 rounded-md text-[1.7vh] text-white ml-2"
+          >
+            <div id="c-point">100,000</div>
+            <div>G</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="Jackzee.js"></script>

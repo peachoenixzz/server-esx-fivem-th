@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/scotty.css" />
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/scotty.js"></script>
+		
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<script src="js/script.js"></script>
+	</head> 
+	<body oncontextmenu="return false;">
+		<div class="desk">
+			<span class="desk-name">DESK_NAME</span>
+			<span class="delear-text">TEXT_DEALER</span>
+			<span class="win-text">คุณชนะ</span>
+			<div class="card-display">
+				<div id="player-frame">
+					<div class="card-frame" id="pf_1">
+					</div>
+					<div class="card-frame" id="pf_2">
+					</div>
+					<span>PLAYER</span>
+					<text id="player-score" class="card-score">ป๊อก 9</text>
+				</div>
+				<div id="banker-frame">
+					<div class="card-frame" id="bf_1">
+					</div>
+					<div class="card-frame" id="bf_2">
+					</div>
+					<span>BANKER</span>
+					<text id="banker-score" class="card-score">ป๊อก 9</text>
+				</div>
+			</div>
+			<div class="bet-control">
+				<div class="control-button" id="bet_player">
+					<span id="text-player">PLAYER<br><span class="rate" id="player-rate">1 | 1</span></span>
+				</div>
+				<div>
+					<div class="control-button" id="bet_tie">
+						<span id="text-tie">เสมอ<br><span class="rate" id="tie-rate">1 | 5</span></span>
+					</div>
+					<div>
+						<div class="control-button" id="bet_player_pair">
+							<text>PAIR</text>
+							<span id="text-player-pair">PLAYER<br><span class="rate" id="player-pair-rate">1 | 10</span></span>
+						</div>
+						<div class="control-button" id="bet_banker_pair">
+							<text>PAIR</text>
+							<span id="text-banker-pair">BANKER<br><span  class="rate"id="banker-pair-rate">1 | 10</span></span>
+						</div>
+					</div>
+				</div>
+				<div class="control-button" id="bet_banker">
+					<span id="text-banker">BANKER<br><span class="rate" id="banker-rate">1 | 0.7</span></span>
+				</div>
+			</div>
+			<div class="last-result">
+				
+			</div>
+		</div>
+	</body>
+</html>

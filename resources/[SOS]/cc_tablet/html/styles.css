@@ -1,0 +1,104 @@
+body {
+  font-family: "Kanit", sans-serif;
+}
+/* body {
+        display: none;
+      } */
+/* .overflow-scroll::-webkit-scrollbar {
+        display: none;
+      } */
+/* Chrome, Safari, Edge, Opera */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.8vh;
+  width: 3vh;
+  height: 3vh;
+}
+
+input[type="checkbox"]:checked {
+  content: url("img/checker.png");
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4vh;
+  height: 2vh;
+  /* border: solid red 1px;
+  border-radius: 1vh; */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.8vh;
+  width: 1.8vh;
+  left: 0.2vh;
+  bottom: 0.1vh;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #00ff4c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #00ff4c;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.8vh);
+  -ms-transform: translateX(1.8vh);
+  transform: translateX(1.8vh);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 1vh;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ffcc00;
+}
+.button-active {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.6),
+    rgba(255, 204, 0, 0.8)
+  );
+}

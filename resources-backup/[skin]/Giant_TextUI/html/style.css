@@ -1,0 +1,67 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@200;300;400;500;600;700&display=swap");
+@font-face {
+	font-family: 'Kanit', sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
+   
+}
+
+* {
+	font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.container {
+    position: absolute;
+    left: 49%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    padding: 7px 27px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 8px;
+    /* border-left-color: rgb(29 78 216);
+    border-left-width: 20px; */
+    /* border-left: 10px solid rgb(29 78 216); */
+    letter-spacing: 0.8px;
+    font-size: 16px;
+    color: #eee;
+    font-family: 'Sarabun', sans-serif;
+    /* font-weight: 400; */
+}
+
+
+.INPUT_CONTEXT {
+    border-radius: 5px;
+    background-color: rgba(243, 168, 188, 0.85);
+    padding: 2px 18px;
+    color: rgb(255, 255, 255);
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    
+}
+
+.container-show {
+    animation: show .3s ease-in-out forwards;
+}
+
+.container-hide {
+    animation: leave .3s ease-in-out forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0.5vw);
+    }
+}
+
+@keyframes leave {
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0.5vw);
+    }
+}

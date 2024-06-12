@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVariation>
+	<variationData>
+	<Item>
+      <modelName>polbuff</modelName>
+      <colors>
+		  <Item>
+          <indices content="char_array">
+            134
+            0
+            0
+            0
+			93
+			134
+          </indices>
+        </Item>
+		  <Item>
+          <indices content="char_array">
+            1
+            0
+            134
+            0
+			93
+			134
+          </indices>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>police guv plate</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="1" />
+      <sirenSettings value="5001" />
+	</Item>
+	</variationData>
+</CVehicleModelInfoVariation>

@@ -1,0 +1,25 @@
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>ymap\apa_ch2_02.ymap</Item>
+    <Item>ymap\apa_ch2_02_critical_0.ymap</Item>
+    <Item>ymap\apa_ch2_02_long_0.ymap</Item>
+    <Item>ymap\apa_ch2_02_strm_2.ymap</Item>
+    <Item>ymap\apa_ch2_02_strm_3.ymap</Item>
+    <Item>ymap\apa_ch2_02_strm_4.ymap</Item>
+    <Item>ymap\apa_ch2_02_strm_5.ymap</Item>
+    <Item>ymap\apa_ch2_occl_03.ymap</Item>
+    <Item>ymap\apa_ch2_occl_05.ymap</Item>
+    <Item>ymap\gmap_council_circle.ymap</Item>
+    <Item>ymap\vw_lodlights_large000.ymap</Item>
+    <Item>ymap\vw_lodlights_small010.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames />
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+</CodeWalkerProject>

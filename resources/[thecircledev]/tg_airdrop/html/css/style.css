@@ -1,0 +1,60 @@
+/* This resource was scripted by TG DEVELOPER
+Discord : https://discord.gg/yT9ySxbM9Y */
+
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
+html {
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+body {
+    background: transparent !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+#airdropList {
+    display: none;
+    position: absolute;
+	left: 50%;
+	top: 4.75%;
+	transform: translate(-50%, -50%);
+}
+
+.Airdrop {
+    display: inline-block;
+    margin-left: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+.timeText {
+    font-size: 16px;
+    position: absolute;
+	left: 51%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.airdropText {
+    position: absolute;
+    bottom: 5px;
+    width: 100px;
+    height: 25px;
+}
+
+.airdropImage {
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+}

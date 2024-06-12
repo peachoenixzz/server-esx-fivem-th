@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith:wght@700&display=swap');
+
+* {
+	font-family:"Roboto","Sarabun";
+}
+
+.dialog{
+	background-color:rgba(255,255,255);
+	position: absolute;
+	min-width: 20%;
+	left: 50%;
+	top: 50%;
+	
+	transform: translate(-50%,-50%);
+	border-radius: 0.15em;
+	z-index: 999;
+	text-align:center;
+	overflow:auto;
+}
+
+.text-pad {
+	padding-left:0.8em;
+	padding-right:0.8em;
+}
+
+.dialog-btn-div{
+	width:100%;
+	height:3.5em;
+	text-align:left;
+	border-top:1px solid rgba(0,0,0,.08);
+
+}
+
+.dialog-input {
+	color: black;
+	background:rgba(255,255,255,0.5);
+	padding: 2% 2%;
+	border-style: groove;
+	border-width: 0.1em;
+	border-radius: 0.1em;
+	width:80%;
+	transition:0.2s;
+}
+
+.dialog-input:focus {
+	border-color: rgba(0,100,255,0.5);
+}
+
+
+.dialog-btn-right{
+	width:50%;
+	height:100%;
+	float:right;
+	background-color:rgba(255,255,255,0.5);
+	border: none;
+	font-weight: 500;
+	font-size:1.0em;
+	color:green;
+	font-family: 'Roboto', 'Sarabun';
+	transition:0.2s;
+}
+
+.dialog-btn-right:hover{
+	background-color:rgba(240,240,240,1.0);
+}
+
+.dialog-btn-left{
+	width:50%;
+	height:100%;
+	float:left;
+	background-color:rgba(255,255,255,0.5);
+	border: none;
+	font-weight: 500;
+	font-size:1.0em;
+	color:gray;
+	font-family: 'Roboto', 'Sarabun';
+	border-right:1px solid rgba(0,0,0,.08);
+	transition:0.2s;
+}
+
+.dialog-btn-left:hover{
+	background-color:rgba(240,240,240,1.0);
+}
+
+.dialog-btn-middle{
+	width:100%;
+	height:100%;
+	float:left;
+	background-color:rgba(255,255,255,0.5);
+	border: none;
+	font-weight: 500;
+	font-size:1.0em;
+	color:gray;
+	font-family: 'Roboto', 'Sarabun';
+	transition:0.2s;
+}
+
+.dialog-btn-middle:hover{
+	background-color:rgba(240,240,240,1.0);
+}
+
+.category {
+	
+}
+
+.category > * {
+	text-align:left;
+}
+
+.category-link {
+	display:inline-block;
+	width:100%;
+	padding:1.5%;
+	
+	color:white;
+	background:rgba(20,20,20,0.2);
+	border-bottom:1px solid #1a1a1a;
+	font-size:15px;
+	text-shadow:0px 1px 0px #1b1b1b;
+	text-decoration:none;
+	
+	transition:all linear 0.15s;
+}
+
+.category-link:hover {
+	background:rgba(67,67,67,0.8);
+}
+
+.category-link:after {
+    content: '\25BC';
+    font-size: 18px;
+    color: rgba(255,255,255,0.3);
+    float: right;
+    margin-right: 5%;
+}
+
+.category-link-content {
+	display:inline-block;
+	width:100%;
+	padding:2%;
+	
+	color:white;
+	
+	border-bottom:1px solid #1a1a1a;
+	font-size:14px;
+	text-shadow:0px 1px 0px #1b1b1b;
+	text-decoration:none;
+	
+	transition:all linear 0.15s;
+}
+
+.category-link-content:hover {
+	background:rgba(67,67,67,0.4);
+}
+
+.category-menu {
+	
+}
+
+.tooltip {
+	display:none;
+	position:absolute;
+	color:white;
+	background:rgba(20,20,20,0.8);
+	padding:1%;
+	z-index:999;
+}
+
+.rmenu {
+	display: inline-flex;
+	flex-direction:column;
+	position:absolute;
+	min-width:7%;
+	z-index:1000;
+}
+
+.rmenu > a{
+	flex:1;
+	color: white;
+	background:rgba(0,0,0,0.7);
+	transition: 0.2s;
+	padding: 0.5em;
+	text-align:center;
+	position: relative;
+	word-break: break-all;
+}
+
+.rmenu > a:hover{
+	color:gold;
+	background:rgba(100,100,100,0.8);
+}
+
+.rmenu-c {
+	display: inline-flex;
+	flex-direction:column;
+	position:absolute;
+	min-width:7%;
+	z-index: 99;
+}
+
+.rmenu-c > a{
+	flex:1;
+	color: white;
+	background:rgba(20,20,20,0.7);
+	transition: 0.2s;
+	padding: 0.5em;
+	text-align:center;
+	position: relative;
+	word-break: break-all;
+}
+
+.rmenu-c > a:hover{
+	color:gold;
+	background:rgba(120,120,120,0.8);
+}
+
+.rmenu-arrow-left {
+	border: solid rgba(255,255,255,0.35);
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	-webkit-transform: rotate(-45deg);
+	
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	
+	transform: rotate(-45deg) translateY(-50%);
+}
+
+.headshot_thumb {
+	width:10.4vw;
+	height:11.32vw;
+	background-size:300%;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.hair_thumb {
+	width:5.0vw;
+	height:5.441vw;
+	background-size:100%;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.l-dialog {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.85);
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	display: flex;
+	flex-direction: column;
+	z-index: 11;
+}
+
+.l-dialog .ld-container {
+	min-width: 30%;
+	min-height: 20%;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	display:flex;
+	flex-direction: column;
+}
+
+.l-dialog .ld-header {
+	flex: 0 0 20%;
+	border-bottom: 1px solid rgba(230,230,230,0.2);
+	padding:1%;
+
+	display: flex;
+	justify-content: center;
+}
+
+.l-dialog .ld-header > span {
+	font-family: "Thasadith";
+	font-size: 2rem;
+}
+
+.l-dialog .ld-content {
+	flex: 1;
+	padding:1%;
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+	text-align: center;
+
+	max-height: 70vh;
+	overflow-y: auto;
+}
+
+.l-dialog .ld-content > span{
+	font-family: "Sarabun";
+	font-size: 1.2rem;
+}
+
+.l-dialog .ld-footer {
+	flex: 0 0 20%;
+	border-top: 1px solid rgba(230,230,230,0.2);
+	display:flex;
+	justify-content: center;
+	padding:1%;
+	column-gap: 1%;
+}
+
+.l-dialog .ld-button {
+	border:1px solid rgba(230,230,230,0.4);
+	padding: 2% 5%;
+	transition: 0.2s;
+}
+
+.l-dialog .ld-button > span {
+	font-family: "Kanit";
+	font-size: 1.2rem;
+}
+
+.l-dialog .ld-button:hover {
+	border:1px solid rgba(230,230,230,0.8);
+}
+
+.l-dialog .ld-button.red {
+	border:1px solid rgba(230,0,0,0.4);
+}
+
+.l-dialog .ld-button.red:hover {
+	border:1px solid rgba(230,0,0,0.8);
+}
+
+.l-dialog .ld-button.green {
+	border:1px solid rgba(0,230,0,0.4);
+}
+
+.l-dialog .ld-button.green:hover {
+	border:1px solid rgba(0,230,0,0.8);
+}
+
+.l-dialog input {
+	color: white;
+	background:rgba(30,30,30,0.5);
+	padding: 2% 2%;
+	border: 1px solid rgba(230,230,230,0.1);
+	text-align: center;
+}
+
+.l-dialog input::placeholder {
+	color: rgba(255,255,255,0.25);
+}
+
+.l-dialog input.error {
+	color: white;
+	border-color: rgba(255,0,0,0.7);
+}
+
+.l-dialog input.error::placeholder {
+	color:red;
+}
+
+@media screen and (max-width: 1024px) {
+	.l-dialog .ld-container {
+		min-width: 50%;
+		min-height: 35%;
+	}
+}
+
+tgold {
+	color: gold;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tred {
+	color: red;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tpink {
+	color: #ffc0cb;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tpinkpastel {
+	color: #ffd1dc;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+torange {
+	color: orange;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tmaroon {
+	color: maroon;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tgreen {
+	color: green;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tlime {
+	color: lime;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tyellow {
+	color: yellow;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tblue {
+	color: blue;
+	font-family: 'Roboto', 'Sarabun';
+}
+
+tpurple {
+	color:rgba(150,0,255);
+	font-family: 'Roboto', 'Sarabun';
+}

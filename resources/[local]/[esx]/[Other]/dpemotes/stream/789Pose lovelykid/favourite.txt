@@ -1,0 +1,16 @@
+	<Anim dict="----- 789 x lovelykid -----" />
+	<Anim dict="789@lovelykid1" name="lovelykid1" />
+	<Anim dict="789@lovelykid2" name="lovelykid2" />
+	<Anim dict="789@lovelykid3" name="lovelykid3" />
+	<Anim dict="789@lovelykid4" name="lovelykid4" />
+	<Anim dict="789@lovelykid5" name="lovelykid5" />
+	<Anim dict="789@lovelykid6" name="lovelykid6" />
+	<Anim dict="789@lovelykid7" name="lovelykid7" />
+	<Anim dict="789@lovelykid8" name="lovelykid8" />
+	<Anim dict="789@lovelykid9" name="lovelykid9" />
+	<Anim dict="789@lovelykid10" name="lovelykid10" />
+
+ท่าที่นำมาขาย เป็นผลงานลิขสิทธิ์ ไม่อนุญาติให้แจก หรือ ก้อปปี้ไฟส์ ส่งต่อเด็ดขาย
+พบเจอปรับท่าหลุด หรือแจกต่อ ปรับ 50,000 บาท / คน ปรับทั้งคนปล่อยของ และ คนซื้อ คนรับ
+
+♡𓂃invite : https://discord.gg/CYMJCTXwr6 

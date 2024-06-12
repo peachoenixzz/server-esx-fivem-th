@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <!--    <link-->
+    <!--      href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
+    <!--      rel="stylesheet"-->
+    <!--    />-->
+    <link href="styles_tw.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!--Import materialize.css-->
+    <meta charset="UTF-8" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://mongkol.dev/assets" rel="stylesheet" />
+    <style>
+      .background-img {
+        position: relative;
+        /* Ensure the pseudo-element is correctly sized and rounded */
+        overflow: hidden;
+      }
+
+      .background-img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("bg3.webp"); /* Add your background image URL */
+        opacity: 0.6;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        /* Fill the entire parent element */
+        z-index: -1; /* Ensure it's behind the content */
+      }
+
+      /* Add styles for your content to ensure it's visible on top of the background */
+      #main-shop {
+        position: relative;
+        z-index: 1; /* Ensure the content is above the pseudo-background */
+      }
+
+      .overflow-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      ::-webkit-scrollbar-track {
+        /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      ::-webkit-scrollbar {
+        width: 0.55vh;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #ffcc00;
+      }
+
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      .tooltip {
+        position: relative;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 11vh;
+        text-align: center;
+        padding: 0.5vh;
+        border-radius: 0.4vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        z-index: 1;
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center h-screen relative">
+      <div
+        class="w-[30vh] h-[60vh] absolute right-0 mr-5 rounded-lg drop-shadow-lg"
+        style="display: none"
+        id="all-economy"
+      >
+        <div
+          class="container relative bg-gradient-to-l from-[#ffa800] to-[#ffcc00] rounded-t-lg text-white flex items-center justify-center text-[2vh] h-[7%]"
+        >
+          <div class="absolute inset-0 z-10">
+            <img
+              src="img/cloud_texture2.png"
+              class="w-full h-full object-cover opacity-70"
+            />
+          </div>
+          <div class="absolute mb-[12vh] ml-[2vh]">
+            <img
+              src="img/dragon-head.png"
+              class="object-cover h-[10vh] w-[14vh]"
+              alt="Logo"
+            />
+            <!-- Adjust the src and class as needed -->
+          </div>
+          <div class="font-bold z-20">
+            <span class="drop-shadow font-bold">ECONOMY</span>
+          </div>
+        </div>
+        <div class="h-[93%] rounded-b-lg">
+          <div
+            class="overflow-scroll overflow-hidden h-[100%] pb-1 bg-black/[0.5] backdrop-blur-xl rounded-b-lg"
+          >
+            <div class="grid grid-cols-1">
+              <div id="main-shop"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8); display: none"
+        class="rounded-lg"
+        id="big-sell-economy"
+      >
+        <div
+          class="container relative bg-gradient-to-l from-[#ffa800] to-[#ffcc00] rounded-t-lg text-white flex items-center justify-center text-[2vh] p-1.5"
+        >
+          <div class="absolute inset-0 z-10">
+            <img
+              src="img/cloud_texture2.png"
+              class="w-full h-full object-cover opacity-70"
+            />
+          </div>
+          <div class="absolute mb-[12vh] ml-[2vh]">
+            <img
+              src="img/dragon-head.png"
+              class="object-cover h-[10vh] w-[14vh]"
+              alt="Logo"
+            />
+            <!-- Adjust the src and class as needed -->
+          </div>
+          <div class="drop-shadow font-bold">ECONOMY</div>
+        </div>
+        <div class="h-[48vh] rounded-b-lg overflow-hidden">
+          <div
+            style="box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8); display: none"
+            class="grid grid-rows-3 grid-flow-col gap-3 px-3 pt-3 h-full min-w-[65vh] bg-black/[0.5] rounded-b-lg overflow-y-scroll"
+            id="sell-economy"
+          ></div>
+        </div>
+        <div
+          class="container bg-black/[0.5] w-[27vh] h-fit mx-auto rounded-lg"
+          style="box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8)"
+          id="sell-special-economy"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--JavaScript at end of body for optimized loading-->
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<!--    <script type="text/javascript" src="js/materialize.js"></script>-->

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+
+      body {
+        display: none;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      .overflow-scroll::-webkit-scrollbar {
+        display: none;
+      }
+      ::-webkit-scrollbar-track {
+        /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      ::-webkit-scrollbar {
+        width: 0vh;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="flex flex-col justify-center items-center h-screen"
+      id="police-panel"
+    >
+      <div class="container bg-black/[0.5] w-[75vh] rounded-lg">
+        <div
+          class="container bg-gradient-to-l from-[#ffa800] to-[#ffcc00] rounded-t-lg text-white flex items-center text-[2.1vh] relative"
+        >
+          <div class="absolute inset-0 z-10">
+            <img
+              src="img/cloud_texture2.png"
+              class="w-full h-full object-cover opacity-70"
+            />
+          </div>
+          <div class="box-content w-[3vh] h-[3vh] ml-2 mr-1 my-1 rounded-full">
+            <img src="img/pd.png" />
+          </div>
+          POLICE DEPARTMENT
+        </div>
+        <div
+          class="box-content mx-2 my-2 flex items-center text-[1.8vh] justify-between"
+        >
+          <label class="text-white">ผู้ต้องหา</label>
+          <div
+            class="box-content rounded-lg bg-gradient-to-l from-[#ffa800]/[0.3] to-[#ffcc00]/[0.3] w-[32%] h-[2.6vh] mx-2 flex items-center justify-center"
+            id="arrest-player"
+          ></div>
+          <label class="text-white">เจ้าหน้าที่รับผิดชอบคดี</label>
+          <div
+            class="box-content rounded-lg bg-gradient-to-l from-[#ffa800]/[0.3] to-[#ffcc00]/[0.3] w-[32%] h-[2.6vh] ml-2 flex items-center justify-center"
+            id="police-player"
+          ></div>
+        </div>
+        <div
+          class="mx-auto w-[95%] h-[0.2vh] bg-black/[0.5] rounded-full"
+        ></div>
+        <div class="flex text-xs mx-4 mt-2 text-white">
+          <div class="w-[33.2%] mb-2">
+            <span class="flex justify-center mb-1">คดีปล้นชิงทรัพย์</span>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="5000"
+                data-imprison="0"
+                data-name="illegal_face_making_case"
+                data-labelname="ปิดบังใบหน้า"
+              />
+              <span>ปิดบังใบหน้า</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="15000"
+                data-imprison="0"
+                data-name="illegal_ransom_case"
+                data-labelname="ขูดรีดทรัพย์"
+              />
+              <span>ขูดรีดทรัพย์</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="5000"
+                data-imprison="600000"
+                data-name="illegal_storerobbery"
+                data-labelname="งัดร้านค้า"
+              />
+              <span>งัดร้านค้า</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="10000"
+                data-imprison="600000"
+                data-name="housebreaking_case"
+                data-labelname="งัดบ้าน"
+              />
+              <span>งัดบ้าน</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="10000"
+                data-imprison="600000"
+                data-name="illegal_storerobbery"
+                data-labelname="ปล้นคลังสินค้า"
+              />
+              <span>ปล้นคลังสินค้า</span>
+            </div>
+          </div>
+          <div class="w-[0.2vh] bg-black/[0.5] mr-2 mt-2"></div>
+          <div class="w-[33.2%] mb-2">
+            <span class="flex justify-center mb-1"
+              >คดีครอบครองของผิดกฎหมาย</span
+            >
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="2"
+                  data-imprison="0"
+                  data-name="illegal_money_case"
+                  data-labelname="ครอบครองเงินผิดกฎหมาย"
+                />
+                <span>ครอบครองเงินผิดกฎหมาย</span>
+              </div>
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center text-white"
+                name="input-quantity"
+                id="illegal_money_case"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="2000"
+                  data-imprison="0"
+                  data-name="illegal_cement_case"
+                  data-labelname="ครอบครองปูน"
+                />
+                <span>ครอบครองปูน</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_cement_case"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="1000"
+                  data-imprison="0"
+                  data-name="illegal_n_amp_case"
+                  data-labelname="ครอบครองแอมป์"
+                />
+                <span>ครอบครองแอมป์</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_n_amp_case"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="1000"
+                  data-imprison="0"
+                  data-name="illegal_cocaine_case"
+                  data-labelname="ครอบครองเศษยา"
+                />
+                <span>ครอบครองเศษยา</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_cocaine_case"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="2000"
+                  data-imprison="0"
+                  data-name="illegal_cocaine_pack_case"
+                  data-labelname="ครอบครองโคเคนแพ็ค"
+                />
+                <span>ครอบครองโคเคนแพ็ค</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_cocaine_pack_case"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="2000"
+                  data-imprison="0"
+                  data-name="illegal_ice_pack_case"
+                  data-labelname="ครอบครองยาไอซ์แพ็ค"
+                />
+                <span>ครอบครองยาไอซ์แพ็ค</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_ice_pack_case"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="3000"
+                  data-imprison="0"
+                  data-name="illegal_amp_case"
+                  data-labelname="ครอบครองเมทแอมป์เฟตามีน"
+                />
+                <span>ครอบครองเมทแอมป์เฟตามีน</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_amp_case"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="5000"
+                  data-imprison="0"
+                  data-name="illegal_heroin_case"
+                  data-labelname="ครอบครองแป๊ะ"
+                />
+                <span>ครอบครองแป๊ะ</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_heroin_case"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="1000"
+                  data-imprison="0"
+                  data-name="illegal_screwdv"
+                  data-labelname="ครอบครองไขควง"
+                />
+                <span>ครอบครองไขควง</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_screwdv"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="5000"
+                  data-imprison="0"
+                  data-name="illegal_keycard"
+                  data-labelname="ครอบครองคีย์การ์ด"
+                />
+                <span>ครอบครองคีย์การ์ด</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_keycard"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="5000"
+                  data-imprison="0"
+                  data-name="illegal_microchip"
+                  data-labelname="ครอบครองไมโคชิป"
+                />
+                <span>ครอบครองไมโคชิป</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_microchip"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="3000"
+                  data-imprison="0"
+                  data-name="illegal_box_amp"
+                  data-labelname="ครอบครองกล่องสุ่มแอมป์"
+                />
+                <span>ครอบครองกล่องสุ่มแอมป์</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_box_amp"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="10000"
+                  data-imprison="0"
+                  data-name="illegal_box_supermarket"
+                  data-labelname="ครอบครองกล่องคลังสินค้า"
+                />
+                <span>ครอบครองกล่องคลังสินค้า</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_box_supermarket"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="10000"
+                  data-imprison="0"
+                  data-name="illegal_box_exhibit"
+                  data-labelname="ครอบครองกล่องของกลาง"
+                />
+                <span>ครอบครองกล่องของกลาง</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg mr-2 flex items-center justify-center text-[0.8vh] text-center"
+                name="input-quantity"
+                id="illegal_box_exhibit"
+                onkeyup="handleQuantity(this)"
+                placeholder="จำนวน"
+                min="1"
+                disabled
+              />
+            </div>
+
+            <!--            <div class="flex items-center mb-1">-->
+            <!--              <input-->
+            <!--                type="checkbox"-->
+            <!--                class="form-checkbox mr-2"-->
+            <!--                name="part1"-->
+            <!--                value="Part 1"-->
+            <!--              />-->
+            <!--              <span>ครอบครองชะแลง</span>-->
+            <!--            </div>-->
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="15000"
+                data-imprison="0"
+                data-name="illegal_weapon_case"
+                data-labelname="ครอบครองอาวุธ"
+              />
+              <span>ครอบครองอาวุธ</span>
+            </div>
+          </div>
+          <div class="w-[0.2vh] bg-black/[0.5] mr-2 mt-2"></div>
+          <div class="w-[33.2%] mb-2">
+            <span class="flex justify-center mb-1">คดีหน่วยงาน</span>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="100000"
+                data-imprison="3600000"
+                data-name="illegal_uniform_suit_case"
+                data-labelname="สวมใส่เครื่องแบบหน่วยงาน"
+              />
+              <span>สวมใส่เครื่องแบบหน่วยงาน</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="100000"
+                data-imprison="10800000"
+                data-name="illegal_department_case"
+                data-labelname="แอบอ้างเป็นหน่วยงาน"
+              />
+              <span>แอบอ้างเป็นหน่วยงาน</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="50000"
+                data-imprison="3600000"
+                data-name="illegal_get_in_place_department_case"
+                data-labelname="บุกรุกสถานที่ของหน่วยงาน"
+              />
+              <span>บุกรุกสถานที่ของหน่วยงาน</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="200000"
+                data-imprison="10800000"
+                data-name="illegal_violence_in_department_area_case"
+                data-labelname="ก่อเหตุในพื้นที่ของหน่วยงาน"
+              />
+              <span>ก่อเหตุในพื้นที่ของหน่วยงาน</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="100000"
+                data-imprison="3600000"
+                data-name="illegal_violence_in_department_area_case"
+                data-labelname="ขโมยยานพาหนะของหน่วยงาน"
+              />
+              <span>ขโมยยานพาหนะของหน่วยงาน</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="30000"
+                data-imprison="7200000"
+                data-name="illegal_profane_department"
+                data-labelname="ดูหมิ่น/ข่มขู่เจ้าหน้าที่"
+              />
+              <span>ดูหมิ่น/ข่มขู่เจ้าหน้าที่</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="100000"
+                data-imprison="14400000"
+                data-name="illegal_violence_department"
+                data-labelname="ทำร้ายร่างกายเจ้าหน้าที่"
+              />
+              <span>ทำร้ายร่างกายเจ้าหน้าที่</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mx-auto w-[95%] h-[0.2vh] bg-black/[0.5] rounded-full"
+        ></div>
+        <div class="flex text-xs mx-4 text-white">
+          <div class="w-[33.2%] my-2">
+            <span class="flex justify-center mb-1">คดีทำร้ายร่างกาย</span>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="10000"
+                data-imprison="3600000"
+                data-name="illegal_quarrel"
+                data-labelname="ทะเลาะวิวาท"
+              />
+              <span>ทะเลาะวิวาท</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="10000"
+                data-imprison="7200000"
+                data-name="illegal_violence"
+                data-labelname="ทำร้ายร่างกาย"
+              />
+              <span>ทำร้ายร่างกาย</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="30000"
+                data-imprison="7200000"
+                data-name="illegal_killing๘intent"
+                data-labelname="เจตนาฆ่า"
+              />
+              <span>เจตนาฆ่า</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="30000"
+                data-imprison="3600000"
+                data-name="illegal_kidnap_consciousness"
+                data-labelname="ลักพาตัว(หมดสติ)"
+              />
+              <span>ลักพาตัว(หมดสติ)</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="15000"
+                data-imprison="1800000"
+                data-name="illegal_kidnap_consciousness2"
+                data-labelname="สมรู้ลักพาตัว(หมดสติ)"
+              />
+              <span>สมรู้ลักพาตัว(หมดสติ)</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="50000"
+                data-imprison="3600000"
+                data-name="illegal_kidnap_shroud"
+                data-labelname="ลักพาตัว(ห่อศพ)"
+              />
+              <span>ลักพาตัว(ห่อศพ)</span>
+            </div>
+
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="25000"
+                data-imprison="1800000"
+                data-name="illegal_kidnap_shroud2"
+                data-labelname="สมรู้ลักพาตัว(ห่อศพ)"
+              />
+              <span>สมรู้ลักพาตัว(ห่อศพ)</span>
+            </div>
+          </div>
+          <div class="w-[0.2vh] bg-black/[0.5] mr-2 mb-2"></div>
+          <div class="w-[33.2%] my-2">
+            <span class="flex justify-center mb-1"
+              >คดีขัดขวาง/ไม่ให้ความร่วมมือ</span
+            >
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="15000"
+                data-imprison="3600000"
+                data-name="illegal_resist_arrest"
+                data-labelname="ขัดขืนการจับกุม"
+              />
+              <span>ขัดขืนการจับกุม</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="50000"
+                data-imprison="10800000"
+                data-name="illegal_hinder_duties"
+                data-labelname="ขัดขวางการปฎิบัติหน้าที่"
+              />
+              <span>ขัดขวางการปฎิบัติหน้าที่</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="30000"
+                data-imprison="3600000"
+                data-name="illegal_false_statement"
+                data-labelname="ให้การ/แจ้งความเท็จ"
+              />
+              <span>ให้การ/แจ้งความเท็จ</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="1000"
+                data-imprison="600000"
+                data-name="illegal_escaped_arrest"
+                data-labelname="หลบหนีการจับกุม"
+              />
+              <span>หลบหนีการจับกุม</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="5000"
+                data-imprison="1800000"
+                data-name="illegal_destroy_evidence"
+                data-labelname="ทำลายหลักฐาน"
+              />
+              <span>ทำลายหลักฐาน</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="0"
+                data-imprison="0"
+                data-name="illegal_conspiracy"
+                data-labelname="ช่วยเหลือ/สมรู้ร่วมคิด"
+              />
+              <span>ช่วยเหลือ/สมรู้ร่วมคิด</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="30000"
+                data-imprison="10800000"
+                data-name="illegal_disappear_to_officer"
+                data-labelname="ไม่มาตามหมายเรียกของเจ้าหน้าที่"
+              />
+              <span>ไม่มาตามหมายเรียกของเจ้าหน้าที่</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="3000"
+                data-imprison="600000"
+                data-name="illegal_dangerous_area"
+                data-labelname="พื้นที่สุ่มเสี่ยง"
+              />
+              <span>พื้นที่สุ่มเสี่ยง</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="20000"
+                data-imprison="7200000"
+                data-name="illegal_prison_break"
+                data-labelname="แหกคุก"
+              />
+              <span>แหกคุก</span>
+            </div>
+            <div class="flex items-center mb-1">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="10000"
+                data-imprison="1800000"
+                data-name="illegal_weapon_public"
+                data-labelname="ควักอาวุธในพื้นที่สาธารณะ"
+              />
+              <span>ควักอาวุธในพื้นที่สาธารณะ</span>
+            </div>
+          </div>
+          <div class="w-[0.2vh] bg-black/[0.5] mr-2 mb-2"></div>
+          <div class="w-[33.2%] my-2">
+            <span class="flex justify-center mb-1"
+              >ลดค่าปรับ/ระยะเวลาจำคุก</span
+            >
+            <div class="flex items-center mb-1 justify-between">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  class="form-checkbox mr-2"
+                  data-fine="100"
+                  data-imprison="-60000"
+                  data-name="decrease_imprison"
+                  data-labelname="ลดระยะเวลาจำคุก"
+                />
+                <span>ลดระยะเวลาจำคุก</span>
+              </div>
+
+              <input
+                type="number"
+                class="box-content w-[7vh] h-[1.5vh] bg-gray-400/[0.5] rounded-lg flex items-center justify-center text-[0.8vh] text-center"
+                placeholder="เวลา"
+                name="input-time"
+                id="decrease_imprison"
+                onkeyup="handleQuantity(this)"
+                min="1"
+                disabled
+              />
+              <div>นาที</div>
+            </div>
+            <div class="flex items-center">
+              <input
+                type="checkbox"
+                class="form-checkbox mr-2"
+                data-fine="1000"
+                data-imprison="0"
+                data-name="phone_insurance"
+                data-labelname="ประกันโทรศัพท์"
+              />
+              <span>ประกันโทรศัพท์</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mx-auto w-[95%] h-[0.2vh] bg-black/[0.5] rounded-full"
+        ></div>
+        <div
+          class="box-content mx-2 my-2 flex items-center text-[1.8vh] justify-between text-white"
+        >
+          <input
+            type="text"
+            id="input-charge"
+            class="box-content rounded-lg bg-gray-400/[0.5] w-[27.5%] h-[2.6vh] text-center"
+            placeholder="ข้อหา"
+          />
+          <button
+            class="box-content w-[2.6vh] h-[2.6vh] mx-2 rounded-lg"
+            id="add-charge"
+          >
+            <img src="img/import.png" />
+          </button>
+          <input
+            type="text"
+            id="input-imprison"
+            class="box-content rounded-lg bg-gray-400/[0.5] w-[27.5%] h-[2.6vh] text-center"
+            placeholder="เวลาจำคุก"
+          />
+          <button
+            class="box-content w-[2.6vh] h-[2.6vh] mx-2 rounded-lg"
+            id="add-imprison"
+          >
+            <img src="img/import.png" />
+          </button>
+          <input
+            type="text"
+            id="input-fine"
+            class="box-content rounded-lg bg-gray-400/[0.5] w-[27.5%] h-[2.6vh] text-center"
+            placeholder="ค่าปรับ"
+          />
+          <button
+            class="box-content w-[2.6vh] h-[2.6vh] ml-2 rounded-lg"
+            id="add-fine"
+          >
+            <img src="img/import.png" />
+          </button>
+        </div>
+        <div
+          class="box-content mx-2 my-2 bg-gradient-to-l from-[#ffa800]/[0.3] to-[#ffcc00]/[0.3] rounded-lg text-white"
+        >
+          <div class="flex text-[1.8vh] mx-2 h-[16vh] relative">
+            <div
+              class="w-[33.2%] overflow-y-scroll my-2 ml-2"
+              id="charge-optional-all"
+            ></div>
+
+            <div class="w-[0.2vh] bg-black/[0.5] mr-2 mt-4"></div>
+
+            <div
+              class="w-[33.2%] overflow-y-scroll my-2 ml-2"
+              id="imprison-optional-all"
+            ></div>
+
+            <div class="w-[0.2vh] bg-black/[0.5] mr-2 mt-4"></div>
+
+            <div
+              class="w-[33.2%] overflow-y-scroll my-2 ml-2"
+              id="fine-optional-all"
+            ></div>
+          </div>
+
+          <div
+            class="mx-auto w-[95%] h-[0.2vh] bg-black/[0.5] rounded-full"
+          ></div>
+          <div class="flex mx-2 text-[1.8vh]">
+            <div class="w-[50%] my-2 mx-2 flex justify-between">
+              <div>รวมเวลาจำคุก :</div>
+              <div id="imprison-mins">0</div>
+              <div>นาที</div>
+            </div>
+            <div class="w-[0.2vh] bg-black/[0.5] mb-2"></div>
+            <div class="w-[50%] my-2 mx-2 flex justify-between">
+              <div>รวมค่าปรับ :</div>
+              <div id="fine-all">0</div>
+              <div>$</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center text-[1.8vh]" id="select-zone">
+          <div id="optional-zone"></div>
+          <button
+            class="bg-black hover:bg-gradient-to-b from-[#ffa800] to-[#ffcc00] rounded-lg mb-2 text-center text-white w-[12vh] h-[3vh] mx-2.5"
+            onclick="processLaw()"
+          >
+            ประมวลผลคดี
+          </button>
+          <button
+            class="bg-black hover:bg-gradient-to-b from-[#ffa800] to-[#ffcc00] rounded-lg mb-2 text-white w-[12vh] h-[3vh] mx-2.5 flex items-center justify-center"
+            onclick="resetPanel()"
+          >
+            <div class="box-content w-[1.8vh] h-[1.8vh]">
+              <img src="img/reset.png" />
+            </div>
+          </button>
+        </div>
+      </div>
+      <!-- 
+      <div class="container bg-black/[0.5] w-[75vh] rounded-lg mt-2"></div> -->
+    </div>
+  </body>
+</html>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/app.js"></script>

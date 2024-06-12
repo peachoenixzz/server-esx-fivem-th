@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <style>
+    body {
+      display: none;
+    }
+  </style>
+
+  <body>
+    <audio id="open-sound">
+      <source src="sound/Ocean_Game_UI_Button_Tick_15.wav" type="audio/wav" />
+    </audio>
+
+    <audio id="success-sound">
+      <source src="sound/GamersToolkitTick.wav" type="audio/wav" />
+    </audio>
+
+    <div class="flex justify-center flex-col items-center h-screen">
+      <div class="flex justify-center items-center">
+        <div class="mr-[4.5vh]">
+          <div
+            class="bg-gradient-to-b from-black/[0.6] via-[#ffcc00]/[0.7] to-[#ffa800]/[0.7] w-fit rounded-[1vh] text-white p-[1vh]"
+            style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8)"
+          >
+            <div
+              class="text-[2vh] mb-[0.5vh] text-center"
+              id="gacha-name"
+            ></div>
+            <div class="bg-black/[0.5] rounded-[0.8vh] w-fit mt-[0.5]">
+              <div
+                class="box-content w-[18vh] h-[18vh] flex justify-center items-center"
+              >
+                <img
+                  src="img/question.png"
+                  id="gachaponImage"
+                  class="w-[13vh] h-[13vh]"
+                />
+              </div>
+            </div>
+            <div class="select-menu text-white mt-[0.5vh]" id="select-menu">
+              <button
+                class="select-btn w-full h-[3vh]"
+                id="select-btn"
+                onclick="selectItems()"
+              >
+                <span class="sBtn-text" id="sBtn-text">กรุณาเลือก</span>
+                <i class="bx bxs-down-arrow"></i>
+              </button>
+              <ul class="options" id="select-data" style="z-index: 10"></ul>
+            </div>
+
+            <div class="flex w-[18vh] mt-[0.5vh]" style="z-index: 1">
+              <input
+                type="number"
+                class="h-[3vh] w-[70%] rounded-[0.8vh] mr-[1vh] bg-black/[0.5] text-center"
+                placeholder="จำนวน"
+                id="input-number"
+                onchange="validateInput()"
+              />
+              <button
+                class="btn-3d rounded-[0.5vh] w-[30%] text-[2vh] h-[3vh]"
+                onclick="maxQuantityItems()"
+                id="btn-max"
+              >
+                MAX
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div
+            class="bg-gradient-to-b from-black/[0.6] via-[#ffcc00]/[0.7] to-[#ffa800]/[0.7] w-[67.5vh] rounded-[1vh] text-white p-[1vh] flex justify-center"
+            style="box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8)"
+          >
+            <div
+              class="flex items-center justify-center min-h-[21vh]"
+              id="griditems-container"
+            >
+              <span class="loader-default"></span>
+              <!-- <div>
+                <div class="bg-black/[0.5] rounded-[0.8vh] w-fit p-[0.5vh]">
+                  <div
+                    class="${textSizeClass} leading-[1.2vh] mb-[0.5vh] text-center"
+                  >
+                    ${item.label_name}
+                  </div>
+                  <div class="bg-black/[0.5] rounded-[0.8vh] w-fit mt-[0.5]">
+                    <div
+                      class="box-content w-[15vh] h-[15vh] flex justify-center items-center"
+                    >
+                      <img
+                        src="nui://nc_inventory/html/img/items/${item.name}.png"
+                        class="w-[10vh] h-[10vh]"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    id="quantity-show-${item.id}"
+                    class="box-content flex justify-center items-center text-[2vh] h-[3vh] bg-black/[0.5] rounded-[0.8vh] mt-[0.5vh] w-full"
+                  >
+                    ? ? ?
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div id="display" class="w-[67.5vh] mt-[1vh]">
+            <div
+              class="bg-gradient-to-b from-black/[0.6] via-[#ffcc00]/[0.7] to-[#ffa800]/[0.7] rounded-[1vh] text-white p-[1vh] w-full flex text-[2vh]"
+              style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8)"
+              id="status-bar"
+            >
+              <!-- <button
+                class="btn-3d rounded-[0.5vh] text-[2vh] h-[3vh] px-[2.5vh] mr-[1vh]"
+                id="btn-progress"
+                onclick="progress_bar()"
+              >
+                เปิด
+              </button>
+              <div
+                class="box-content bg-black/[0.5] h-[3vh] w-full flex items-center justify-center text-center relative rounded-[0.5vh]"
+              >
+                <div
+                  class="absolute inset-0 flex items-center justify-center z-10"
+                >
+                  0%
+                </div>
+                <div
+                  id="progress"
+                  class="absolute bottom-0 left-0 right-0 box-content progress h-[3vh] w-[0%] z-0 rounded-[0.5vh]"
+                ></div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="app.js"></script>

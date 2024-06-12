@@ -1,0 +1,151 @@
+	<Anim dict="babyqueen@queen15" name="queen15" />
+	<Anim dict="babyqueen@queen14" name="queen14" />
+	<Anim dict="babyqueen@queen13" name="queen13" />
+	<Anim dict="babyqueen@queen12" name="queen12" />
+	<Anim dict="babyqueen@queen11" name="queen11" />
+	<Anim dict="babyqueen@queen10" name="queen10" />
+	<Anim dict="babyqueen@queen09" name="queen09" />
+	<Anim dict="babyqueen@queen08" name="queen08" />
+	<Anim dict="babyqueen@queen07" name="queen07" />
+	<Anim dict="babyqueen@queen06" name="queen06" />
+	<Anim dict="babyqueen@queen05" name="queen05" />
+	<Anim dict="babyqueen@queen04" name="queen04" />
+	<Anim dict="babyqueen@queen03" name="queen03" />
+	<Anim dict="babyqueen@queen02" name="queen02" />
+	<Anim dict="babyqueen@queen01" name="queen01" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lindaman#7676 ลดาวัลย์ 

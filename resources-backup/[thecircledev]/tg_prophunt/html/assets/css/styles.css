@@ -1,0 +1,299 @@
+/* This resource was scripted by TG DEVELOPER
+Discord : https://discord.gg/yT9ySxbM9Y */
+
+/* thai */
+@font-face {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Kanit Regular"), local("Kanit-Regular"),
+    url(../font/Kanit-thai.woff2) format("woff2");
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Kanit Regular"), local("Kanit-Regular"),
+    url(../font/Kanit-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Kanit Regular"), local("Kanit-Regular"),
+    url(../font/Kanit-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Kanit Regular"), local("Kanit-Regular"),
+    url(../font/Kanit-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  user-select: none;
+}
+
+.con {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.con2 {
+  display: none;
+  position: fixed;
+  left: 1%;
+  top: 50%;
+  width: 110px;
+  height: 70px;
+  border-radius: 5px;
+
+  background-color: rgba(30, 30, 30);
+}
+
+.con3 {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0);
+}
+
+.push-bt {
+  position: relative;
+  color: #ffffff;
+}
+
+.bt-txt {
+  color: rgb(30, 30, 30);
+  position: relative;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  background-color: rgb(231, 224, 224);
+  top: 5px;
+  left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.detailbt-txt {
+  position: relative;
+  top: -15px;
+  left: 30px;
+  font-size: 14px;
+}
+
+.itemcolect-con {
+  position: fixed;
+  left: 50%;
+  width: 310px;
+  height: 120px;
+  border-radius: 5px;
+  transform: translate(-50%, 0%);
+}
+
+.main-colect {
+  position: relative;
+  width: 305px;
+  height: 80px;
+  border-radius: 80px;
+  background-color: rgba(40, 40, 40);
+}
+
+.prop-title {
+  position: relative;
+  color: white;
+  font-size: 14px;
+  top: 10px;
+  left: 20px;
+}
+
+.prop-num {
+  position: relative;
+  color: #8eebec;
+  font-size: 40px;
+  top: -45px;
+  left: 17px;
+}
+
+.prop-title2 {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  top: -244px;
+  left: 245px;
+}
+
+.prop-num2 {
+  position: relative;
+  color: #8eebec;
+  font-size: 40px;
+  top: -300px;
+  left: 245px;
+}
+
+.round {
+  position: relative;
+  top: -160px;
+  left: 75px;
+  width: 160px;
+  height: 30px;
+  background-color: rgba(30, 30, 30);
+  color: white;
+  text-align: center;
+  font-size: 22px;
+}
+
+.round .round-amount {
+  color: #8eebec;
+}
+
+.round-time {
+  position: relative;
+  top: -160px;
+  left: 75px;
+  width: 160px;
+  height: 49px;
+  background-color: rgba(20, 20, 20);
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+#timer {
+  position: relative;
+  font-size: 32px;
+  color: #8eebec;
+}
+
+#timer2 {
+  text-align: center;
+  font-size: 2.5vh;
+  line-height: 2.8vh;
+  /* position: relative;
+  font-size: 42px; */
+  /* color: #8eebec; */
+}
+
+.itemcolect-con2 {
+  position: fixed;
+  left: 50%;
+  top: 2%;
+  /* width: 310px;
+  height: 120px; */
+  border-radius: 5px;
+  transform: translate(-50%, 0%);
+}
+
+.play-count {
+  position: relative;
+  top: -5px;
+  width: 100px;
+  height: 30px;
+  left: 190px;
+  border-radius: 80px;
+  background-color: rgba(30, 30, 30);
+}
+
+.main-colect2 {
+  position: relative;
+  /* width: 305px */
+  width: 20vh;
+  /* height: 10vh; */
+  border-radius: 0.5vh;
+  background: linear-gradient(
+    to right,
+    rgba(41, 194, 250, 0.5),
+    rgba(0, 34, 255, 0.5)
+  );
+}
+
+.cycle-time {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  top: -20px;
+  left: -20px;
+  background-color: rgba(30, 30, 30);
+  border-radius: 100%;
+  background-image: url(../img/3889548.png);
+  background-position: center;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  transform: rotate(-30deg);
+}
+
+.icon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 5px;
+  background-image: url(../img/456212.png);
+  background-position: center;
+  background-size: 15px;
+  background-repeat: no-repeat;
+}
+
+.amount {
+  /* position: relative; */
+  color: #ffffff;
+  /* top: -28px;
+  left: 35px;
+  font-size: 18px; */
+}
+
+.play-game {
+  position: relative;
+  color: #ffffff;
+  height: 30px;
+  width: 210px;
+  text-align: center;
+  top: 5px;
+  left: 50px;
+  background-color: rgba(30, 30, 30);
+  border-radius: 80px;
+  font-size: 14.5px;
+}
+
+.target-eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-size: 1vh;
+}
+
+.warp-num {
+  position: relative;
+  width: 50px;
+  text-align: center;
+}
+.con-img-prophunt {
+  height: 10vh;
+  width: 10vh;
+  position: absolute;
+  left: 0;
+  margin-right: 2vh;
+}

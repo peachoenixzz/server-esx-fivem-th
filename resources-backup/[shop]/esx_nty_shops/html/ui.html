@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles_tw.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+      body {
+        display: none;
+      }
+      /* .overflow-scroll::-webkit-scrollbar {
+        display: none;
+      } */
+
+      ::-webkit-scrollbar-track {
+        /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      ::-webkit-scrollbar {
+        width: 0.55vh;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #ffcc00;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      .bg-gradient {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .bg-gradient:hover {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 204, 0),
+          rgba(166, 106, 2)
+        );
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <div
+        class="container bg-black/[0.5] w-fit rounded-lg text-white text-[1.7vh]"
+      >
+        <div
+          class="container relative bg-gradient-to-l from-[#ffa800] to-[#ffcc00] rounded-t-lg text-white flex items-center justify-center text-[4vh] h-[6vh]"
+        >
+          <div class="absolute inset-0 z-10">
+            <img
+              src="img/cloud_texture2.png"
+              class="w-full h-full object-cover opacity-70"
+            />
+          </div>
+          <div class="absolute mb-[17vh] ml-[3vh]">
+            <img
+              src="img/dragon-head.png"
+              class="object-cover h-[14vh] w-[20vh]"
+              alt="Logo"
+            />
+            <!-- Adjust the src and class as needed -->
+          </div>
+          <div class="drop-shadow font-bold">SHOP</div>
+        </div>
+        <div class="rounded-b-lg overflow-y-hidden">
+          <div class="h-[53vh] overflow-y-scroll rounded-b-lg">
+            <div class="grid grid-rows gap-3 mx-3 mt-3">
+              <div id="container-shop"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/app.js"></script>
